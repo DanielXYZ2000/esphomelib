@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Sensor" href="../sensor/index.html" />
+    <link rel="next" title="Switch" href="../switch/index.html" />
     <link rel="prev" title="Fan" href="../fan/index.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -680,8 +680,8 @@ state updates.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib5light10LightState17add_send_callbackE21light_send_callback_t">
-<span id="esphomelib::light::LightState::add_send_callback__light_send_callback_t"></span><span class="target" id="classesphomelib_1_1light_1_1_light_state_1ad9775224d6386f68d7ff12fc1e604d40"></span>void <code class="descname">add_send_callback</code><span class="sig-paren">(</span>light_send_callback_t <em>send_callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib5light10LightState17add_send_callbackE21light_send_callback_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib5light10LightState17add_send_callbackERR21light_send_callback_t">
+<span id="esphomelib::light::LightState::add_send_callback__light_send_callback_tRR"></span><span class="target" id="classesphomelib_1_1light_1_1_light_state_1a32c2f43834cee8dcccb39244670d1689"></span>void <code class="descname">add_send_callback</code><span class="sig-paren">(</span>light_send_callback_t &amp;&amp;<em>send_callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib5light10LightState17add_send_callbackERR21light_send_callback_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This lets front-end components subscribe to light change events, for example when a transition is done. </p>
 <p>Note the callback should get the output values through <a class="reference internal" href="#classesphomelib_1_1light_1_1_light_state_1a1978ad460620a7e3118141c6c85fec4a"><span class="std std-ref">get_remote_values()</span></a>.</p>
 <p><dl class="docutils">
@@ -697,7 +697,7 @@ state updates.</p>
 <dl class="function">
 <dt id="_CPPv2N10esphomelib5light10LightState11send_valuesEv">
 <span id="esphomelib::light::LightState::send_values"></span><span class="target" id="classesphomelib_1_1light_1_1_light_state_1a452c4761a4b6ff0feaf57bbe5bafa3b9"></span>void <code class="descname">send_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib5light10LightState11send_valuesEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Causes the callback defined by <a class="reference internal" href="#classesphomelib_1_1light_1_1_light_state_1ad9775224d6386f68d7ff12fc1e604d40"><span class="std std-ref">add_send_callback()</span></a> to trigger. </p>
+<dd><p>Causes the callback defined by <a class="reference internal" href="#classesphomelib_1_1light_1_1_light_state_1a32c2f43834cee8dcccb39244670d1689"><span class="std std-ref">add_send_callback()</span></a> to trigger. </p>
 </dd></dl>
 
 <dl class="function">
@@ -1077,7 +1077,7 @@ state updates.</p>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">API Reference</a><ul>
       <li>Previous: <a href="../fan/index.html" title="previous chapter">Fan</a></li>
-      <li>Next: <a href="../sensor/index.html" title="next chapter">Sensor</a></li>
+      <li>Next: <a href="../switch/index.html" title="next chapter">Switch</a></li>
   </ul></li>
   </ul></li>
 </ul>

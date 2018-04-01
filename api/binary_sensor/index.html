@@ -23,8 +23,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fan" href="../fan/index.html" />
-    <link rel="prev" title="ESP32 LEDC Output" href="../output/pca9685.html" />
+    <link rel="next" title="Node Status Binary Sensor" href="status.html" />
+    <link rel="prev" title="Sensor" href="../sensor/index.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -47,6 +47,23 @@
 <a class="reference internal" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensor13publish_stateEb" title="esphomelib::binary_sensor::BinarySensor::publish_state"><code class="xref cpp cpp-func docutils literal"><span class="pre">BinarySensor::publish_state()</span></code></a> to tell the frontend that you have a new state.
 Inversion is automatically done for you when publishing state and can be changed by the
 user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensor12set_invertedEb" title="esphomelib::binary_sensor::BinarySensor::set_inverted"><code class="xref cpp cpp-func docutils literal"><span class="pre">BinarySensor::set_inverted()</span></code></a>.</p>
+<div class="section" id="supported-binary-sensors">
+<h2>Supported Binary Sensors<a class="headerlink" href="#supported-binary-sensors" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gpio.html">GPIO Binary Sensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpio.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="status.html">Node Status Binary Sensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="status.html#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
@@ -58,7 +75,7 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
                             <span class="n">binary_sensor</span><span class="o">::</span><span class="n">device_class</span><span class="o">::</span><span class="n">WINDOW</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application27make_mqtt_binary_sensor_forENSt6stringENSt6stringEPN13binary_sensor12BinarySensorE" title="esphomelib::Application::make_mqtt_binary_sensor_for"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_mqtt_binary_sensor_for()</span></code></a> and <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinNSt6stringENSt6stringE" title="esphomelib::Application::make_gpio_binary_sensor"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_gpio_binary_sensor()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application27make_mqtt_binary_sensor_forEPN13binary_sensor12BinarySensorERKNSt6stringE8OptionalINSt6stringEE" title="esphomelib::Application::make_mqtt_binary_sensor_for"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_mqtt_binary_sensor_for()</span></code></a> and <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinRKNSt6stringERKNSt6stringE" title="esphomelib::Application::make_gpio_binary_sensor"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_gpio_binary_sensor()</span></code></a>.</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
@@ -69,12 +86,12 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 <span id="esphomelib::binary_sensor::BinarySensor"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_binary_sensor"></span><em class="property">class </em><code class="descclassname">esphomelib::binary_sensor::</code><code class="descname">BinarySensor</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Base class for all binary_sensor-type classes. </p>
 <p>This class includes a callback that components such as MQTT can subscribe to for state changes. The sub classes should notify the front-end of new states via the <a class="reference internal" href="#classesphomelib_1_1binary__sensor_1_1_binary_sensor_1acb6ee948f595cd3321d9c552d563c53c"><span class="std std-ref">publish_state()</span></a> method which handles inverted inputs for you. </p>
-<p>Subclassed by <a class="reference internal" href="../input/gpio-binary-sensor.html#classesphomelib_1_1input_1_1_g_p_i_o_binary_sensor_component"><span class="std std-ref">esphomelib::input::GPIOBinarySensorComponent</span></a>, <a class="reference internal" href="../switch/index.html#classesphomelib_1_1switch__platform_1_1_switch"><span class="std std-ref">esphomelib::switch_platform::Switch</span></a></p>
+<p>Subclassed by <a class="reference internal" href="gpio.html#classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component"><span class="std std-ref">esphomelib::binary_sensor::GPIOBinarySensorComponent</span></a>, <a class="reference internal" href="status.html#classesphomelib_1_1binary__sensor_1_1_status_binary_sensor"><span class="std std-ref">esphomelib::binary_sensor::StatusBinarySensor</span></a>, <a class="reference internal" href="../switch/index.html#classesphomelib_1_1switch___1_1_switch"><span class="std std-ref">esphomelib::switch_::Switch</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor12BinarySensor25add_on_new_state_callbackE17binary_callback_t">
-<span id="esphomelib::binary_sensor::BinarySensor::add_on_new_state_callback__binary_callback_t"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_binary_sensor_1a9013bdaf12bcbdc55394134faf87aea0"></span>void <code class="descname">add_on_new_state_callback</code><span class="sig-paren">(</span>binary_callback_t <em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensor25add_on_new_state_callbackE17binary_callback_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib13binary_sensor12BinarySensor25add_on_new_state_callbackERR17binary_callback_t">
+<span id="esphomelib::binary_sensor::BinarySensor::add_on_new_state_callback__binary_callback_tRR"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_binary_sensor_1a62c21afe360559aa08c8c1623f9ec7ae"></span>void <code class="descname">add_on_new_state_callback</code><span class="sig-paren">(</span>binary_callback_t &amp;&amp;<em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensor25add_on_new_state_callbackERR17binary_callback_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set callback for state changes. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
@@ -108,6 +125,12 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N10esphomelib13binary_sensor12BinarySensor12device_classEv">
+<span id="esphomelib::binary_sensor::BinarySensor::device_class"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_binary_sensor_1a0aa304b237cfd7d3cd61cb6c4abeb34e"></span>std::string <code class="descname">device_class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensor12device_classEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the default device class for this sensor, or empty string for no default. </p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2NK10esphomelib13binary_sensor12BinarySensor11is_invertedEv">
 <span id="esphomelib::binary_sensor::BinarySensor::is_invertedC"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_binary_sensor_1acdd8f013e2525962299e42a4bbec6d97"></span>bool <code class="descname">is_inverted</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13binary_sensor12BinarySensor11is_invertedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return whether all states of this binary sensor should be inverted. </p>
@@ -132,148 +155,27 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 </div>
 <div class="section" id="mqttbinarysensorcomponent">
 <h3>MQTTBinarySensorComponent<a class="headerlink" href="#mqttbinarysensorcomponent" title="Permalink to this headline">¶</a></h3>
-<dl class="type">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_classE">
-<span id="esphomelib::binary_sensor::device_class"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class"></span><em class="property">namespace </em><code class="descclassname">esphomelib::binary_sensor::</code><code class="descname">device_class</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_classE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Home Assistant device classes. See <a class="reference external" href="https://home-assistant.io/components/binary_sensor/">Binary Sensor</a>. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Variables</p>
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class4NONEE">
-<span id="esphomelib::binary_sensor::device_class::NONE__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a144a7ebbd9c34e74393721cf2141d534"></span><em class="property">const</em> std::string <code class="descname">NONE</code> = &quot;&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class4NONEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class7BATTERYE">
-<span id="esphomelib::binary_sensor::device_class::BATTERY__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1aafd1ced6916c586f8ed1ccda3c80a29d"></span><em class="property">const</em> std::string <code class="descname">BATTERY</code> = &quot;&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class7BATTERYE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class4COLDE">
-<span id="esphomelib::binary_sensor::device_class::COLD__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a87ef1d86c9490524f46e8784fe3fde9c"></span><em class="property">const</em> std::string <code class="descname">COLD</code> = &quot;cold&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class4COLDE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class12CONNECTIVITYE">
-<span id="esphomelib::binary_sensor::device_class::CONNECTIVITY__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a0700b804e0f26e6ca8ce819bee27a3c5"></span><em class="property">const</em> std::string <code class="descname">CONNECTIVITY</code> = &quot;connectivity&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class12CONNECTIVITYE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class4DOORE">
-<span id="esphomelib::binary_sensor::device_class::DOOR__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a7250ddbc3eb6284e509140ca45e76f52"></span><em class="property">const</em> std::string <code class="descname">DOOR</code> = &quot;door&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class4DOORE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class11GARAGE_DOORE">
-<span id="esphomelib::binary_sensor::device_class::GARAGE_DOOR__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a47d7e3381eaf3d6f6332b2536af9d544"></span><em class="property">const</em> std::string <code class="descname">GARAGE_DOOR</code> = &quot;garage_door&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class11GARAGE_DOORE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class3GASE">
-<span id="esphomelib::binary_sensor::device_class::GAS__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a87e92329541c1b30e0b37bae456d310f"></span><em class="property">const</em> std::string <code class="descname">GAS</code> = &quot;gas&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class3GASE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class4HEATE">
-<span id="esphomelib::binary_sensor::device_class::HEAT__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a35764c91d77a407c377b599ac83c60ed"></span><em class="property">const</em> std::string <code class="descname">HEAT</code> = &quot;heat&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class4HEATE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class5LIGHTE">
-<span id="esphomelib::binary_sensor::device_class::LIGHT__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1ab9bf6e76a788621f49f2eb6500646ea0"></span><em class="property">const</em> std::string <code class="descname">LIGHT</code> = &quot;light&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class5LIGHTE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class4LOCKE">
-<span id="esphomelib::binary_sensor::device_class::LOCK__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1aaeed9fb0426da5a9c8fc921138ecb824"></span><em class="property">const</em> std::string <code class="descname">LOCK</code> = &quot;lock&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class4LOCKE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class8MOISTUREE">
-<span id="esphomelib::binary_sensor::device_class::MOISTURE__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a6141fd469b3937d7d253e5c124dc82b1"></span><em class="property">const</em> std::string <code class="descname">MOISTURE</code> = &quot;moisture&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class8MOISTUREE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class6MOTIONE">
-<span id="esphomelib::binary_sensor::device_class::MOTION__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a80e5e540b9433a0f58285f3540a44d12"></span><em class="property">const</em> std::string <code class="descname">MOTION</code> = &quot;motion&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class6MOTIONE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class6MOVINGE">
-<span id="esphomelib::binary_sensor::device_class::MOVING__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1abc02bf60ad780b643e5b529d642d7c9a"></span><em class="property">const</em> std::string <code class="descname">MOVING</code> = &quot;moving&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class6MOVINGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class9OCCUPANCYE">
-<span id="esphomelib::binary_sensor::device_class::OCCUPANCY__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1afb596dfddbf2feebf8a1ac972b1ac370"></span><em class="property">const</em> std::string <code class="descname">OCCUPANCY</code> = &quot;occupancy&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class9OCCUPANCYE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class7OPENINGE">
-<span id="esphomelib::binary_sensor::device_class::OPENING__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a0bf083fb3e165e7f9a8123ba5fe1bbc3"></span><em class="property">const</em> std::string <code class="descname">OPENING</code> = &quot;opening&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class7OPENINGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class4PLUGE">
-<span id="esphomelib::binary_sensor::device_class::PLUG__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a65d1b33a25d6715531415f1d39546873"></span><em class="property">const</em> std::string <code class="descname">PLUG</code> = &quot;plug&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class4PLUGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class5POWERE">
-<span id="esphomelib::binary_sensor::device_class::POWER__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a154dd66fbea781412bfd42572dae5944"></span><em class="property">const</em> std::string <code class="descname">POWER</code> = &quot;power&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class5POWERE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class8PRESENCEE">
-<span id="esphomelib::binary_sensor::device_class::PRESENCE__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a5f751309f3113751fa74fac28331bb0f"></span><em class="property">const</em> std::string <code class="descname">PRESENCE</code> = &quot;presence&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class8PRESENCEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class6SAFETYE">
-<span id="esphomelib::binary_sensor::device_class::SAFETY__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1abf981966845c25942afac37d7ebc8d6a"></span><em class="property">const</em> std::string <code class="descname">SAFETY</code> = &quot;safety&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class6SAFETYE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class5SMOKEE">
-<span id="esphomelib::binary_sensor::device_class::SMOKE__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1a1aa9e5878ae9c4659c97170458492d86"></span><em class="property">const</em> std::string <code class="descname">SMOKE</code> = &quot;smoke&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class5SMOKEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class5SOUNDE">
-<span id="esphomelib::binary_sensor::device_class::SOUND__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1af7a63fdeb01db5b1338a58d2fdd190db"></span><em class="property">const</em> std::string <code class="descname">SOUND</code> = &quot;sound&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class5SOUNDE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class9VIBRATIONE">
-<span id="esphomelib::binary_sensor::device_class::VIBRATION__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1aacff9dedf402e4185519be589c3a83c9"></span><em class="property">const</em> std::string <code class="descname">VIBRATION</code> = &quot;vibration&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class9VIBRATIONE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor12device_class6WINDOWE">
-<span id="esphomelib::binary_sensor::device_class::WINDOW__ssC"></span><span class="target" id="namespaceesphomelib_1_1binary__sensor_1_1device__class_1addd5c65b94f3d32498a7de5b8be74ebd"></span><em class="property">const</em> std::string <code class="descname">WINDOW</code> = &quot;window&quot;<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor12device_class6WINDOWE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygennamespace: Cannot find namespace “esphomelib::binary_sensor::device_class” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
 </div>
-</dd></dl>
-
 <dl class="class">
 <dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponentE">
 <span id="esphomelib::binary_sensor::MQTTBinarySensorComponent"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component"></span><em class="property">class </em><code class="descclassname">esphomelib::binary_sensor::</code><code class="descname">MQTTBinarySensorComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Simple MQTT component for a binary_sensor. </p>
 <p>After construction of this class, it should be connected to the <a class="reference internal" href="#classesphomelib_1_1binary__sensor_1_1_binary_sensor"><span class="std std-ref">BinarySensor</span></a> by setting the callback returned by <a class="reference internal" href="#classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a12cf9321da7e9cb47764036494cbc1fe"><span class="std std-ref">create_on_new_state_callback()</span></a> in BinarySensor::on_new_state(). </p>
 <p>Inherits from <a class="reference internal" href="../core/mqtt.html#classesphomelib_1_1mqtt_1_1_m_q_t_t_component"><span class="std std-ref">esphomelib::mqtt::MQTTComponent</span></a></p>
-<p>Subclassed by <a class="reference internal" href="../switch/index.html#classesphomelib_1_1switch__platform_1_1_m_q_t_t_switch_component"><span class="std std-ref">esphomelib::switch_platform::MQTTSwitchComponent</span></a></p>
+<p>Subclassed by <a class="reference internal" href="../switch/index.html#classesphomelib_1_1switch___1_1_m_q_t_t_switch_component"><span class="std std-ref">esphomelib::switch_::MQTTSwitchComponent</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent25MQTTBinarySensorComponentENSt6stringENSt6stringEP12BinarySensor">
-<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::MQTTBinarySensorComponent__ss.ss.BinarySensorP"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1af6ac54ce4cf3ce640f105b9e613c4ce4"></span><code class="descname">MQTTBinarySensorComponent</code><span class="sig-paren">(</span>std::string <em>friendly_name</em>, std::string <em>device_class</em> = &quot;&quot;, <a class="reference internal" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensorE" title="esphomelib::binary_sensor::BinarySensor">BinarySensor</a> *<em>binary_sensor</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent25MQTTBinarySensorComponentENSt6stringENSt6stringEP12BinarySensor" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent25MQTTBinarySensorComponentENSt6stringEP12BinarySensor">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::MQTTBinarySensorComponent__ss.BinarySensorP"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a016a1319ef55bad4d1e1a57f2a77aaf7"></span><code class="descname">MQTTBinarySensorComponent</code><span class="sig-paren">(</span>std::string <em>friendly_name</em>, <a class="reference internal" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensorE" title="esphomelib::binary_sensor::BinarySensor">BinarySensor</a> *<em>binary_sensor</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent25MQTTBinarySensorComponentENSt6stringEP12BinarySensor" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a <a class="reference internal" href="#classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component"><span class="std std-ref">MQTTBinarySensorComponent</span></a>. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal"><span class="pre">friendly_name</span></code>: The friendly name. </li>
-<li><code class="docutils literal"><a class="reference internal" href="#namespaceesphomelib_1_1binary__sensor_1_1device__class"><span class="std std-ref"><span class="pre">device_class</span></span></a></code>: The device class of this component (see <a class="reference internal" href="#namespaceesphomelib_1_1binary__sensor_1_1device__class"><span class="std std-ref">esphomelib::binary_sensor::device_class</span></a>) </li>
 <li><code class="docutils literal"><span class="pre">binary_sensor</span></code>: The binary sensor to connect the callback to, can be nullptr. </li>
 </ul>
 </dd>
@@ -282,9 +184,9 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent16set_device_classERKNSt6stringE">
-<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::set_device_class__ssCR"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1af5188cc3c4626015c5ea49cdb3900d0c"></span>void <code class="descname">set_device_class</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>device_class</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent16set_device_classERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set the Home Assistant device class (see <a class="reference internal" href="#namespaceesphomelib_1_1binary__sensor_1_1device__class"><span class="std std-ref">esphomelib::binary_sensor::device_class</span></a>) </p>
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent16set_device_classENSt6stringE">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::set_device_class__ss"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a3ca3494ceb71edb9635979072aad6c78"></span>void <code class="descname">set_device_class</code><span class="sig-paren">(</span>std::string <em>device_class</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent16set_device_classENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the Home Assistant device class (see esphomelib::binary_sensor::device_class) </p>
 </dd></dl>
 
 <dl class="function">
@@ -305,6 +207,30 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 <dd><p>Send discovery. </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv2NK10esphomelib13binary_sensor25MQTTBinarySensorComponent14get_payload_onEv">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::get_payload_onC"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1ade121afae31ce2e5c23e13a1057dd8b0"></span><em class="property">const</em> std::string &amp;<code class="descname">get_payload_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13binary_sensor25MQTTBinarySensorComponent14get_payload_onEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the payload this binary sensor uses for an ON value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent14set_payload_onENSt6stringE">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::set_payload_on__ss"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1aa279d128032f53c19843e1e90a4bb71b"></span>void <code class="descname">set_payload_on</code><span class="sig-paren">(</span>std::string <em>payload_on</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent14set_payload_onENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the custom payload this binary sensor uses for an ON value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10esphomelib13binary_sensor25MQTTBinarySensorComponent15get_payload_offEv">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::get_payload_offC"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a90e9b40ffa3863a65ce3958326b5c7e2"></span><em class="property">const</em> std::string &amp;<code class="descname">get_payload_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13binary_sensor25MQTTBinarySensorComponent15get_payload_offEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the payload this binary sensor uses for an OFF value. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent15set_payload_offENSt6stringE">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::set_payload_off__ss"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1aef804b51d4d476426f77bddbc481f5b4"></span>void <code class="descname">set_payload_off</code><span class="sig-paren">(</span>std::string <em>payload_off</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent15set_payload_offENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the custom payload this binary sensor uses for an OFF value. </p>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Functions</p>
@@ -318,6 +244,11 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent14binary_sensor_E">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::binary_sensor___BinarySensorP"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a2f468ec1d73637b31bb3e734fb65834e"></span><a class="reference internal" href="#_CPPv2N10esphomelib13binary_sensor12BinarySensorE" title="esphomelib::binary_sensor::BinarySensor">BinarySensor</a> *<code class="descname">binary_sensor_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent14binary_sensor_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
 <dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent13device_class_E">
 <span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::device_class___ss"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1aa98c64e129d123370ca104c97801f95f"></span>std::string <code class="descname">device_class_</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent13device_class_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -330,6 +261,16 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 <dl class="member">
 <dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent11last_state_E">
 <span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::last_state___b"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1ababa93edec84f3705ed79afc4ab6207a"></span>bool <code class="descname">last_state_</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent11last_state_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent11payload_on_E">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::payload_on___ss"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a72dadafa29be01c03b923f0047ad9091"></span>std::string <code class="descname">payload_on_</code> = {&quot;ON&quot;}<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent11payload_on_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent12payload_off_E">
+<span id="esphomelib::binary_sensor::MQTTBinarySensorComponent::payload_off___ss"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component_1a526b270bba2581e4a95ccfbb56dfe1b9"></span>std::string <code class="descname">payload_off_</code> = {&quot;OFF&quot;}<a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponent12payload_off_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -349,8 +290,8 @@ user with <a class="reference internal" href="#_CPPv2N10esphomelib13binary_senso
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">API Reference</a><ul>
-      <li>Previous: <a href="../output/pca9685.html" title="previous chapter">ESP32 LEDC Output</a></li>
-      <li>Next: <a href="../fan/index.html" title="next chapter">Fan</a></li>
+      <li>Previous: <a href="../sensor/index.html" title="previous chapter">Sensor</a></li>
+      <li>Next: <a href="status.html" title="next chapter">Node Status Binary Sensor</a></li>
   </ul></li>
   </ul></li>
 </ul>

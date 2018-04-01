@@ -23,8 +23,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GPIO Binary Output" href="gpio-binary.html" />
-    <link rel="prev" title="Ultrasonic Sensor" href="../input/ultrasonic-sensor.html" />
+    <link rel="next" title="Fan" href="../fan/index.html" />
+    <link rel="prev" title="Node Status Binary Sensor" href="../binary_sensor/status.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -53,15 +53,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ir-transmitter.html">IR Transmitter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ir-transmitter.html#example-usage">Example Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ir-transmitter.html#api-reference">API Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ir-transmitter.html#irtransmittercomponent">IRTransmitterComponent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ir-transmitter.html#senddata">SendData</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="ledc.html">LEDC PWM Output</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ledc.html#example-usage">Example Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ledc.html#api-reference">API Reference</a><ul>
@@ -74,6 +65,14 @@
 <li class="toctree-l2"><a class="reference internal" href="pca9685.html#example-usage">Example Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pca9685.html#api-reference">API Reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pca9685.html#pca9685outputcomponent">PCA9685OutputComponent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esp8266-pwm.html">ESP8266 Software PWM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esp8266-pwm.html#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esp8266-pwm.html#api-reference">API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esp8266-pwm.html#esp8266pwmoutput">ESP8266PWMOutput</a></li>
 </ul>
 </li>
 </ul>
@@ -178,7 +177,7 @@
 <p>If you want to create a <a class="reference internal" href="#classesphomelib_1_1output_1_1_float_output"><span class="std std-ref">FloatOutput</span></a> yourself, you essentially just have to override <a class="reference internal" href="#classesphomelib_1_1output_1_1_float_output_1a42a42ceda67a0cf3f79b67d802c0abc0"><span class="std std-ref">write_state(float)</span></a>. That method will be called for you with inversion and max power already applied. It is</p>
 <p>This interface is compatible with <a class="reference internal" href="#classesphomelib_1_1output_1_1_binary_output"><span class="std std-ref">BinaryOutput</span></a> (and will automatically convert the binary states to floating point states for you). Additionally, this class provides a way for users to set a maximum power output </p>
 <p>Inherits from <a class="reference internal" href="#classesphomelib_1_1output_1_1_binary_output"><span class="std std-ref">esphomelib::output::BinaryOutput</span></a></p>
-<p>Subclassed by <a class="reference internal" href="ledc.html#classesphomelib_1_1output_1_1_l_e_d_c_output_component"><span class="std std-ref">esphomelib::output::LEDCOutputComponent</span></a>, <a class="reference internal" href="pca9685.html#classesphomelib_1_1output_1_1_p_c_a9685_output_component_1_1_channel"><span class="std std-ref">esphomelib::output::PCA9685OutputComponent::Channel</span></a></p>
+<p>Subclassed by <a class="reference internal" href="esp8266-pwm.html#classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output"><span class="std std-ref">esphomelib::output::ESP8266PWMOutput</span></a>, <a class="reference internal" href="ledc.html#classesphomelib_1_1output_1_1_l_e_d_c_output_component"><span class="std std-ref">esphomelib::output::LEDCOutputComponent</span></a>, <a class="reference internal" href="pca9685.html#classesphomelib_1_1output_1_1_p_c_a9685_output_component_1_1_channel"><span class="std std-ref">esphomelib::output::PCA9685OutputComponent::Channel</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -257,8 +256,8 @@
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">API Reference</a><ul>
-      <li>Previous: <a href="../input/ultrasonic-sensor.html" title="previous chapter">Ultrasonic Sensor</a></li>
-      <li>Next: <a href="gpio-binary.html" title="next chapter">GPIO Binary Output</a></li>
+      <li>Previous: <a href="../binary_sensor/status.html" title="previous chapter">Node Status Binary Sensor</a></li>
+      <li>Next: <a href="../fan/index.html" title="next chapter">Fan</a></li>
   </ul></li>
   </ul></li>
 </ul>

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ESP32 LEDC Output &#8212; esphomelib 1.1.1 documentation</title>
+    <title>PCA9685 PWM &#8212; esphomelib 1.1.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Binary Sensor" href="../binary_sensor/index.html" />
+    <link rel="next" title="ADC Sensor" href="../sensor/adc-sensor.html" />
     <link rel="prev" title="ESP32 LEDC Output" href="ledc.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
@@ -40,17 +40,20 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="esp32-ledc-output">
-<h1>ESP32 LEDC Output<a class="headerlink" href="#esp32-ledc-output" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pca9685-pwm">
+<h1>PCA9685 PWM<a class="headerlink" href="#pca9685-pwm" title="Permalink to this headline">¶</a></h1>
+<p>FloatOutput support for an <a class="reference external" href="https://www.adafruit.com/product/815">PCA9695 16-Channel PWM Driver</a>.</p>
 <div class="section" id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Setup i2c on pin 14 and 27 with frequency 400000Hz.</span>
-<span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">400000</span><span class="p">);</span>
+<span class="c1">// the last parameter frequency is only available on the ESP32!</span>
+<span class="n">App</span><span class="p">.</span><span class="n">init_i2c</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">400000</span><span class="p">);</span>
+
 <span class="c1">// Create the PCA9685 Output hub with frequency 500Hz.</span>
 <span class="k">auto</span> <span class="o">*</span><span class="n">pca9685</span> <span class="o">=</span> <span class="n">App</span><span class="p">.</span><span class="n">make_pca9685_component</span><span class="p">(</span><span class="mf">500.0f</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application22make_pca9685_componentEfR7TwoWire" title="esphomelib::Application::make_pca9685_component"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_pca9685_component()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application22make_pca9685_componentEf" title="esphomelib::Application::make_pca9685_component"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_pca9685_component()</span></code></a>.</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
@@ -64,14 +67,13 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6output22PCA9685OutputComponent22PCA9685OutputComponentEfR7TwoWire21PCA9685_PhaseBalancer7uint8_t">
-<span id="esphomelib::output::PCA9685OutputComponent::PCA9685OutputComponent__float.TwoWireR.PCA9685_PhaseBalancer.uint8_t"></span><span class="target" id="classesphomelib_1_1output_1_1_p_c_a9685_output_component_1a1d3c69ebdaab099353af1dcc3c2ca657"></span><code class="descname">PCA9685OutputComponent</code><span class="sig-paren">(</span>float <em>frequency</em>, TwoWire &amp;<em>i2c_wire</em> = Wire, PCA9685_PhaseBalancer <em>phase_balancer</em> = PCA9685_PhaseBalancer_Linear, uint8_t <em>mode</em> = PCA9685_MODE_OUTPUT_ONACK|PCA9685_MODE_OUTPUT_TPOLE<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output22PCA9685OutputComponent22PCA9685OutputComponentEfR7TwoWire21PCA9685_PhaseBalancer7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib6output22PCA9685OutputComponent22PCA9685OutputComponentEf21PCA9685_PhaseBalancer7uint8_t">
+<span id="esphomelib::output::PCA9685OutputComponent::PCA9685OutputComponent__float.PCA9685_PhaseBalancer.uint8_t"></span><span class="target" id="classesphomelib_1_1output_1_1_p_c_a9685_output_component_1add5a4b24f0bb56093e72d98b3219d598"></span><code class="descname">PCA9685OutputComponent</code><span class="sig-paren">(</span>float <em>frequency</em>, PCA9685_PhaseBalancer <em>phase_balancer</em> = PCA9685_PhaseBalancer_Linear, uint8_t <em>mode</em> = PCA9685_MODE_OUTPUT_ONACK|PCA9685_MODE_OUTPUT_TPOLE<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output22PCA9685OutputComponent22PCA9685OutputComponentEf21PCA9685_PhaseBalancer7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct the component. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal"><span class="pre">frequency</span></code>: The frequency of the PCA9685. </li>
-<li><code class="docutils literal"><span class="pre">i2c_wire</span></code>: The TwoWire (i2c) interface. </li>
 <li><code class="docutils literal"><span class="pre">phase_balancer</span></code>: How to balance phases. </li>
 <li><code class="docutils literal"><span class="pre">mode</span></code>: The output mode. For example, PCA9685_MODE_OUTPUT_ONACK or PCA9685_MODE_OUTPUT_TPOLE. </li>
 </ul>
@@ -282,12 +284,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../index.html">API Reference</a><ul>
-  <li><a href="index.html">Output</a><ul>
       <li>Previous: <a href="ledc.html" title="previous chapter">ESP32 LEDC Output</a></li>
-      <li>Next: <a href="../binary_sensor/index.html" title="next chapter">Binary Sensor</a></li>
-  </ul></li>
-  </ul></li>
+      <li>Next: <a href="../sensor/adc-sensor.html" title="next chapter">ADC Sensor</a></li>
   </ul></li>
 </ul>
 </div>

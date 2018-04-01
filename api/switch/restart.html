@@ -1,0 +1,138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Restart Switch &#8212; esphomelib 1.1.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Switch" href="index.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="restart-switch">
+<h1>Restart Switch<a class="headerlink" href="#restart-switch" title="Permalink to this headline">¶</a></h1>
+<p>This platform allows you to restart your ESP8266/ESP32 with a simple MQTT message.</p>
+<div class="section" id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">App</span><span class="p">.</span><span class="n">make_restart_switch</span><span class="p">(</span><span class="s">&quot;Livingroom Restart&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application19make_restart_switchERKNSt6stringE" title="esphomelib::Application::make_restart_switch"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_restart_switch()</span></code></a>.</p>
+</div>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N10esphomelib7switch_13RestartSwitchE">
+<span id="esphomelib::switch_::RestartSwitch"></span><span class="target" id="classesphomelib_1_1switch___1_1_restart_switch"></span><em class="property">class </em><code class="descclassname">esphomelib::switch_::</code><code class="descname">RestartSwitch</code><a class="headerlink" href="#_CPPv2N10esphomelib7switch_13RestartSwitchE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A simple switch that restarts the device when triggered. </p>
+<p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1switch___1_1_switch"><span class="std std-ref">esphomelib::switch_::Switch</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10esphomelib7switch_13RestartSwitch7turn_onEv">
+<span id="esphomelib::switch_::RestartSwitch::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_restart_switch_1a2b75403a51104f0c4507bc0eec0d5188"></span>void <code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_13RestartSwitch7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turn this switch on. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib7switch_13RestartSwitch8turn_offEv">
+<span id="esphomelib::switch_::RestartSwitch::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_restart_switch_1a190669cf16221096a4ab472bdbcd5b73"></span>void <code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_13RestartSwitch8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turn this switch off. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib7switch_13RestartSwitch4iconEv">
+<span id="esphomelib::switch_::RestartSwitch::icon"></span><span class="target" id="classesphomelib_1_1switch___1_1_restart_switch_1a2baf9b5b9c66a32d76df85a33d29396f"></span>std::string <code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_13RestartSwitch4iconEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Override this to set the Home Assistant icon for this switch. </p>
+<p>Return “” to disable this feature.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The icon of this switch, for example “mdi:fan”. </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">API Reference</a><ul>
+  <li><a href="index.html">Switch</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Switch</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/api/switch/restart.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

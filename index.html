@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Reference" href="api/index.html" />
+    <link rel="next" title="GPIO Binary Sensor" href="api/binary_sensor/gpio.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -46,17 +46,43 @@
 <p>Here you will find all of esphomelib’s API documentation together with some examples.</p>
 <p>Eventually, guides will also be setup here on how to create your own custom components
 and some basic stuff.</p>
+</div>
+<div class="section" id="supported-first-order-integrations">
+<h2>Supported First Order Integrations<a class="headerlink" href="#supported-first-order-integrations" title="Permalink to this headline">¶</a></h2>
+<p>esphomelib is using many layers of abstraction so that you can use all of these 1st
+order integrations with all 2nd order integrations (like lights or fans). For example,
+a light is a combination of output components.</p>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/binary_sensor/gpio.html">GPIO Binary Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/output/esp8266-pwm.html">ESP8266 Software PWM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/output/gpio-binary.html">GPIO Binary Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/output/ledc.html">ESP32 LEDC Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/output/pca9685.html">PCA9685 PWM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/adc-sensor.html">ADC Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/ads1115.html">ADS1115 ADC Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/bmp085.html">BMP085 Pressure/Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/dallas.html">Dallas Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/dht.html">DHT Temperature/Humidity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/htu21d.html">HTU21D Temperature/Humidity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/hdc1080.html">HDC1080 Temperature/Humidity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/pulse-counter.html">ESP32 Pulse Counter Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/sensor/ultrasonic.html">Ultrasonic Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/switch/ir-transmitter.html">IR Transmitter</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">    API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/core/index.html">Core</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/input/index.html">Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/output/index.html">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/sensor/index.html">Sensor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/binary_sensor/index.html">Binary Sensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/output/index.html">Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/fan/index.html">Fan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/light/index.html">Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/sensor/index.html">Sensor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/switch/index.html">Switch</a></li>
 </ul>
 </li>
@@ -81,7 +107,7 @@ and some basic stuff.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="api/index.html" title="next chapter">API Reference</a></li>
+      <li>Next: <a href="api/binary_sensor/gpio.html" title="next chapter">GPIO Binary Sensor</a></li>
   </ul></li>
 </ul>
 </div>

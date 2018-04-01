@@ -53,8 +53,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent19MQTTClientComponentE15MQTTCredentialsNSt6stringE">
-<span id="esphomelib::mqtt::MQTTClientComponent::MQTTClientComponent__MQTTCredentials.ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a7fd9fcdde7c5ec6a46d8a05c16889712"></span><code class="descname">MQTTClientComponent</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N10esphomelib4mqtt15MQTTCredentialsE" title="esphomelib::mqtt::MQTTCredentials">MQTTCredentials</a> <em>credentials</em>, std::string <em>node_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent19MQTTClientComponentE15MQTTCredentialsNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent19MQTTClientComponentERK15MQTTCredentials">
+<span id="esphomelib::mqtt::MQTTClientComponent::MQTTClientComponent__MQTTCredentialsCR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a3f696b9d13ef2628e94feb80003846a4"></span><code class="descname">MQTTClientComponent</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N10esphomelib4mqtt15MQTTCredentialsE" title="esphomelib::mqtt::MQTTCredentials">MQTTCredentials</a> &amp;<em>credentials</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent19MQTTClientComponentERK15MQTTCredentials" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -75,24 +75,14 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent13get_last_willEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::get_last_willC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a70bebafe444098d5654de712803a71ac"></span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a>&gt; &amp;<code class="descname">get_last_will</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent13get_last_willEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent13set_last_willERK8OptionalI11MQTTMessageE">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_last_will__Optional:MQTTMessage:CR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a0a6aefaf48d3968aed70561a298a534d"></span>void <code class="descname">set_last_will</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a>&gt; &amp;<em>last_will</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent13set_last_willERK8OptionalI11MQTTMessageE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent16remove_last_willEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::remove_last_will"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a64a5c6156a73eb2f28c6c7285cbe5625"></span>void <code class="descname">remove_last_will</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent16remove_last_willEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent17disable_last_willEv">
+<span id="esphomelib::mqtt::MQTTClientComponent::disable_last_will"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a8497e0e7a2eeb5c155e2d24f86cd3dde"></span>void <code class="descname">disable_last_will</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent17disable_last_willEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove the last will testament message. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent17set_birth_messageENSt6stringENSt6stringEb">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_birth_message__ss.ss.b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a2c9c1b0007bee46869dcd5d6fa945c14"></span>void <code class="descname">set_birth_message</code><span class="sig-paren">(</span>std::string <em>topic</em>, std::string <em>payload</em>, bool <em>retain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent17set_birth_messageENSt6stringENSt6stringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent17set_birth_messageERRNSt6stringERRNSt6stringEb">
+<span id="esphomelib::mqtt::MQTTClientComponent::set_birth_message__ssRR.ssRR.b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a05cb11666392935accb9277eb621b88b"></span>void <code class="descname">set_birth_message</code><span class="sig-paren">(</span>std::string &amp;&amp;<em>topic</em>, std::string &amp;&amp;<em>payload</em>, bool <em>retain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent17set_birth_messageERRNSt6stringERRNSt6stringEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the birth message. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
@@ -107,43 +97,14 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent17set_birth_messageERK8OptionalI11MQTTMessageE">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_birth_message__Optional:MQTTMessage:CR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a0db8b070ac0a895a4b8f3e0fbf903a31"></span>void <code class="descname">set_birth_message</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a>&gt; &amp;<em>birth_message</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent17set_birth_messageERK8OptionalI11MQTTMessageE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent20remove_birth_messageEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::remove_birth_message"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a1c3b9d771eb968e9b69741fb3b34deb1"></span>void <code class="descname">remove_birth_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent20remove_birth_messageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent21disable_birth_messageEv">
+<span id="esphomelib::mqtt::MQTTClientComponent::disable_birth_message"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1ad3289996af23ebc74b3b14a981ad6676"></span>void <code class="descname">disable_birth_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent21disable_birth_messageEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove the birth message. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent17get_birth_messageEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::get_birth_messageC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1ae366f231f408c8adfe5860a570bfdadd"></span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a>&gt; &amp;<code class="descname">get_birth_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent17get_birth_messageEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent23get_use_status_messagesEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::get_use_status_messagesC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a7e709c6b50749f362b45820490a1b654"></span>bool <code class="descname">get_use_status_messages</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent23get_use_status_messagesEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Getter for use_status_messages. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent23set_use_status_messagesEb">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_use_status_messages__b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a4ab6ef54c225aff50e45f5746f1bcdb6"></span>void <code class="descname">set_use_status_messages</code><span class="sig-paren">(</span>bool <em>use_status_messages</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent23set_use_status_messagesEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set whether this client will automatically send topic_prefix/status on connect/disconnect. </p>
-<p>This will also make all MQTTComponents use Home Assistant availability_topic feature. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent32get_default_status_message_topicEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::get_default_status_message_topicC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1abf4ef1c656d282c14d394fe5eedbea0f"></span>std::string <code class="descname">get_default_status_message_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent32get_default_status_message_topicEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the status message topic esphomelib will use by default if use_status_messages is enabled. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent18set_discovery_infoENSt6stringEb">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_discovery_info__ss.b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a960f7d6e0d1fb6d15f6de2d5e552fb65"></span>void <code class="descname">set_discovery_info</code><span class="sig-paren">(</span>std::string <em>prefix</em>, bool <em>retain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent18set_discovery_infoENSt6stringEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent18set_discovery_infoERRNSt6stringEb">
+<span id="esphomelib::mqtt::MQTTClientComponent::set_discovery_info__ssRR.b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a64dad0034aae5703372666ecdc1c1c4b"></span>void <code class="descname">set_discovery_info</code><span class="sig-paren">(</span>std::string &amp;&amp;<em>prefix</em>, bool <em>retain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent18set_discovery_infoERRNSt6stringEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the Home Assistant discovery info. </p>
 <p>See <a class="reference external" href="https://home-assistant.io/docs/mqtt/discovery/">MQTT Discovery</a>. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
@@ -157,14 +118,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent20set_discovery_retainEb">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_discovery_retain__b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a8e8dbc7679cef5bfbcefba41a463e33f"></span>void <code class="descname">set_discovery_retain</code><span class="sig-paren">(</span>bool <em>retain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent20set_discovery_retainEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Manually set whether to retain Home Assistant discovery messages. </p>
-</dd></dl>
-
-<dl class="function">
 <dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent18get_discovery_infoEv">
-<span id="esphomelib::mqtt::MQTTClientComponent::get_discovery_infoC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a72d782f90d0d31f49f527c87b0e361d0"></span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE" title="esphomelib::mqtt::MQTTDiscoveryInfo">MQTTDiscoveryInfo</a>&gt; &amp;<code class="descname">get_discovery_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent18get_discovery_infoEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTClientComponent::get_discovery_infoC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1aabe2a77e23f7643a395b9e54ae1bf660"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE" title="esphomelib::mqtt::MQTTDiscoveryInfo">MQTTDiscoveryInfo</a> &amp;<code class="descname">get_discovery_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent18get_discovery_infoEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get Home Assistant discovery info. </p>
 </dd></dl>
 
@@ -175,8 +130,24 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent16set_topic_prefixERKNSt6stringE">
-<span id="esphomelib::mqtt::MQTTClientComponent::set_topic_prefix__ssCR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a789a85a7268e4f78dd831a3035063b99"></span>void <code class="descname">set_topic_prefix</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>topic_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent16set_topic_prefixERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent20is_discovery_enabledEv">
+<span id="esphomelib::mqtt::MQTTClientComponent::is_discovery_enabledC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a785604dd38677ac888aa16e54684d3b1"></span>bool <code class="descname">is_discovery_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent20is_discovery_enabledEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent13set_client_idENSt6stringE">
+<span id="esphomelib::mqtt::MQTTClientComponent::set_client_id__ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a608d0e32f01b1df6ee02ec093993b8ca"></span>void <code class="descname">set_client_id</code><span class="sig-paren">(</span>std::string <em>client_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent13set_client_idENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manually set the client id, by default it’s &lt;name&gt;-&lt;MAC&gt;, it’s automatically truncated to 23 chars. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent16get_availabilityEv">
+<span id="esphomelib::mqtt::MQTTClientComponent::get_availability"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a38f250a418a50864e3d3962cbf49464a"></span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a> &amp;<code class="descname">get_availability</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent16get_availabilityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent16set_topic_prefixENSt6stringE">
+<span id="esphomelib::mqtt::MQTTClientComponent::set_topic_prefix__ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a28406d355d6000953822119bfe59dd05"></span>void <code class="descname">set_topic_prefix</code><span class="sig-paren">(</span>std::string <em>topic_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent16set_topic_prefixENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the topic prefix that will be prepended to all topics together with “/”. </p>
 <p>This will, in most cases, be the name of your <a class="reference internal" href="application.html#classesphomelib_1_1_application"><span class="std std-ref">Application</span></a>.</p>
 <p>For example, if “livingroom” is passed to this method, all state topics will, by default, look like “livingroom/…/state”</p>
@@ -193,7 +164,7 @@
 <dl class="function">
 <dt id="_CPPv2NK10esphomelib4mqtt19MQTTClientComponent16get_topic_prefixEv">
 <span id="esphomelib::mqtt::MQTTClientComponent::get_topic_prefixC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a41898e24539758d7f7bd548214d79c14"></span><em class="property">const</em> std::string &amp;<code class="descname">get_topic_prefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt19MQTTClientComponent16get_topic_prefixEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the topic prefix of this device. </p>
+<dd><p>Get the topic prefix of this device, using default if necessary. </p>
 </dd></dl>
 
 <dl class="function">
@@ -318,6 +289,11 @@
 <span id="esphomelib::mqtt::MQTTClientComponent::reconnect"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a316b69b975366dc3cef0d46230731917"></span>void <code class="descname">reconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent9reconnectEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
+<dl class="function">
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent24recalculate_availabilityEv">
+<span id="esphomelib::mqtt::MQTTClientComponent::recalculate_availability"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1ad2a938e69360513a559d99f9aea6c044"></span>void <code class="descname">recalculate_availability</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent24recalculate_availabilityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
@@ -328,26 +304,37 @@
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent10last_will_E">
-<span id="esphomelib::mqtt::MQTTClientComponent::last_will___Optional:MQTTMessage:"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1aee31cdcef5192f31988d6564798a4ddd"></span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a>&gt; <code class="descname">last_will_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent10last_will_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTClientComponent::last_will___MQTTMessage"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1aa8e3630115243f8397eace2cf8e6aa5a"></span><a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a> <code class="descname">last_will_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent10last_will_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The last will message. </p>
-<p>Disabled optional denotes it being disabled and an empty topic denotes the default value being used. </p>
+<p>Disabled optional denotes it being default and an empty topic denotes the the feature being disabled. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent14birth_message_E">
-<span id="esphomelib::mqtt::MQTTClientComponent::birth_message___Optional:MQTTMessage:"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a97c9d99391c0dc538b3488c1b772ca85"></span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a>&gt; <code class="descname">birth_message_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent14birth_message_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTClientComponent::birth_message___MQTTMessage"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a56af73a8de380db16c8e15f03c6e2450"></span><a class="reference internal" href="#_CPPv2N10esphomelib4mqtt11MQTTMessageE" title="esphomelib::mqtt::MQTTMessage">MQTTMessage</a> <code class="descname">birth_message_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent14birth_message_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The birth message (e.g. </p>
 <p>the message that’s send on an established connection. See last_will_ for what different values denote. </p>
 </dd></dl>
 
 <dl class="member">
+<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent13availability_E">
+<span id="esphomelib::mqtt::MQTTClientComponent::availability___Availability"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1add723814d1676251530f67d5ff5d24d2"></span><a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a> <code class="descname">availability_</code> = {}<a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent13availability_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Caches availability. </p>
+</dd></dl>
+
+<dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent15discovery_info_E">
-<span id="esphomelib::mqtt::MQTTClientComponent::discovery_info___Optional:MQTTDiscoveryInfo:"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1aff6c466dfa12ecea340a44edaccb46cc"></span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE" title="esphomelib::mqtt::MQTTDiscoveryInfo">MQTTDiscoveryInfo</a>&gt; <code class="descname">discovery_info_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent15discovery_info_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<span id="esphomelib::mqtt::MQTTClientComponent::discovery_info___MQTTDiscoveryInfo"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1a2a1c78290930b88fa404a1cb8c515f9b"></span><a class="reference internal" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE" title="esphomelib::mqtt::MQTTDiscoveryInfo">MQTTDiscoveryInfo</a> <code class="descname">discovery_info_</code> = {
+      .prefix = &quot;homeassistant&quot;,
+      .retain = true
+  }<a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent15discovery_info_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The discovery info options for Home Assistant. </p>
+<p>Undefined optional means default and empty prefix means disabled. </p>
+</dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent13topic_prefix_E">
-<span id="esphomelib::mqtt::MQTTClientComponent::topic_prefix___ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1abaf565ca72a41b92798eaea58ff45061"></span>std::string <code class="descname">topic_prefix_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent13topic_prefix_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTClientComponent::topic_prefix___ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1abaf565ca72a41b92798eaea58ff45061"></span>std::string <code class="descname">topic_prefix_</code> = {}<a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent13topic_prefix_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
@@ -363,11 +350,6 @@
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent7client_E">
 <span id="esphomelib::mqtt::MQTTClientComponent::client___WiFiClient"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1af96bc6adfe7a06c4375eb90d82d95774"></span>WiFiClient <code class="descname">client_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent7client_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib4mqtt19MQTTClientComponent20use_status_messages_E">
-<span id="esphomelib::mqtt::MQTTClientComponent::use_status_messages___b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_client_component_1ab148ac533b20ce716ee84fbbebbaefed"></span>bool <code class="descname">use_status_messages_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt19MQTTClientComponent20use_status_messages_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -488,14 +470,14 @@
 <dl class="class">
 <dt id="_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE">
 <span id="esphomelib::mqtt::MQTTDiscoveryInfo"></span><span class="target" id="structesphomelib_1_1mqtt_1_1_m_q_t_t_discovery_info"></span><em class="property">struct </em><code class="descclassname">esphomelib::mqtt::</code><code class="descname">MQTTDiscoveryInfo</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>internal struct for MQTT Home Assistant discovery </p>
+<dd><p>Internal struct for MQTT Home Assistant discovery. </p>
 <p>See <a class="reference external" href="https://home-assistant.io/docs/mqtt/discovery/">MQTT Discovery</a>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfo6prefixE">
 <span id="esphomelib::mqtt::MQTTDiscoveryInfo::prefix__ss"></span><span class="target" id="structesphomelib_1_1mqtt_1_1_m_q_t_t_discovery_info_1a36b3bc9f77a559d933fb5c4bda051916"></span>std::string <code class="descname">prefix</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfo6prefixE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The Home Assistant discovery prefix. </p>
+<dd><p>The Home Assistant discovery prefix. Empty means disabled. </p>
 </dd></dl>
 
 <dl class="member">
@@ -579,22 +561,6 @@
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent20set_custom_entity_idERKNSt6stringE">
-<span id="esphomelib::mqtt::MQTTComponent::set_custom_entity_id__ssCR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a6fb13424b92dd0b8383280eb6539ca0d"></span>void <code class="descname">set_custom_entity_id</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>entity_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent20set_custom_entity_idERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent13get_entity_idEv">
-<span id="esphomelib::mqtt::MQTTComponent::get_entity_idC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a48e6cc5c6bb0469237360cb8330a106e"></span>std::string <code class="descname">get_entity_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent13get_entity_idEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent21get_default_entity_idEv">
-<span id="esphomelib::mqtt::MQTTComponent::get_default_entity_idC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a1eca256fd574238695a3e253f5e777c1"></span>std::string <code class="descname">get_default_entity_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent21get_default_entity_idEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Generate the Home Assistant entity id by automatically transforming the friendly name. </p>
-</dd></dl>
-
-<dl class="function">
 <dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent14component_typeEv">
 <span id="esphomelib::mqtt::MQTTComponent::component_typeC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a53cef486a74bfa2328af0a0666b852e3"></span><em class="property">virtual</em> std::string <code class="descname">component_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent14component_typeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override this method to return the component type (e.g. “light”, “sensor”, …) </p>
@@ -631,23 +597,28 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent16set_availabilityERK8OptionalIN4mqtt12AvailabilityEE">
-<span id="esphomelib::mqtt::MQTTComponent::set_availability__Optional:mqtt::Availability:CR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a0d4fa574699732653db3cb7e2d47309e"></span>void <code class="descname">set_availability</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;mqtt::<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a>&gt; &amp;<em>availability</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent16set_availabilityERK8OptionalIN4mqtt12AvailabilityEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent16set_availabilityENSt6stringENSt6stringENSt6stringE">
+<span id="esphomelib::mqtt::MQTTComponent::set_availability__ss.ss.ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1aa56cd2820dc23bb69ded20e093999820"></span>void <code class="descname">set_availability</code><span class="sig-paren">(</span>std::string <em>topic</em>, std::string <em>payload_available</em>, std::string <em>payload_not_available</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent16set_availabilityENSt6stringENSt6stringENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the Home Assistant availability data. </p>
 <p>See See <a class="reference external" href="https://home-assistant.io/components/binary_sensor.mqtt/">Home Assistant</a> for more info. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent16get_availabilityEv">
-<span id="esphomelib::mqtt::MQTTComponent::get_availabilityC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a0cbca5efffbd10982076c6bc1059ca6c"></span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a>&gt; &amp;<code class="descname">get_availability</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent16get_availabilityEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTComponent::get_availabilityC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1afe37f2dcc28d19d119c0578a4011d60e"></span><em class="property">const</em> mqtt::<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a> &amp;<code class="descname">get_availability</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent16get_availabilityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent20disable_availabilityEv">
+<span id="esphomelib::mqtt::MQTTComponent::disable_availability"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a3b6ff96f279e9c7962f18ec505844788"></span>void <code class="descname">disable_availability</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent20disable_availabilityEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Functions</p>
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent19get_discovery_topicEv">
-<span id="esphomelib::mqtt::MQTTComponent::get_discovery_topicC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1ae5a0c8fae01b23baf25df97ee5ade493"></span>std::string <code class="descname">get_discovery_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent19get_discovery_topicEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent19get_discovery_topicERK17MQTTDiscoveryInfo">
+<span id="esphomelib::mqtt::MQTTComponent::get_discovery_topic__MQTTDiscoveryInfoCRC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a2d8f067bf5ca736f4008f077e3ac1887"></span>std::string <code class="descname">get_discovery_topic</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N10esphomelib4mqtt17MQTTDiscoveryInfoE" title="esphomelib::mqtt::MQTTDiscoveryInfo">MQTTDiscoveryInfo</a> &amp;<em>discovery_info</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent19get_discovery_topicERK17MQTTDiscoveryInfo" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Helper method to get the discovery topic for this component. </p>
 </dd></dl>
 
@@ -691,7 +662,7 @@
 <dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent14send_discoveryERK12json_build_tbbRKNSt6stringE">
 <span id="esphomelib::mqtt::MQTTComponent::send_discovery__json_build_tCR.b.b.ssCR"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a4dc0ebbee1e3cab2d78e81cb0898a591"></span>void <code class="descname">send_discovery</code><span class="sig-paren">(</span><em class="property">const</em> json_build_t &amp;<em>f</em>, bool <em>state_topic</em> = true, bool <em>command_topic</em> = true, <em class="property">const</em> std::string &amp;<em>platform</em> = &quot;mqtt&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent14send_discoveryERK12json_build_tbbRKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Send discovery info. </p>
-<p>Sends discovery info to the topic returned by <a class="reference internal" href="#classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1ae5a0c8fae01b23baf25df97ee5ade493"><span class="std std-ref">get_discovery_topic()</span></a> using the specified component type (“light”, “sensor”, …). Automatically populates “name” and “platform” which defaults to “mqtt” but can be overridden. If state_topic is set to true, the state topic from <a class="reference internal" href="#classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1aeb28f07383441e069b3168fd575845b3"><span class="std std-ref">get_state_topic()</span></a> is aditionally included. The same applies to command_topic. Aditionally a “platform” can be specified to specify which platform should</p>
+<p>Sends discovery info to the topic returned by <a class="reference internal" href="#classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a2d8f067bf5ca736f4008f077e3ac1887"><span class="std std-ref">get_discovery_topic()</span></a> using the specified component type (“light”, “sensor”, …). Automatically populates “name” and “platform” which defaults to “mqtt” but can be overridden. If state_topic is set to true, the state topic from <a class="reference internal" href="#classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1aeb28f07383441e069b3168fd575845b3"><span class="std std-ref">get_state_topic()</span></a> is aditionally included. The same applies to command_topic. Aditionally a “platform” can be specified to specify which platform should</p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
@@ -785,6 +756,12 @@
 </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv2NK10esphomelib4mqtt13MQTTComponent21get_default_object_idEv">
+<span id="esphomelib::mqtt::MQTTComponent::get_default_object_idC"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a748a372ecc38c469afbfc54e49694a22"></span>std::string <code class="descname">get_default_object_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib4mqtt13MQTTComponent21get_default_object_idEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generate the Home Assistant MQTT discovery object id by automatically transforming the friendly name. </p>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
@@ -795,23 +772,18 @@
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent17custom_entity_id_E">
-<span id="esphomelib::mqtt::MQTTComponent::custom_entity_id___ss"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a1535cf41442f9ca45182ad083dabf7d5"></span>std::string <code class="descname">custom_entity_id_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent17custom_entity_id_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent14custom_topics_E">
-<span id="esphomelib::mqtt::MQTTComponent::custom_topics___std::map:ss.ss:"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a835ee1aa49221f05e8ab0dba09afaddf"></span>std::map&lt;std::string, std::string&gt; <code class="descname">custom_topics_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent14custom_topics_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTComponent::custom_topics___std::map:ss.ss:"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a835ee1aa49221f05e8ab0dba09afaddf"></span>std::map&lt;std::string, std::string&gt; <code class="descname">custom_topics_</code> = {}<a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent14custom_topics_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent7retain_E">
-<span id="esphomelib::mqtt::MQTTComponent::retain___b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a23c3b0e26a85150d990a761d95c396d7"></span>bool <code class="descname">retain_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent7retain_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTComponent::retain___b"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a23c3b0e26a85150d990a761d95c396d7"></span>bool <code class="descname">retain_</code> = {true}<a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent7retain_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt13MQTTComponent13availability_E">
-<span id="esphomelib::mqtt::MQTTComponent::availability___Optional:Availability:"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a26d9351996fed7a27bdad53897e88ad8"></span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a>&gt; <code class="descname">availability_</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent13availability_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::mqtt::MQTTComponent::availability___AvailabilityP"></span><span class="target" id="classesphomelib_1_1mqtt_1_1_m_q_t_t_component_1a4673ef4895b62d378c708b0ddb0d8a61"></span><a class="reference internal" href="#_CPPv2N10esphomelib4mqtt12AvailabilityE" title="esphomelib::mqtt::Availability">Availability</a> *<code class="descname">availability_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib4mqtt13MQTTComponent13availability_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -826,7 +798,8 @@
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt12Availability5topicE">
 <span id="esphomelib::mqtt::Availability::topic__ss"></span><span class="target" id="structesphomelib_1_1mqtt_1_1_availability_1addf40193ec4035708d86de6b06844754"></span>std::string <code class="descname">topic</code><a class="headerlink" href="#_CPPv2N10esphomelib4mqtt12Availability5topicE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Empty means disabled. </p>
+</dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib4mqtt12Availability17payload_availableE">

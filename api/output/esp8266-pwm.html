@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ESP8266 Software PWM &#8212; esphomelib 1.1.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GPIO Binary Output" href="gpio-binary.html" />
+    <link rel="prev" title="GPIO Binary Sensor" href="../binary_sensor/gpio.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="esp8266-software-pwm">
+<h1>ESP8266 Software PWM<a class="headerlink" href="#esp8266-software-pwm" title="Permalink to this headline">¶</a></h1>
+<p>Software PWM for the ESP8266. Warning: This is a <em>software</em> PWM and therefore can have noticeable flickering.
+Additionally, this software PWM can’t output values higher than 80%. That’s a known limitation.</p>
+<div class="section" id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
+<span class="k">auto</span> <span class="o">*</span><span class="n">output</span> <span class="o">=</span> <span class="n">App</span><span class="p">.</span><span class="n">make_esp8266_pwm_output</span><span class="p">(</span><span class="n">D2</span><span class="p">);</span>
+<span class="c1">// Create a brightness-only light with it:</span>
+<span class="n">App</span><span class="p">.</span><span class="n">make_monochromatic_light</span><span class="p">(</span><span class="s">&quot;Desk Lamp&quot;</span><span class="p">,</span> <span class="n">output</span><span class="p">);</span>
+
+<span class="c1">// Advanced: Setting a custom frequency globally</span>
+<span class="n">analogWriteFreq</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application23make_esp8266_pwm_outputE13GPIOOutputPin" title="esphomelib::Application::make_esp8266_pwm_output"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_esp8266_pwm_output()</span></code></a>.</p>
+</div>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="esp8266pwmoutput">
+<h3>ESP8266PWMOutput<a class="headerlink" href="#esp8266pwmoutput" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutputE">
+<span id="esphomelib::output::ESP8266PWMOutput"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output"></span><em class="property">class </em><code class="descclassname">esphomelib::output::</code><code class="descname">ESP8266PWMOutput</code><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Software PWM output component for ESP8266. </p>
+<p>Supported pins are 0-16. By default, this uses a frequency of 1000Hz, and this can only be changed globally for all software PWM pins. To change the PWM frequency, do the following:</p>
+<p><div class="highlight-c++"><div class="highlight"><pre><span></span><span class="n">analogWriteFreq</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> <span class="c1">// 500Hz frequency for all pins.</span>
+</pre></div>
+</div>
+</p>
+<p>Note that this is a software PWM and can have noticeable flickering because of other interrupts on the ESP8266 (like WiFi). Additionally, this PWM output can only be 80% on at max. That is a known limitation, if it’s a deal breaker, consider using the ESP32 instead - it up to 16 integrated hardware PWM channels. </p>
+<p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1output_1_1_float_output"><span class="std std-ref">esphomelib::output::FloatOutput</span></a>, <a class="reference internal" href="../core/component.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutput16ESP8266PWMOutputERK13GPIOOutputPin">
+<span id="esphomelib::output::ESP8266PWMOutput::ESP8266PWMOutput__GPIOOutputPinCR"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1a44855640965d5699b3858b9713f5cd65"></span><code class="descname">ESP8266PWMOutput</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutput16ESP8266PWMOutputERK13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct the Software PWM output. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pin</span></code>: The pin to be used (inversion of the pin will be ignored, use the direct <a class="reference internal" href="index.html#classesphomelib_1_1output_1_1_binary_output_1ad3a31ea155ab24096e1035e50f4bf43c"><span class="std std-ref">set_inverted()</span></a>) method instead. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutput7get_pinEv">
+<span id="esphomelib::output::ESP8266PWMOutput::get_pin"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1a9940f858e0f7048ff257a0ab9d31a634"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<code class="descname">get_pin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutput7get_pinEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the output pin used by this component. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutput7set_pinERK13GPIOOutputPin">
+<span id="esphomelib::output::ESP8266PWMOutput::set_pin__GPIOOutputPinCR"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1add66dcc7d8c0f79300854d9abb5b9e1a"></span>void <code class="descname">set_pin</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutput7set_pinERK13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutput5setupEv">
+<span id="esphomelib::output::ESP8266PWMOutput::setup"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1ac472529695eea9fbe6518c7b44c2d131"></span>void <code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutput5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize pin. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10esphomelib6output16ESP8266PWMOutput18get_setup_priorityEv">
+<span id="esphomelib::output::ESP8266PWMOutput::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1a3419e7a59f5c02f550d3a3c50e7e3ffc"></span>float <code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib6output16ESP8266PWMOutput18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>HARDWARE <a class="reference internal" href="../core/component.html#namespaceesphomelib_1_1setup__priority"><span class="std std-ref">setup_priority</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutput11write_stateEf">
+<span id="esphomelib::output::ESP8266PWMOutput::write_state__float"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1a1e7dcdc7b74945da297101ffaa87a246"></span>void <code class="descname">write_state</code><span class="sig-paren">(</span>float <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutput11write_stateEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Override <a class="reference internal" href="index.html#classesphomelib_1_1output_1_1_float_output"><span class="std std-ref">FloatOutput</span></a>’s write_state for analogWrite. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N10esphomelib6output16ESP8266PWMOutput4pin_E">
+<span id="esphomelib::output::ESP8266PWMOutput::pin___GPIOOutputPin"></span><span class="target" id="classesphomelib_1_1output_1_1_e_s_p8266_p_w_m_output_1ad92caa0dc9c371337d8b48550df93027"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <code class="descname">pin_</code><a class="headerlink" href="#_CPPv2N10esphomelib6output16ESP8266PWMOutput4pin_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../binary_sensor/gpio.html" title="previous chapter">GPIO Binary Sensor</a></li>
+      <li>Next: <a href="gpio-binary.html" title="next chapter">GPIO Binary Output</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/api/output/esp8266-pwm.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

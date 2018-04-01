@@ -122,7 +122,7 @@
 <p class="breathe-sectiondef-title rubric">Variables</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib28HOSTNAME_CHARACTER_WHITELISTE">
-<span id="esphomelib::HOSTNAME_CHARACTER_WHITELIST__ssC"></span><span class="target" id="helpers_8h_1a2c9e62a6340bc2b1ed2ea6ca8c6c8071"></span><em class="property">const</em> std::string <code class="descname">HOSTNAME_CHARACTER_WHITELIST</code> = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_&quot;<a class="headerlink" href="#_CPPv2N10esphomelib28HOSTNAME_CHARACTER_WHITELISTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::HOSTNAME_CHARACTER_WHITELIST__cCP"></span><span class="target" id="helpers_8h_1a689112f48419190a280cad116b1675fc"></span><em class="property">const</em> char *<code class="descname">HOSTNAME_CHARACTER_WHITELIST</code> = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_&quot;<a class="headerlink" href="#_CPPv2N10esphomelib28HOSTNAME_CHARACTER_WHITELISTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The characters that are allowed in a hostname. </p>
 </dd></dl>
 
@@ -144,8 +144,8 @@ template&lt;&gt;<br /><em class="property">class </em><code class="descname">Cal
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib15CallbackManager3addENSt8functionIFvDp2TsEEE">
-<span class="target" id="classesphomelib_1_1_callback_manager_3_01void_07_ts_8_8_8_08_4_1a1c6485a9a98c3e6041ec61e190f7d542"></span>void <code class="descname">add</code><span class="sig-paren">(</span>std::function&lt;void<span class="sig-paren">(</span>Ts...<span class="sig-paren">)</span>&gt; <em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib15CallbackManager3addENSt8functionIFvDp2TsEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib15CallbackManager3addERRNSt8functionIFvDp2TsEEE">
+<span class="target" id="classesphomelib_1_1_callback_manager_3_01void_07_ts_8_8_8_08_4_1ad6347d9c70dde68959373b311b8ee3a8"></span>void <code class="descname">add</code><span class="sig-paren">(</span>std::function&lt;void<span class="sig-paren">(</span>Ts...<span class="sig-paren">)</span>&gt; &amp;&amp;<em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib15CallbackManager3addERRNSt8functionIFvDp2TsEEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add a callback to the internal callback list. </p>
 </dd></dl>
 
@@ -627,6 +627,169 @@ template&lt;&gt;<br /><em class="property">class </em><code class="descname">Cal
 <dl class="function">
 <dt id="_CPPv2N10esphomelib12GPIOInputPin12GPIOInputPinE7uint8_t7uint8_tb">
 <span id="esphomelib::GPIOInputPin::GPIOInputPin__uint8_t.uint8_t.b"></span><span class="target" id="classesphomelib_1_1_g_p_i_o_input_pin_1a244ea6a7ddd7fb3f207eda8463da8a0d"></span><code class="descname">GPIOInputPin</code><span class="sig-paren">(</span>uint8_t <em>pin</em>, uint8_t <em>mode</em> = INPUT, bool <em>inverted</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib12GPIOInputPin12GPIOInputPinE7uint8_t7uint8_tb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="esponewire">
+<h3>ESPOneWire<a class="headerlink" href="#esponewire" title="Permalink to this headline">¶</a></h3>
+<p>esphomelib has its own implementation of OneWire, because the implementation in the Arduino libraries
+seems to have lots of timing issues with the ESP8266/ESP32. That’s why ESPOneWire was created.</p>
+<dl class="class">
+<dt id="_CPPv2N10esphomelib10ESPOneWireE">
+<span id="esphomelib::ESPOneWire"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire"></span><em class="property">class </em><code class="descclassname">esphomelib::</code><code class="descname">ESPOneWire</code><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWireE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This is esphomelib’s own (minimal) implementation of 1-Wire that improves timing for ESP boards. </p>
+<p>It’s more or less the same as Arduino’s internal library but uses some fancy C++ and 64 bit unsigned integers to make our lives easier. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire10ESPOneWireE7uint8_t">
+<span id="esphomelib::ESPOneWire::ESPOneWire__uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1abe8892e444480cf178227a7d41a535ce"></span><code class="descname">ESPOneWire</code><span class="sig-paren">(</span>uint8_t <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire10ESPOneWireE7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a OneWire instance for the specified pin. There should only exist one instance per pin. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire5resetEv">
+<span id="esphomelib::ESPOneWire::reset"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1ac155b35fa55e50b58b2034d9ebe1b930"></span>bool <code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire5resetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reset the bus, should be done before all write operations. </p>
+<p>Takes approximately 1ms.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Whether the operation was successful. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire9write_bitEb">
+<span id="esphomelib::ESPOneWire::write_bit__b"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a6e393cd3ebe34dc5eace1fb1f9347a1a"></span>void <code class="descname">write_bit</code><span class="sig-paren">(</span>bool <em>bit</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire9write_bitEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a single bit to the bus, takes about 70µs. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire8read_bitEv">
+<span id="esphomelib::ESPOneWire::read_bit"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1aa2ae6740c83c95296e77ee454b2c22e5"></span>bool <code class="descname">read_bit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire8read_bitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read a single bit from the bus, takes about 70µs. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire6write8E7uint8_t">
+<span id="esphomelib::ESPOneWire::write8__uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a5b1739111e673deb30fcdfed32b8a42c"></span>void <code class="descname">write8</code><span class="sig-paren">(</span>uint8_t <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire6write8E7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a word to the bus. LSB first. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire7write64E8uint64_t">
+<span id="esphomelib::ESPOneWire::write64__uint64_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a4d564b30da87bd001b66a6cdc79e44af"></span>void <code class="descname">write64</code><span class="sig-paren">(</span>uint64_t <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire7write64E8uint64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a 64 bit unsigned integer to the bus. LSB first. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire4skipEv">
+<span id="esphomelib::ESPOneWire::skip"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a4286b2022688f8ed0480ed84fbb6721a"></span>void <code class="descname">skip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire4skipEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a command to the bus that addresses all devices by skipping the ROM. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire5read8Ev">
+<span id="esphomelib::ESPOneWire::read8"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1acd280a7596aab9aacb6292ad70376be5"></span>uint8_t <code class="descname">read8</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire5read8Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read an 8 bit word from the bus. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire6read64Ev">
+<span id="esphomelib::ESPOneWire::read64"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a7a513cb7bb95ff918fbefb43a3544f7d"></span>uint64_t <code class="descname">read64</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire6read64Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read an 64-bit unsigned integer from the bus. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire6selectE8uint64_t">
+<span id="esphomelib::ESPOneWire::select__uint64_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1ae344022314d3d04e058737ccfc8522d5"></span>void <code class="descname">select</code><span class="sig-paren">(</span>uint64_t <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire6selectE8uint64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Select a specific address on the bus for the following command. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire12reset_searchEv">
+<span id="esphomelib::ESPOneWire::reset_search"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a9d3ded3aaf2fd5dfd0077c4de47f8697"></span>void <code class="descname">reset_search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire12reset_searchEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reset the device search. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire6searchEv">
+<span id="esphomelib::ESPOneWire::search"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1abee390ae0b4991ee26147d6e6a83c589"></span>uint64_t <code class="descname">search</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire6searchEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Search for a 1-Wire device on the bus. Returns 0 if all devices have been found. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire10search_vecEv">
+<span id="esphomelib::ESPOneWire::search_vec"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1af4ed210d56293044c7dd633c196dbafd"></span>std::vector&lt;uint64_t&gt; <code class="descname">search_vec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire10search_vecEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper that wraps search in a std::vector. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire4crc8EP7uint8_t7uint8_t">
+<span id="esphomelib::ESPOneWire::crc8__uint8_tP.uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a9ef02afcc61e8af5f352fece223b2a55"></span>uint8_t <code class="descname">crc8</code><span class="sig-paren">(</span>uint8_t *<em>addr</em>, uint8_t <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire4crc8EP7uint8_t7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper to create a CRC8 bit checksum for the specified address and length. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire13digital_read_Ev">
+<span id="esphomelib::ESPOneWire::digital_read_"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1ab1c0f46b8d498bc7fb52b332c0191ac4"></span>bool <code class="descname">digital_read_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire13digital_read_Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper to read the value on the bus. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire14digital_write_E7uint8_t">
+<span id="esphomelib::ESPOneWire::digital_write___uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a99c02ae20aeeba13a5eaa644d9dc7797"></span>void <code class="descname">digital_write_</code><span class="sig-paren">(</span>uint8_t <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire14digital_write_E7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper to pull the bus low/high. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire9pin_mode_E7uint8_t">
+<span id="esphomelib::ESPOneWire::pin_mode___uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1ad5cc23769a933eb751e349dee2ea71d7"></span>void <code class="descname">pin_mode_</code><span class="sig-paren">(</span>uint8_t <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire9pin_mode_E7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper to set the pin mode on the bus. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib10ESPOneWire12rom_number8_Ev">
+<span id="esphomelib::ESPOneWire::rom_number8_"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a2d17568ad37078d0952217247499b81e"></span>uint8_t *<code class="descname">rom_number8_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire12rom_number8_Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper to get the internal 64-bit unsigned rom number as a 8-bit integer pointer. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N10esphomelib10ESPOneWire4pin_E">
+<span id="esphomelib::ESPOneWire::pin___uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1ad59867e5103bce7906025dd3a110cbc6"></span>uint8_t <code class="descname">pin_</code><a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire4pin_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib10ESPOneWire17last_discrepancy_E">
+<span id="esphomelib::ESPOneWire::last_discrepancy___uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a4c8e20188f5ef3149fde7025b256995f"></span>uint8_t <code class="descname">last_discrepancy_</code> = {0}<a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire17last_discrepancy_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib10ESPOneWire24last_family_discrepancy_E">
+<span id="esphomelib::ESPOneWire::last_family_discrepancy___uint8_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a78cdcb35aca690af45def29d3e8aac8c"></span>uint8_t <code class="descname">last_family_discrepancy_</code> = {0}<a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire24last_family_discrepancy_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib10ESPOneWire17last_device_flag_E">
+<span id="esphomelib::ESPOneWire::last_device_flag___b"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a19e17e2e6eda5eb581b57565d0e46123"></span>bool <code class="descname">last_device_flag_</code> = {false}<a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire17last_device_flag_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib10ESPOneWire10rom_numberE">
+<span id="esphomelib::ESPOneWire::rom_number__uint64_t"></span><span class="target" id="classesphomelib_1_1_e_s_p_one_wire_1a12239e332443978d253a8bd9501a9ffc"></span>uint64_t <code class="descname">rom_number</code> = {0}<a class="headerlink" href="#_CPPv2N10esphomelib10ESPOneWire10rom_numberE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

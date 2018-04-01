@@ -23,8 +23,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Switch" href="../switch/index.html" />
-    <link rel="prev" title="Light" href="../light/index.html" />
+    <link rel="next" title="Binary Sensor" href="../binary_sensor/index.html" />
+    <link rel="prev" title="Power Supply" href="../core/power-supply.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -42,8 +42,21 @@
             
   <div class="section" id="sensor">
 <h1>Sensor<a class="headerlink" href="#sensor" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="xref cpp cpp-any docutils literal"><span class="pre">esphomelib::sensor</span></code> namespace contains all sensor helpers.</p>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application20make_mqtt_sensor_forEPN6sensor6SensorENSt6stringE" title="esphomelib::Application::make_mqtt_sensor_for"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_mqtt_sensor_for()</span></code></a>.</p>
+<p>The <code class="xref cpp cpp-any docutils literal"><span class="pre">esphomelib::sensor</span></code> namespace contains all sensors.</p>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application20make_mqtt_sensor_forEPN6sensor6SensorERKNSt6stringE" title="esphomelib::Application::make_mqtt_sensor_for"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_mqtt_sensor_for()</span></code></a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adc-sensor.html">ADC Sensor Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallas.html">Dallas Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dht.html">DHT Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulse-counter.html">ESP32 Pulse Counter Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ultrasonic.html">Ultrasonic Sensor Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ads1115.html">ADS1115 ADC Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bmp085.html">BMP085 Pressure/Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="htu21d.html">HTU21D Temperature/Humidity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hdc1080.html">HDC1080 Temperature/Humidity Sensor</a></li>
+</ul>
+</div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
@@ -53,7 +66,7 @@
 <span id="esphomelib::sensor::Sensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_sensor"></span><em class="property">class </em><code class="descclassname">esphomelib::sensor::</code><code class="descname">Sensor</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor6SensorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Base-class for all sensors. </p>
 <p>A sensor has unit of measurement and can use push_new_value to send out a new value with the specified accuracy. </p>
-<p>Subclassed by <a class="reference internal" href="../input/dallas.html#classesphomelib_1_1input_1_1_dallas_temperature_sensor"><span class="std std-ref">esphomelib::input::DallasTemperatureSensor</span></a>, esphomelib::input::DHTHumiditySensor, esphomelib::input::DHTTemperatureSensor, <a class="reference internal" href="#classesphomelib_1_1sensor_1_1_polling_sensor_component"><span class="std std-ref">esphomelib::sensor::PollingSensorComponent</span></a></p>
+<p>Subclassed by <a class="reference internal" href="ads1115.html#classesphomelib_1_1sensor_1_1_a_d_s1115_sensor"><span class="std std-ref">esphomelib::sensor::ADS1115Sensor</span></a>, <a class="reference internal" href="bmp085.html#classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor"><span class="std std-ref">esphomelib::sensor::BMP085PressureSensor</span></a>, <a class="reference internal" href="bmp085.html#classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor"><span class="std std-ref">esphomelib::sensor::BMP085TemperatureSensor</span></a>, <a class="reference internal" href="dallas.html#classesphomelib_1_1sensor_1_1_dallas_temperature_sensor"><span class="std std-ref">esphomelib::sensor::DallasTemperatureSensor</span></a>, <a class="reference internal" href="dht.html#classesphomelib_1_1sensor_1_1_d_h_t_humidity_sensor"><span class="std std-ref">esphomelib::sensor::DHTHumiditySensor</span></a>, <a class="reference internal" href="dht.html#classesphomelib_1_1sensor_1_1_d_h_t_temperature_sensor"><span class="std std-ref">esphomelib::sensor::DHTTemperatureSensor</span></a>, <a class="reference internal" href="hdc1080.html#classesphomelib_1_1sensor_1_1_h_d_c1080_humidity_sensor"><span class="std std-ref">esphomelib::sensor::HDC1080HumiditySensor</span></a>, <a class="reference internal" href="hdc1080.html#classesphomelib_1_1sensor_1_1_h_d_c1080_temperature_sensor"><span class="std std-ref">esphomelib::sensor::HDC1080TemperatureSensor</span></a>, <a class="reference internal" href="htu21d.html#classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor"><span class="std std-ref">esphomelib::sensor::HTU21DHumiditySensor</span></a>, <a class="reference internal" href="htu21d.html#classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor"><span class="std std-ref">esphomelib::sensor::HTU21DTemperatureSensor</span></a>, <a class="reference internal" href="#classesphomelib_1_1sensor_1_1_polling_sensor_component"><span class="std std-ref">esphomelib::sensor::PollingSensorComponent</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -129,52 +142,43 @@
 <span class="target" id="sensor_8h_1a88921d420ae341a907ff9ede5fee2f95"></span><em class="property">using </em><code class="descname">esphomelib::sensor::sensor_callback_t = typedef std::function&lt;void(float)&gt;</code></dt>
 <dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor27UNIT_OF_MEASUREMENT_CELSIUSE">
-<span id="esphomelib::sensor::UNIT_OF_MEASUREMENT_CELSIUS__ssC"></span><span class="target" id="sensor_8h_1a080d9596b3073c829b3fd5feeaaa4b59"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">UNIT_OF_MEASUREMENT_CELSIUS</code> = &quot;°C&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor27UNIT_OF_MEASUREMENT_CELSIUSE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor27UNIT_OF_MEASUREMENT_PERCENTE">
-<span id="esphomelib::sensor::UNIT_OF_MEASUREMENT_PERCENT__ssC"></span><span class="target" id="sensor_8h_1a39329014b6c6c35b88cb7ceae3b5978f"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">UNIT_OF_MEASUREMENT_PERCENT</code> = &quot;%&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor27UNIT_OF_MEASUREMENT_PERCENTE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor24UNIT_OF_MEASUREMENT_VOLTE">
-<span id="esphomelib::sensor::UNIT_OF_MEASUREMENT_VOLT__ssC"></span><span class="target" id="sensor_8h_1a0459c60960ae3e391db00220a406c644"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">UNIT_OF_MEASUREMENT_VOLT</code> = &quot;V&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor24UNIT_OF_MEASUREMENT_VOLTE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor25UNIT_OF_MEASUREMENT_METERE">
-<span id="esphomelib::sensor::UNIT_OF_MEASUREMENT_METER__ssC"></span><span class="target" id="sensor_8h_1a09b23669f58d318c83ab269303296b12"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">UNIT_OF_MEASUREMENT_METER</code> = &quot;m&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor25UNIT_OF_MEASUREMENT_METERE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor16ICON_TEMPERATUREE">
-<span id="esphomelib::sensor::ICON_TEMPERATURE__ssC"></span><span class="target" id="sensor_8h_1a4888963f51a0f11335d83d108553ba94"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">ICON_TEMPERATURE</code> = &quot;&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor16ICON_TEMPERATUREE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Home Assistant will set this itself because of unit of measurement. </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor13ICON_HUMIDITYE">
-<span id="esphomelib::sensor::ICON_HUMIDITY__ssC"></span><span class="target" id="sensor_8h_1a07afa61a5b7d3639a5f2606d7b4f3bd3"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">ICON_HUMIDITY</code> = &quot;mdi:water-percent&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor13ICON_HUMIDITYE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor12ICON_VOLTAGEE">
-<span id="esphomelib::sensor::ICON_VOLTAGE__ssC"></span><span class="target" id="sensor_8h_1a64254b6687c51f268d876dc0e0b38e54"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">ICON_VOLTAGE</code> = &quot;mdi:flash&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor12ICON_VOLTAGEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor13ICON_DISTANCEE">
-<span id="esphomelib::sensor::ICON_DISTANCE__ssC"></span><span class="target" id="sensor_8h_1ac53c587b041c76074089ea12049c381d"></span><em class="property">const</em> std::string <code class="descclassname">esphomelib::sensor::</code><code class="descname">ICON_DISTANCE</code> = &quot;mdi:arrow-expand-vertical&quot;<a class="headerlink" href="#_CPPv2N10esphomelib6sensor13ICON_DISTANCEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::UNIT_OF_MEASUREMENT_CELSIUS” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::UNIT_OF_MEASUREMENT_PERCENT” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::UNIT_OF_MEASUREMENT_VOLT” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::UNIT_OF_MEASUREMENT_METER” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::ICON_TEMPERATURE” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::ICON_HUMIDITY” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::ICON_VOLTAGE” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenvariable: Cannot find variable “esphomelib::sensor::ICON_DISTANCE” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
+</div>
 <dl class="class">
 <dt id="_CPPv2N10esphomelib6sensor22PollingSensorComponentE">
 <span id="esphomelib::sensor::PollingSensorComponent"></span><span class="target" id="classesphomelib_1_1sensor_1_1_polling_sensor_component"></span><em class="property">class </em><code class="descclassname">esphomelib::sensor::</code><code class="descname">PollingSensorComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor22PollingSensorComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Inherits from <a class="reference internal" href="../core/component.html#classesphomelib_1_1_polling_component"><span class="std std-ref">esphomelib::PollingComponent</span></a>, <a class="reference internal" href="#classesphomelib_1_1sensor_1_1_sensor"><span class="std std-ref">esphomelib::sensor::Sensor</span></a></p>
-<p>Subclassed by <a class="reference internal" href="../input/adc-sensor.html#classesphomelib_1_1input_1_1_a_d_c_sensor_component"><span class="std std-ref">esphomelib::input::ADCSensorComponent</span></a>, <a class="reference internal" href="../input/pulse-counter-sensor.html#classesphomelib_1_1input_1_1_pulse_counter_sensor_component"><span class="std std-ref">esphomelib::input::PulseCounterSensorComponent</span></a>, <a class="reference internal" href="../input/ultrasonic-sensor.html#classesphomelib_1_1input_1_1_ultrasonic_sensor_component"><span class="std std-ref">esphomelib::input::UltrasonicSensorComponent</span></a></p>
+<p>Subclassed by <a class="reference internal" href="adc-sensor.html#classesphomelib_1_1sensor_1_1_a_d_c_sensor_component"><span class="std std-ref">esphomelib::sensor::ADCSensorComponent</span></a>, <a class="reference internal" href="pulse-counter.html#classesphomelib_1_1sensor_1_1_pulse_counter_sensor_component"><span class="std std-ref">esphomelib::sensor::PulseCounterSensorComponent</span></a>, <a class="reference internal" href="ultrasonic.html#classesphomelib_1_1sensor_1_1_ultrasonic_sensor_component"><span class="std std-ref">esphomelib::sensor::UltrasonicSensorComponent</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -593,8 +597,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor19MQTTSensorComponent19MQTTSensorComponentENSt6stringEP6Sensor">
-<span id="esphomelib::sensor::MQTTSensorComponent::MQTTSensorComponent__ss.SensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_m_q_t_t_sensor_component_1ad9caad65e8bcbe54517734c9896d0d2e"></span><code class="descname">MQTTSensorComponent</code><span class="sig-paren">(</span>std::string <em>friendly_name</em>, <a class="reference internal" href="#_CPPv2N10esphomelib6sensor6SensorE" title="esphomelib::sensor::Sensor">Sensor</a> *<em>sensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor19MQTTSensorComponent19MQTTSensorComponentENSt6stringEP6Sensor" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib6sensor19MQTTSensorComponent19MQTTSensorComponentERKNSt6stringEP6Sensor">
+<span id="esphomelib::sensor::MQTTSensorComponent::MQTTSensorComponent__ssCR.SensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_m_q_t_t_sensor_component_1a3521186f5c893a193a8caf272507ace6"></span><code class="descname">MQTTSensorComponent</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>friendly_name</em>, <a class="reference internal" href="#_CPPv2N10esphomelib6sensor6SensorE" title="esphomelib::sensor::Sensor">Sensor</a> *<em>sensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor19MQTTSensorComponent19MQTTSensorComponentERKNSt6stringEP6Sensor" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct this <a class="reference internal" href="#classesphomelib_1_1sensor_1_1_m_q_t_t_sensor_component"><span class="std std-ref">MQTTSensorComponent</span></a> instance with the provided friendly_name and sensor. </p>
 <p>Note the sensor is never stored and is only used for initializing some values of this class. If sensor is nullptr, then automatic initialization of these fields is disabled.</p>
 <p><dl class="docutils">
@@ -880,8 +884,8 @@
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">API Reference</a><ul>
-      <li>Previous: <a href="../light/index.html" title="previous chapter">Light</a></li>
-      <li>Next: <a href="../switch/index.html" title="next chapter">Switch</a></li>
+      <li>Previous: <a href="../core/power-supply.html" title="previous chapter">Power Supply</a></li>
+      <li>Next: <a href="../binary_sensor/index.html" title="next chapter">Binary Sensor</a></li>
   </ul></li>
   </ul></li>
 </ul>

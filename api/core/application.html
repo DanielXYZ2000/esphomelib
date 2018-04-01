@@ -101,7 +101,7 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 
 <dl class="function">
 <dt id="_CPPv2N10esphomelib11Application9init_wifiERKNSt6stringERKNSt6stringE">
-<span id="esphomelib::Application::init_wifi__ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a4f1a46470cf81d62b69a7d796bef1cf5"></span><a class="reference internal" href="wifi.html#_CPPv2N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a> *<code class="descname">init_wifi</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em>, <em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application9init_wifiERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::init_wifi__ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a8c9e95a27240d376347db2a48bb923e4"></span><a class="reference internal" href="wifi.html#_CPPv2N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a> *<code class="descname">init_wifi</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em>, <em class="property">const</em> std::string &amp;<em>password</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application9init_wifiERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Initialize the WiFi system. </p>
 <p>Note: for advanced options, such as manual ip, use the return value.</p>
 <p><dl class="docutils">
@@ -110,7 +110,7 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal"><span class="pre">ssid</span></code>: The ssid of the network you want to connect to. </li>
-<li><code class="docutils literal"><span class="pre">password</span></code>: The password of your network. </li>
+<li><code class="docutils literal"><span class="pre">password</span></code>: The password of your network. Leave empty for no password </li>
 </ul>
 </dd>
 </dl>
@@ -129,8 +129,8 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringE8uint16_tRKNSt6stringERKNSt6stringERKNSt6stringE">
-<span id="esphomelib::Application::init_mqtt__ssCR.uint16_t.ssCR.ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a5b5becb781e6ff8e9ac199073703e2fb"></span>MQTTClientComponent *<code class="descname">init_mqtt</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>address</em>, uint16_t <em>port</em>, <em class="property">const</em> std::string &amp;<em>username</em>, <em class="property">const</em> std::string &amp;<em>password</em>, <em class="property">const</em> std::string &amp;<em>discovery_prefix</em> = &quot;homeassistant&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringE8uint16_tRKNSt6stringERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringE8uint16_tRKNSt6stringERKNSt6stringE">
+<span id="esphomelib::Application::init_mqtt__ssCR.uint16_t.ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a7015ccfae9562ca59f0d615bd5d5c5da"></span>MQTTClientComponent *<code class="descname">init_mqtt</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>address</em>, uint16_t <em>port</em>, <em class="property">const</em> std::string &amp;<em>username</em>, <em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringE8uint16_tRKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Initialize the MQTT client. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -141,7 +141,6 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <li><code class="docutils literal"><span class="pre">port</span></code>: The port of your server. </li>
 <li><code class="docutils literal"><span class="pre">username</span></code>: The username. </li>
 <li><code class="docutils literal"><span class="pre">password</span></code>: The password. Empty for no password. </li>
-<li><code class="docutils literal"><span class="pre">discovery_prefix</span></code>: The discovery prefix for home assistant. Leave empty for no discovery. </li>
 </ul>
 </dd>
 </dl>
@@ -149,8 +148,8 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringERKNSt6stringERKNSt6stringERKNSt6stringE">
-<span id="esphomelib::Application::init_mqtt__ssCR.ssCR.ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a3170d2f99bbc6392d3d60949bb30aeb1"></span>MQTTClientComponent *<code class="descname">init_mqtt</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>address</em>, <em class="property">const</em> std::string &amp;<em>username</em>, <em class="property">const</em> std::string &amp;<em>password</em>, <em class="property">const</em> std::string &amp;<em>discovery_prefix</em> = &quot;homeassistant&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringERKNSt6stringERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringERKNSt6stringERKNSt6stringE">
+<span id="esphomelib::Application::init_mqtt__ssCR.ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1aa15e916e7cc45dcaad897604e00375a0"></span>MQTTClientComponent *<code class="descname">init_mqtt</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>address</em>, <em class="property">const</em> std::string &amp;<em>username</em>, <em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application9init_mqttERKNSt6stringERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Initialize the MQTT client. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -160,7 +159,6 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <li><code class="docutils literal"><span class="pre">address</span></code>: The address of your server. </li>
 <li><code class="docutils literal"><span class="pre">username</span></code>: The username. </li>
 <li><code class="docutils literal"><span class="pre">password</span></code>: The password. Empty for no password. </li>
-<li><code class="docutils literal"><span class="pre">discovery_prefix</span></code>: The discovery prefix for home assistant. Leave empty for no discovery. </li>
 </ul>
 </dd>
 </dl>
@@ -168,17 +166,18 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application17make_power_supplyE13GPIOOutputPin8uint32_t8uint32_t">
-<span id="esphomelib::Application::make_power_supply__GPIOOutputPin.uint32_t.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a9433ed878c9a49c024677458a71c235d"></span><a class="reference internal" href="power-supply.html#_CPPv2N10esphomelib20PowerSupplyComponentE" title="esphomelib::PowerSupplyComponent">PowerSupplyComponent</a> *<code class="descname">make_power_supply</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>pin</em>, uint32_t <em>enable_time</em> = 20, uint32_t <em>keep_on_time</em> = 10000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application17make_power_supplyE13GPIOOutputPin8uint32_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Create a power supply component that will automatically switch on and off. </p>
+<dt id="_CPPv2N10esphomelib11Application8init_i2cE7uint8_t7uint8_t8uint32_t">
+<span id="esphomelib::Application::init_i2c__uint8_t.uint8_t.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a6d9f772f75726d1b20ea874aa04a59d9"></span>void <code class="descname">init_i2c</code><span class="sig-paren">(</span>uint8_t <em>sda_pin</em> = SDA, uint8_t <em>scl_pin</em> = SCL, uint32_t <em>frequency</em> = 100000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application8init_i2cE7uint8_t7uint8_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize the i2c bus on the provided SDA and SCL pins for use with other components. </p>
+<p>Note: YOU ONLY NEED TO CALL THIS METHOD ONCE.</p>
+<p>SDA/SCL pins default to the values defined by the Arduino framework and are usually GPIO4 and GPIO5 on the ESP8266 (D2 and D1 on NodeMCU). And for the ESP32 it defaults to GPIO21 and GPIO22 for SDA and SCL, respectively.</p>
+<p>If you’re unsure about what the defaults are on your board, it’s always better</p>
 <p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The <a class="reference internal" href="power-supply.html#classesphomelib_1_1_power_supply_component"><span class="std std-ref">PowerSupplyComponent</span></a>. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">pin</span></code>: The pin the power supply is connected to. </li>
-<li><code class="docutils literal"><span class="pre">enable_time</span></code>: The time (in ms) the power supply needs until it can provide high power when powering on. </li>
-<li><code class="docutils literal"><span class="pre">keep_on_time</span></code>: The time (in ms) the power supply should stay on when it is not used. </li>
+<li><code class="docutils literal"><span class="pre">sda_pin</span></code>: The SDA pin the i2c bus is connected to. </li>
+<li><code class="docutils literal"><span class="pre">scl_pin</span></code>: The SCL pin the i2c bus is connected to. </li>
+<li><code class="docutils literal"><span class="pre">frequency</span></code>: (only on ESP32) the frequency in Hz the i2c bus should operate at, not all components support all frequencies! </li>
 </ul>
 </dd>
 </dl>
@@ -186,14 +185,19 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application27make_mqtt_binary_sensor_forENSt6stringENSt6stringEPN13binary_sensor12BinarySensorE">
-<span id="esphomelib::Application::make_mqtt_binary_sensor_for__ss.ss.binary_sensor::BinarySensorP"></span><span class="target" id="classesphomelib_1_1_application_1add3e1a54186d5c6243794d4a2474f3ec"></span>MQTTBinarySensorComponent *<code class="descname">make_mqtt_binary_sensor_for</code><span class="sig-paren">(</span>std::string <em>friendly_name</em>, std::string <em>device_class</em>, binary_sensor::<a class="reference internal" href="../binary_sensor/index.html#_CPPv2N10esphomelib13binary_sensor12BinarySensorE" title="esphomelib::binary_sensor::BinarySensor">BinarySensor</a> *<em>binary_sensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application27make_mqtt_binary_sensor_forENSt6stringENSt6stringEPN13binary_sensor12BinarySensorE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application8init_i2cE7uint8_t7uint8_t">
+<span id="esphomelib::Application::init_i2c__uint8_t.uint8_t"></span><span class="target" id="classesphomelib_1_1_application_1a4e3deb12ca5224d86621875cba970991"></span>void <code class="descname">init_i2c</code><span class="sig-paren">(</span>uint8_t <em>sda_pin</em> = SDA, uint8_t <em>scl_pin</em> = SCL<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application8init_i2cE7uint8_t7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application27make_mqtt_binary_sensor_forEPN13binary_sensor12BinarySensorERKNSt6stringE8OptionalINSt6stringEE">
+<span id="esphomelib::Application::make_mqtt_binary_sensor_for__binary_sensor::BinarySensorP.ssCR.Optional:ss:"></span><span class="target" id="classesphomelib_1_1_application_1acb33275bf8980aaacc08762dc9996f1d"></span>MQTTBinarySensorComponent *<code class="descname">make_mqtt_binary_sensor_for</code><span class="sig-paren">(</span>binary_sensor::<a class="reference internal" href="../binary_sensor/index.html#_CPPv2N10esphomelib13binary_sensor12BinarySensorE" title="esphomelib::binary_sensor::BinarySensor">BinarySensor</a> *<em>binary_sensor</em>, <em class="property">const</em> std::string &amp;<em>friendly_name</em>, <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;std::string&gt; <em>device_class</em> = Optional &lt; std::string &gt;()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application27make_mqtt_binary_sensor_forEPN13binary_sensor12BinarySensorERKNSt6stringE8OptionalINSt6stringEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a MQTTBinarySensorComponent for a specific BinarySensor. Mostly for internal use. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinNSt6stringENSt6stringE">
-<span id="esphomelib::Application::make_gpio_binary_sensor__GPIOInputPin.ss.ss"></span><span class="target" id="classesphomelib_1_1_application_1a634e47cc0b0265cb7ff7a33469210c12"></span><a class="reference internal" href="#_CPPv2N10esphomelib11ApplicationE" title="esphomelib::Application">Application</a>::<a class="reference internal" href="#_CPPv2N10esphomelib11Application18SimpleBinarySensorE" title="esphomelib::Application::SimpleBinarySensor">SimpleBinarySensor</a> <code class="descname">make_gpio_binary_sensor</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <em>pin</em>, std::string <em>friendly_name</em>, std::string <em>device_class</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinNSt6stringENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinRKNSt6stringERKNSt6stringE">
+<span id="esphomelib::Application::make_gpio_binary_sensor__GPIOInputPin.ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a80f0438379e8d54e428aa3506541cabf"></span><a class="reference internal" href="#_CPPv2N10esphomelib11ApplicationE" title="esphomelib::Application">Application</a>::<a class="reference internal" href="#_CPPv2N10esphomelib11Application20MakeGPIOBinarySensorE" title="esphomelib::Application::MakeGPIOBinarySensor">MakeGPIOBinarySensor</a> <code class="descname">make_gpio_binary_sensor</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <em>pin</em>, <em class="property">const</em> std::string &amp;<em>friendly_name</em>, <em class="property">const</em> std::string &amp;<em>device_class</em> = &quot;&quot;<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinRKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a simple GPIO binary sensor. </p>
 <p>Note: advanced options such as inverted input are available in the return value.</p>
 <p><dl class="docutils">
@@ -201,7 +205,7 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal"><span class="pre">pin</span></code>: The GPIO pin. </li>
 <li><code class="docutils literal"><span class="pre">friendly_name</span></code>: The friendly name that should be advertised. Leave empty for no automatic discovery. </li>
-<li><code class="docutils literal"><span class="pre">device_class</span></code>: The Home Assistant <a class="reference external" href="https://home-assistant.io/components/binary_sensor/">device_class</a>. or <a class="reference internal" href="../binary_sensor/index.html#namespaceesphomelib_1_1binary__sensor_1_1device__class"><span class="std std-ref">esphomelib::binary_sensor::device_class</span></a> </li>
+<li><code class="docutils literal"><span class="pre">device_class</span></code>: The Home Assistant <a class="reference external" href="https://home-assistant.io/components/binary_sensor/">device_class</a>. or esphomelib::binary_sensor::device_class </li>
 </ul>
 </dd>
 </dl>
@@ -209,8 +213,25 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application20make_mqtt_sensor_forEPN6sensor6SensorENSt6stringE">
-<span id="esphomelib::Application::make_mqtt_sensor_for__sensor::SensorP.ss"></span><span class="target" id="classesphomelib_1_1_application_1a4d2a1ebcffe3f57dc9c75abac3c54fd4"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">make_mqtt_sensor_for</code><span class="sig-paren">(</span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor6SensorE" title="esphomelib::sensor::Sensor">Sensor</a> *<em>sensor</em>, std::string <em>friendly_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application20make_mqtt_sensor_forEPN6sensor6SensorENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application25make_status_binary_sensorERKNSt6stringE">
+<span id="esphomelib::Application::make_status_binary_sensor__ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a874e534014a2ac431cdee06756cbcb12"></span>MQTTBinarySensorComponent *<code class="descname">make_status_binary_sensor</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>friendly_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application25make_status_binary_sensorERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a simple binary sensor that reports the online/offline state of the node. </p>
+<p>Uses the MQTT last will and birth message feature. If the values for these features are custom, you need to override them using the return value of this function.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A MQTTBinarySensorComponent. Use this to set custom status messages. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">friendly_name</span></code>: The friendly name advertised via MQTT discovery. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application20make_mqtt_sensor_forEPN6sensor6SensorERKNSt6stringE">
+<span id="esphomelib::Application::make_mqtt_sensor_for__sensor::SensorP.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a71625c0d575fddb2c31d238ffb02557b"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">make_mqtt_sensor_for</code><span class="sig-paren">(</span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor6SensorE" title="esphomelib::sensor::Sensor">Sensor</a> *<em>sensor</em>, <em class="property">const</em> std::string &amp;<em>friendly_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application20make_mqtt_sensor_forEPN6sensor6SensorERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a MQTTSensorComponent for the provided Sensor and connect them. Mostly for internal use. </p>
 </dd></dl>
 
@@ -235,13 +256,13 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application21make_dallas_componentEP7OneWire">
-<span id="esphomelib::Application::make_dallas_component__OneWireP"></span><span class="target" id="classesphomelib_1_1_application_1a9fd231599c83e91db28394485f7d3198"></span>input::<a class="reference internal" href="../input/dallas.html#_CPPv2N10esphomelib5input15DallasComponentE" title="esphomelib::input::DallasComponent">DallasComponent</a> *<code class="descname">make_dallas_component</code><span class="sig-paren">(</span>OneWire *<em>one_wire</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application21make_dallas_componentEP7OneWire" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application21make_dallas_componentEP10ESPOneWire8uint32_t">
+<span id="esphomelib::Application::make_dallas_component__ESPOneWireP.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a5f219b8491855ce79c6df5dfd3f2ed98"></span>DallasComponent *<code class="descname">make_dallas_component</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib10ESPOneWireE" title="esphomelib::ESPOneWire">ESPOneWire</a> *<em>one_wire</em>, uint32_t <em>update_interval</em> = 15000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application21make_dallas_componentEP10ESPOneWire8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application21make_dallas_componentE7uint8_t">
-<span id="esphomelib::Application::make_dallas_component__uint8_t"></span><span class="target" id="classesphomelib_1_1_application_1a72dc2784f95486f83f89ff531a4e7cb8"></span>input::<a class="reference internal" href="../input/dallas.html#_CPPv2N10esphomelib5input15DallasComponentE" title="esphomelib::input::DallasComponent">DallasComponent</a> *<code class="descname">make_dallas_component</code><span class="sig-paren">(</span>uint8_t <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application21make_dallas_componentE7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application21make_dallas_componentE7uint8_t8uint32_t">
+<span id="esphomelib::Application::make_dallas_component__uint8_t.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1ac66cb94b925c10a81f83df5972d090f1"></span>DallasComponent *<code class="descname">make_dallas_component</code><span class="sig-paren">(</span>uint8_t <em>pin</em>, uint32_t <em>update_interval</em> = 15000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application21make_dallas_componentE7uint8_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -283,6 +304,81 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N10esphomelib11Application22make_ads1115_componentE7uint8_t">
+<span id="esphomelib::Application::make_ads1115_component__uint8_t"></span><span class="target" id="classesphomelib_1_1_application_1a710853ac6c09e2a9bbbf8a7d220834d2"></span>ADS1115Component *<code class="descname">make_ads1115_component</code><span class="sig-paren">(</span>uint8_t <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application22make_ads1115_componentE7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create an ADS1115 component hub. </p>
+<p>From this hub you can then create individual sensors using <code class="docutils literal"><span class="pre">get_sensor()</span></code>.</p>
+<p>Note that you should have i2c setup for this component to work. To setup i2c call <code class="docutils literal"><span class="pre">App.init_i2c(SDA_PIN,</span> <span class="pre">SCL_PIN);</span></code> before <code class="docutils literal"><span class="pre">App.setup()</span></code>.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The ADS1115Component hub. Use this to set advanced setting and create the actual sensors. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">address</span></code>: The i2c address of the ADS1115. See <a class="reference internal" href="../sensor/ads1115.html#classesphomelib_1_1sensor_1_1_a_d_s1115_component_1a56b8157df07cceeef708a37b6c57eebc"><span class="std std-ref">ADS1115Component::set_address</span></a> for possible values. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application18make_bmp085_sensorERKNSt6stringERKNSt6stringE8uint32_t">
+<span id="esphomelib::Application::make_bmp085_sensor__ssCR.ssCR.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a38a4ac1d8a745687f3a1c33f1f0f0da5"></span><a class="reference internal" href="#_CPPv2N10esphomelib11ApplicationE" title="esphomelib::Application">Application</a>::<a class="reference internal" href="#_CPPv2N10esphomelib11Application19MakeBMP085ComponentE" title="esphomelib::Application::MakeBMP085Component">MakeBMP085Component</a> <code class="descname">make_bmp085_sensor</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>temperature_friendly_name</em>, <em class="property">const</em> std::string &amp;<em>pressure_friendly_name</em>, uint32_t <em>update_interval</em> = 30000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application18make_bmp085_sensorERKNSt6stringERKNSt6stringE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create an BMP085/BMP180/BMP280 i2c temperature+pressure sensor. </p>
+<p>Be sure to initialize i2c before calling <code class="docutils literal"><span class="pre">App.setup()</span></code> in order for this to work. Do so with <code class="docutils literal"><span class="pre">App.init_i2c(SDA_PIN,</span> <span class="pre">SCL_PIN);</span></code>.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A <a class="reference internal" href="#structesphomelib_1_1_application_1_1_make_b_m_p085_component"><span class="std std-ref">MakeBMP085Component</span></a> object, use this to set advanced settings. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">temperature_friendly_name</span></code>: The friendly name the temperature should be advertised as. </li>
+<li><code class="docutils literal"><span class="pre">pressure_friendly_name</span></code>: The friendly name the pressure should be advertised as. </li>
+<li><code class="docutils literal"><span class="pre">update_interval</span></code>: The interval in ms to update the sensor values. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application18make_htu21d_sensorERKNSt6stringERKNSt6stringE8uint32_t">
+<span id="esphomelib::Application::make_htu21d_sensor__ssCR.ssCR.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a6b48f7642209f7e361bc334247408522"></span><a class="reference internal" href="#_CPPv2N10esphomelib11ApplicationE" title="esphomelib::Application">Application</a>::<a class="reference internal" href="#_CPPv2N10esphomelib11Application19MakeHTU21DComponentE" title="esphomelib::Application::MakeHTU21DComponent">MakeHTU21DComponent</a> <code class="descname">make_htu21d_sensor</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>temperature_friendly_name</em>, <em class="property">const</em> std::string &amp;<em>humidity_friendly_name</em>, uint32_t <em>update_interval</em> = 15000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application18make_htu21d_sensorERKNSt6stringERKNSt6stringE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a HTU21D i2c-based temperature+humidity highly accurate sensor. </p>
+<p>Be sure to initialize i2c before calling <code class="docutils literal"><span class="pre">App.setup</span></code> in order for this to work. Do so with <code class="docutils literal"><span class="pre">App.init_i2c(SDA_PIN,</span> <span class="pre">SCL_PIN);</span></code>.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A <a class="reference internal" href="#structesphomelib_1_1_application_1_1_make_h_t_u21_d_component"><span class="std std-ref">MakeHTU21DComponent</span></a>, use this to set advanced settings. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">temperature_friendly_name</span></code>: The friendly name the temperature sensor should be advertised as. </li>
+<li><code class="docutils literal"><span class="pre">humidity_friendly_name</span></code>: The friendly name the humidity sensor should be advertised as. </li>
+<li><code class="docutils literal"><span class="pre">update_interval</span></code>: The interval in ms to update the sensor values. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application19make_hdc1080_sensorERKNSt6stringERKNSt6stringE8uint32_t">
+<span id="esphomelib::Application::make_hdc1080_sensor__ssCR.ssCR.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1adad4afa57f9414b2b630983c0ce4b613"></span><a class="reference internal" href="#_CPPv2N10esphomelib11ApplicationE" title="esphomelib::Application">Application</a>::<a class="reference internal" href="#_CPPv2N10esphomelib11Application20MakeHDC1080ComponentE" title="esphomelib::Application::MakeHDC1080Component">MakeHDC1080Component</a> <code class="descname">make_hdc1080_sensor</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>temperature_friendly_name</em>, <em class="property">const</em> std::string &amp;<em>humidity_friendly_name</em>, uint32_t <em>update_interval</em> = 15000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application19make_hdc1080_sensorERKNSt6stringERKNSt6stringE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a HDC1080 i2c-based temperature+humidity sensor. </p>
+<p>Be sure to initialize i2c before calling <code class="docutils literal"><span class="pre">App.setup</span></code> in order for this to work. Do so with <code class="docutils literal"><span class="pre">App.init_i2c(SDA_PIN,</span> <span class="pre">SCL_PIN);</span></code>.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A <a class="reference internal" href="#structesphomelib_1_1_application_1_1_make_h_d_c1080_component"><span class="std std-ref">MakeHDC1080Component</span></a>, use this to set advanced settings. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">temperature_friendly_name</span></code>: The friendly name the temperature sensor should be advertised as. </li>
+<li><code class="docutils literal"><span class="pre">humidity_friendly_name</span></code>: The friendly name the humidity sensor should be advertised as. </li>
+<li><code class="docutils literal"><span class="pre">update_interval</span></code>: The interval in ms to update the sensor values. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N10esphomelib11Application22make_ultrasonic_sensorE13GPIOOutputPin12GPIOInputPinRKNSt6stringE8uint32_t">
 <span id="esphomelib::Application::make_ultrasonic_sensor__GPIOOutputPin.GPIOInputPin.ssCR.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a01f3183a6fb9a3cf1ac782e9f4862020"></span><a class="reference internal" href="#_CPPv2N10esphomelib11ApplicationE" title="esphomelib::Application">Application</a>::<a class="reference internal" href="#_CPPv2N10esphomelib11Application20MakeUltrasonicSensorE" title="esphomelib::Application::MakeUltrasonicSensor">MakeUltrasonicSensor</a> <code class="descname">make_ultrasonic_sensor</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>trigger_pin</em>, <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <em>echo_pin</em>, <em class="property">const</em> std::string &amp;<em>friendly_name</em>, uint32_t <em>update_interval</em> = 5000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application22make_ultrasonic_sensorE13GPIOOutputPin12GPIOInputPinRKNSt6stringE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create an Ultrasonic range sensor. </p>
@@ -296,6 +392,24 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <li><code class="docutils literal"><span class="pre">echo_pin</span></code>: The pin we wait that we wait on for the echo, can be integer or <a class="reference internal" href="helpers.html#classesphomelib_1_1_g_p_i_o_input_pin"><span class="std std-ref">GPIOInputPin</span></a>. </li>
 <li><code class="docutils literal"><span class="pre">friendly_name</span></code>: The friendly name for this sensor advertised to Home Assistant. </li>
 <li><code class="docutils literal"><span class="pre">update_interval</span></code>: The time in ms between updates, defaults to 5 seconds. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application17make_power_supplyE13GPIOOutputPin8uint32_t8uint32_t">
+<span id="esphomelib::Application::make_power_supply__GPIOOutputPin.uint32_t.uint32_t"></span><span class="target" id="classesphomelib_1_1_application_1a9433ed878c9a49c024677458a71c235d"></span><a class="reference internal" href="power-supply.html#_CPPv2N10esphomelib20PowerSupplyComponentE" title="esphomelib::PowerSupplyComponent">PowerSupplyComponent</a> *<code class="descname">make_power_supply</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>pin</em>, uint32_t <em>enable_time</em> = 20, uint32_t <em>keep_on_time</em> = 10000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application17make_power_supplyE13GPIOOutputPin8uint32_t8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a power supply component that will automatically switch on and off. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The <a class="reference internal" href="power-supply.html#classesphomelib_1_1_power_supply_component"><span class="std std-ref">PowerSupplyComponent</span></a>. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pin</span></code>: The pin the power supply is connected to. </li>
+<li><code class="docutils literal"><span class="pre">enable_time</span></code>: The time (in ms) the power supply needs until it can provide high power when powering on. </li>
+<li><code class="docutils literal"><span class="pre">keep_on_time</span></code>: The time (in ms) the power supply should stay on when it is not used. </li>
 </ul>
 </dd>
 </dl>
@@ -321,8 +435,8 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application22make_pca9685_componentEfR7TwoWire">
-<span id="esphomelib::Application::make_pca9685_component__float.TwoWireR"></span><span class="target" id="classesphomelib_1_1_application_1ae3e68cfa6ab214243786fae9b7d209f8"></span>PCA9685OutputComponent *<code class="descname">make_pca9685_component</code><span class="sig-paren">(</span>float <em>frequency</em>, TwoWire &amp;<em>i2c_wire</em> = Wire<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application22make_pca9685_componentEfR7TwoWire" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application22make_pca9685_componentEf">
+<span id="esphomelib::Application::make_pca9685_component__float"></span><span class="target" id="classesphomelib_1_1_application_1aab1624c1d858eaa7e90d498a77672322"></span>PCA9685OutputComponent *<code class="descname">make_pca9685_component</code><span class="sig-paren">(</span>float <em>frequency</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application22make_pca9685_componentEf" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a PCA9685 component. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -330,7 +444,6 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal"><span class="pre">frequency</span></code>: The PWM frequency. </li>
-<li><code class="docutils literal"><span class="pre">i2c_wire</span></code>: The i2c interface. </li>
 </ul>
 </dd>
 </dl>
@@ -355,8 +468,25 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application16make_mqtt_light_ERKNSt6stringEPN5light10LightStateE">
-<span id="esphomelib::Application::make_mqtt_light___ssCR.light::LightStateP"></span><span class="target" id="classesphomelib_1_1_application_1a369ab14ef3168340bcad307b5326b545"></span>MQTTJSONLightComponent *<code class="descname">make_mqtt_light_</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>friendly_name</em>, light::<a class="reference internal" href="../light/index.html#_CPPv2N10esphomelib5light10LightStateE" title="esphomelib::light::LightState">LightState</a> *<em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application16make_mqtt_light_ERKNSt6stringEPN5light10LightStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application23make_esp8266_pwm_outputE13GPIOOutputPin">
+<span id="esphomelib::Application::make_esp8266_pwm_output__GPIOOutputPin"></span><span class="target" id="classesphomelib_1_1_application_1a08dd87fa126e5241786e1cac38af63aa"></span>ESP8266PWMOutput *<code class="descname">make_esp8266_pwm_output</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application23make_esp8266_pwm_outputE13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create an ESP8266 software PWM channel. </p>
+<p>Warning: This is a <em>software</em> PWM and therefore can have noticeable flickering. Additionally, this software PWM can’t output values higher than 80%.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The PWM output channel, use this for advanced settings and using it with lights. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pin</span></code>: The pin for this PWM output, supported pins are 0-16. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application16make_mqtt_light_EPN5light10LightStateERKNSt6stringE">
+<span id="esphomelib::Application::make_mqtt_light___light::LightStateP.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1ac96d925ecdf86bd419f7e53913c1dc81"></span>MQTTJSONLightComponent *<code class="descname">make_mqtt_light_</code><span class="sig-paren">(</span>light::<a class="reference internal" href="../light/index.html#_CPPv2N10esphomelib5light10LightStateE" title="esphomelib::light::LightState">LightState</a> *<em>state</em>, <em class="property">const</em> std::string &amp;<em>friendly_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application16make_mqtt_light_EPN5light10LightStateERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a MQTTJSONLightComponent. Mostly for internal use. </p>
 </dd></dl>
 
@@ -440,8 +570,8 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application29make_ir_transmitter_componentE7uint8_t7uint8_t7uint8_t">
-<span id="esphomelib::Application::make_ir_transmitter_component__uint8_t.uint8_t.uint8_t"></span><span class="target" id="classesphomelib_1_1_application_1aafde02896b47fc86c2a5c8892197a686"></span>IRTransmitterComponent *<code class="descname">make_ir_transmitter_component</code><span class="sig-paren">(</span>uint8_t <em>pin</em>, uint8_t <em>carrier_duty_percent</em> = 50, uint8_t <em>clock_divider</em> = output::DEFAULT_CLOCK_DIVIDER<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application29make_ir_transmitter_componentE7uint8_t7uint8_t7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application19make_ir_transmitterE13GPIOOutputPin7uint8_t7uint8_t">
+<span id="esphomelib::Application::make_ir_transmitter__GPIOOutputPin.uint8_t.uint8_t"></span><span class="target" id="classesphomelib_1_1_application_1a26b64ede77aa53bccd5b75f27606280a"></span>IRTransmitterComponent *<code class="descname">make_ir_transmitter</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>pin</em>, uint8_t <em>carrier_duty_percent</em> = 50, uint8_t <em>clock_divider</em> = switch_::DEFAULT_CLOCK_DIVIDER<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application19make_ir_transmitterE13GPIOOutputPin7uint8_t7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create an IR transmitter. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -475,9 +605,15 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib11Application20make_mqtt_switch_forERKNSt6stringEPN15switch_platform6SwitchE">
-<span id="esphomelib::Application::make_mqtt_switch_for__ssCR.switch_platform::SwitchP"></span><span class="target" id="classesphomelib_1_1_application_1aa6c61fcc30b0fae7882c4ab231fdea08"></span>MQTTSwitchComponent *<code class="descname">make_mqtt_switch_for</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>friendly_name</em>, switch_platform::<a class="reference internal" href="../switch/index.html#_CPPv2N10esphomelib15switch_platform6SwitchE" title="esphomelib::switch_platform::Switch">Switch</a> *<em>switch_</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application20make_mqtt_switch_forERKNSt6stringEPN15switch_platform6SwitchE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10esphomelib11Application20make_mqtt_switch_forEPN7switch_6SwitchERKNSt6stringE">
+<span id="esphomelib::Application::make_mqtt_switch_for__switch_::SwitchP.ssCR"></span><span class="target" id="classesphomelib_1_1_application_1aebe6ee122b1b4925c6d194a9d6aeb492"></span>MQTTSwitchComponent *<code class="descname">make_mqtt_switch_for</code><span class="sig-paren">(</span>switch_::<a class="reference internal" href="../switch/index.html#_CPPv2N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<em>switch_</em>, <em class="property">const</em> std::string &amp;<em>friendly_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application20make_mqtt_switch_forEPN7switch_6SwitchERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a MQTTSwitchComponent for the provided Switch. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10esphomelib11Application19make_restart_switchERKNSt6stringE">
+<span id="esphomelib::Application::make_restart_switch__ssCR"></span><span class="target" id="classesphomelib_1_1_application_1a24fd730efec076acbacf8e9957cc9efe"></span>switch_::<a class="reference internal" href="../switch/index.html#_CPPv2N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a> *<code class="descname">make_restart_switch</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>friendly_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib11Application19make_restart_switchERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Make a simple switch that restarts the device with the provided friendly name. </p>
 </dd></dl>
 
 <dl class="function">
@@ -545,22 +681,27 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <dd><p>Get the name of this <a class="reference internal" href="#classesphomelib_1_1_application"><span class="std std-ref">Application</span></a> set by <a class="reference internal" href="#classesphomelib_1_1_application_1aa03c932a11c7e2f808588352e5dfaf81"><span class="std std-ref">set_name()</span></a>. </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv2NK10esphomelib11Application22assert_i2c_initializedEv">
+<span id="esphomelib::Application::assert_i2c_initializedC"></span><span class="target" id="classesphomelib_1_1_application_1a7c1af206354b9029ba05ec1fde249441"></span>void <code class="descname">assert_i2c_initialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib11Application22assert_i2c_initializedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application11components_E">
-<span id="esphomelib::Application::components___std::vector:ComponentP:"></span><span class="target" id="classesphomelib_1_1_application_1aa42790063a5caa58ec465b141891b447"></span>std::vector&lt;<a class="reference internal" href="component.html#_CPPv2N10esphomelib9ComponentE" title="esphomelib::Component">Component</a> *&gt; <code class="descname">components_</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application11components_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::components___std::vector:ComponentP:"></span><span class="target" id="classesphomelib_1_1_application_1aa42790063a5caa58ec465b141891b447"></span>std::vector&lt;<a class="reference internal" href="component.html#_CPPv2N10esphomelib9ComponentE" title="esphomelib::Component">Component</a> *&gt; <code class="descname">components_</code> = {}<a class="headerlink" href="#_CPPv2N10esphomelib11Application11components_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application12mqtt_client_E">
-<span id="esphomelib::Application::mqtt_client___mqtt::MQTTClientComponentP"></span><span class="target" id="classesphomelib_1_1_application_1a55820bc12065351d5b355f07a1db4dcf"></span>mqtt::<a class="reference internal" href="mqtt.html#_CPPv2N10esphomelib4mqtt19MQTTClientComponentE" title="esphomelib::mqtt::MQTTClientComponent">MQTTClientComponent</a> *<code class="descname">mqtt_client_</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application12mqtt_client_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::mqtt_client___mqtt::MQTTClientComponentP"></span><span class="target" id="classesphomelib_1_1_application_1a55820bc12065351d5b355f07a1db4dcf"></span>mqtt::<a class="reference internal" href="mqtt.html#_CPPv2N10esphomelib4mqtt19MQTTClientComponentE" title="esphomelib::mqtt::MQTTClientComponent">MQTTClientComponent</a> *<code class="descname">mqtt_client_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib11Application12mqtt_client_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application5wifi_E">
-<span id="esphomelib::Application::wifi___WiFiComponentP"></span><span class="target" id="classesphomelib_1_1_application_1a1765ac5081fb1c99b0672797307eb43d"></span><a class="reference internal" href="wifi.html#_CPPv2N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a> *<code class="descname">wifi_</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application5wifi_E" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::wifi___WiFiComponentP"></span><span class="target" id="classesphomelib_1_1_application_1a1765ac5081fb1c99b0672797307eb43d"></span><a class="reference internal" href="wifi.html#_CPPv2N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a> *<code class="descname">wifi_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib11Application5wifi_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
@@ -571,6 +712,11 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application18application_state_E">
 <span id="esphomelib::Application::application_state___Component::ComponentState"></span><span class="target" id="classesphomelib_1_1_application_1a7e5e66fa9a5128ffd73578ad5b95591b"></span><a class="reference internal" href="component.html#_CPPv2N10esphomelib9ComponentE" title="esphomelib::Component">Component</a>::<a class="reference internal" href="component.html#_CPPv2N10esphomelib9Component14ComponentStateE" title="esphomelib::Component::ComponentState">ComponentState</a> <code class="descname">application_state_</code> = {Component::CONSTRUCTION}<a class="headerlink" href="#_CPPv2N10esphomelib11Application18application_state_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application16i2c_initialized_E">
+<span id="esphomelib::Application::i2c_initialized___b"></span><span class="target" id="classesphomelib_1_1_application_1aa1c0a420ab1e6aa551a52ef6a7a29cdf"></span>bool <code class="descname">i2c_initialized_</code> = {false}<a class="headerlink" href="#_CPPv2N10esphomelib11Application16i2c_initialized_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -609,7 +755,7 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application16GPIOSwitchStruct4mqttE">
-<span id="esphomelib::Application::GPIOSwitchStruct::mqtt__switch_platform::MQTTSwitchComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_g_p_i_o_switch_struct_1ab4fa3221f9501606ce348a148706d426"></span>switch_platform::<a class="reference internal" href="../switch/index.html#_CPPv2N10esphomelib15switch_platform19MQTTSwitchComponentE" title="esphomelib::switch_platform::MQTTSwitchComponent">MQTTSwitchComponent</a> *<code class="descname">mqtt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16GPIOSwitchStruct4mqttE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::GPIOSwitchStruct::mqtt__switch_::MQTTSwitchComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_g_p_i_o_switch_struct_1ada13e09239906eaaee620182482e40f8"></span>switch_::<a class="reference internal" href="../switch/index.html#_CPPv2N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a> *<code class="descname">mqtt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16GPIOSwitchStruct4mqttE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -645,12 +791,35 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application13MakeADCSensor3adcE">
-<span id="esphomelib::Application::MakeADCSensor::adc__input::ADCSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_a_d_c_sensor_1a3196e3357c7d3cba88cfc3434ffa5712"></span>input::<a class="reference internal" href="../input/adc-sensor.html#_CPPv2N10esphomelib5input18ADCSensorComponentE" title="esphomelib::input::ADCSensorComponent">ADCSensorComponent</a> *<code class="descname">adc</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application13MakeADCSensor3adcE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::MakeADCSensor::adc__sensor::ADCSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_a_d_c_sensor_1a28ee5453dd205e0640b540bfff60301c"></span>sensor::<a class="reference internal" href="../sensor/adc-sensor.html#_CPPv2N10esphomelib6sensor18ADCSensorComponentE" title="esphomelib::sensor::ADCSensorComponent">ADCSensorComponent</a> *<code class="descname">adc</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application13MakeADCSensor3adcE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application13MakeADCSensor4mqttE">
 <span id="esphomelib::Application::MakeADCSensor::mqtt__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_a_d_c_sensor_1a02571e33c87c096248447e711c6b9cdd"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application13MakeADCSensor4mqttE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N10esphomelib11Application19MakeBMP085ComponentE">
+<span id="esphomelib::Application::MakeBMP085Component"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_b_m_p085_component"></span><em class="property">struct </em><code class="descname">MakeBMP085Component</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeBMP085ComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application19MakeBMP085Component3bmpE">
+<span id="esphomelib::Application::MakeBMP085Component::bmp__sensor::BMP085ComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_b_m_p085_component_1a11123bbea78952bc2bfcabd7b72c4f49"></span>sensor::<a class="reference internal" href="../sensor/bmp085.html#_CPPv2N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<code class="descname">bmp</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeBMP085Component3bmpE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application19MakeBMP085Component16mqtt_temperatureE">
+<span id="esphomelib::Application::MakeBMP085Component::mqtt_temperature__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_b_m_p085_component_1a311842c52589b41252cff9deabfdfc04"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt_temperature</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeBMP085Component16mqtt_temperatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application19MakeBMP085Component13mqtt_pressureE">
+<span id="esphomelib::Application::MakeBMP085Component::mqtt_pressure__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_b_m_p085_component_1a711fea6be432369d30b9790df77b5b6a"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt_pressure</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeBMP085Component13mqtt_pressureE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -663,7 +832,7 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application16MakeDHTComponent3dhtE">
-<span id="esphomelib::Application::MakeDHTComponent::dht__input::DHTComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_d_h_t_component_1a1f7066b1039da14456181fc2adc4dd07"></span>input::DHTComponent *<code class="descname">dht</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16MakeDHTComponent3dhtE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::MakeDHTComponent::dht__sensor::DHTComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_d_h_t_component_1ac68b7ebdead6aef289db3c41f3fadfea"></span>sensor::<a class="reference internal" href="../sensor/dht.html#_CPPv2N10esphomelib6sensor12DHTComponentE" title="esphomelib::sensor::DHTComponent">DHTComponent</a> *<code class="descname">dht</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16MakeDHTComponent3dhtE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
@@ -680,13 +849,77 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 </dd></dl>
 
 <dl class="class">
+<dt id="_CPPv2N10esphomelib11Application20MakeGPIOBinarySensorE">
+<span id="esphomelib::Application::MakeGPIOBinarySensor"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_g_p_i_o_binary_sensor"></span><em class="property">struct </em><code class="descname">MakeGPIOBinarySensor</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeGPIOBinarySensorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application20MakeGPIOBinarySensor4gpioE">
+<span id="esphomelib::Application::MakeGPIOBinarySensor::gpio__binary_sensor::GPIOBinarySensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_g_p_i_o_binary_sensor_1ab69c5990dbe1e79e1261471e51e20f97"></span>binary_sensor::<a class="reference internal" href="../binary_sensor/gpio.html#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a> *<code class="descname">gpio</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeGPIOBinarySensor4gpioE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application20MakeGPIOBinarySensor4mqttE">
+<span id="esphomelib::Application::MakeGPIOBinarySensor::mqtt__binary_sensor::MQTTBinarySensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_g_p_i_o_binary_sensor_1a352f73de34dbbc14adfdfcc502e0565e"></span>binary_sensor::<a class="reference internal" href="../binary_sensor/index.html#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponentE" title="esphomelib::binary_sensor::MQTTBinarySensorComponent">MQTTBinarySensorComponent</a> *<code class="descname">mqtt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeGPIOBinarySensor4mqttE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N10esphomelib11Application20MakeHDC1080ComponentE">
+<span id="esphomelib::Application::MakeHDC1080Component"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_d_c1080_component"></span><em class="property">struct </em><code class="descname">MakeHDC1080Component</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeHDC1080ComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application20MakeHDC1080Component7hdc1080E">
+<span id="esphomelib::Application::MakeHDC1080Component::hdc1080__sensor::HDC1080ComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_d_c1080_component_1a6bfa5755c7064e5c597e79a8000f56e7"></span>sensor::<a class="reference internal" href="../sensor/hdc1080.html#_CPPv2N10esphomelib6sensor16HDC1080ComponentE" title="esphomelib::sensor::HDC1080Component">HDC1080Component</a> *<code class="descname">hdc1080</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeHDC1080Component7hdc1080E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application20MakeHDC1080Component16mqtt_temperatureE">
+<span id="esphomelib::Application::MakeHDC1080Component::mqtt_temperature__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_d_c1080_component_1abf953a48308f55e3f7e42aae00a424de"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt_temperature</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeHDC1080Component16mqtt_temperatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application20MakeHDC1080Component13mqtt_humidityE">
+<span id="esphomelib::Application::MakeHDC1080Component::mqtt_humidity__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_d_c1080_component_1af3cabfb71ce164407883f6419150df5c"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt_humidity</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeHDC1080Component13mqtt_humidityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N10esphomelib11Application19MakeHTU21DComponentE">
+<span id="esphomelib::Application::MakeHTU21DComponent"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_t_u21_d_component"></span><em class="property">struct </em><code class="descname">MakeHTU21DComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeHTU21DComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application19MakeHTU21DComponent6htu21dE">
+<span id="esphomelib::Application::MakeHTU21DComponent::htu21d__sensor::HTU21DComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_t_u21_d_component_1a6407eac8f57ac1a7565f76d3abfaea9c"></span>sensor::<a class="reference internal" href="../sensor/htu21d.html#_CPPv2N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a> *<code class="descname">htu21d</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeHTU21DComponent6htu21dE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application19MakeHTU21DComponent16mqtt_temperatureE">
+<span id="esphomelib::Application::MakeHTU21DComponent::mqtt_temperature__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_t_u21_d_component_1a87f4efbdf49891a18785e43384ccb10a"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt_temperature</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeHTU21DComponent16mqtt_temperatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10esphomelib11Application19MakeHTU21DComponent13mqtt_humidityE">
+<span id="esphomelib::Application::MakeHTU21DComponent::mqtt_humidity__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_h_t_u21_d_component_1a85dd425450d99a3d94d3a5d71b5fca0e"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt_humidity</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application19MakeHTU21DComponent13mqtt_humidityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
 <dt id="_CPPv2N10esphomelib11Application16MakePulseCounterE">
 <span id="esphomelib::Application::MakePulseCounter"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_pulse_counter"></span><em class="property">struct </em><code class="descname">MakePulseCounter</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16MakePulseCounterE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application16MakePulseCounter4pcntE">
-<span id="esphomelib::Application::MakePulseCounter::pcnt__input::PulseCounterSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_pulse_counter_1adc5e62455de427037c3a1e80b9a5b525"></span>input::<a class="reference internal" href="../input/pulse-counter-sensor.html#_CPPv2N10esphomelib5input27PulseCounterSensorComponentE" title="esphomelib::input::PulseCounterSensorComponent">PulseCounterSensorComponent</a> *<code class="descname">pcnt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16MakePulseCounter4pcntE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::MakePulseCounter::pcnt__sensor::PulseCounterSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_pulse_counter_1a09524522f002ed29a0a1f1d2c4216dd1"></span>sensor::<a class="reference internal" href="../sensor/pulse-counter.html#_CPPv2N10esphomelib6sensor27PulseCounterSensorComponentE" title="esphomelib::sensor::PulseCounterSensorComponent">PulseCounterSensorComponent</a> *<code class="descname">pcnt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application16MakePulseCounter4pcntE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
@@ -704,30 +937,12 @@ and <code class="xref cpp cpp-any docutils literal"><span class="pre">get_setup_
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application20MakeUltrasonicSensor10ultrasonicE">
-<span id="esphomelib::Application::MakeUltrasonicSensor::ultrasonic__input::UltrasonicSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_ultrasonic_sensor_1a5645449c02f66bf197d2faf973922459"></span>input::<a class="reference internal" href="../input/ultrasonic-sensor.html#_CPPv2N10esphomelib5input25UltrasonicSensorComponentE" title="esphomelib::input::UltrasonicSensorComponent">UltrasonicSensorComponent</a> *<code class="descname">ultrasonic</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeUltrasonicSensor10ultrasonicE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="esphomelib::Application::MakeUltrasonicSensor::ultrasonic__sensor::UltrasonicSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_ultrasonic_sensor_1a9e5aacb74166a8c1786f8370a734387b"></span>sensor::<a class="reference internal" href="../sensor/ultrasonic.html#_CPPv2N10esphomelib6sensor25UltrasonicSensorComponentE" title="esphomelib::sensor::UltrasonicSensorComponent">UltrasonicSensorComponent</a> *<code class="descname">ultrasonic</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeUltrasonicSensor10ultrasonicE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N10esphomelib11Application20MakeUltrasonicSensor4mqttE">
 <span id="esphomelib::Application::MakeUltrasonicSensor::mqtt__sensor::MQTTSensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_make_ultrasonic_sensor_1a51063976856ed200490f15c0c1a90671"></span>sensor::<a class="reference internal" href="../sensor/index.html#_CPPv2N10esphomelib6sensor19MQTTSensorComponentE" title="esphomelib::sensor::MQTTSensorComponent">MQTTSensorComponent</a> *<code class="descname">mqtt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application20MakeUltrasonicSensor4mqttE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N10esphomelib11Application18SimpleBinarySensorE">
-<span id="esphomelib::Application::SimpleBinarySensor"></span><span class="target" id="structesphomelib_1_1_application_1_1_simple_binary_sensor"></span><em class="property">struct </em><code class="descname">SimpleBinarySensor</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application18SimpleBinarySensorE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
-<dt id="_CPPv2N10esphomelib11Application18SimpleBinarySensor4gpioE">
-<span id="esphomelib::Application::SimpleBinarySensor::gpio__input::GPIOBinarySensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_simple_binary_sensor_1a84a294cd674e4e6bd2a9d1510ef02137"></span>input::<a class="reference internal" href="../input/gpio-binary-sensor.html#_CPPv2N10esphomelib5input25GPIOBinarySensorComponentE" title="esphomelib::input::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a> *<code class="descname">gpio</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application18SimpleBinarySensor4gpioE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N10esphomelib11Application18SimpleBinarySensor4mqttE">
-<span id="esphomelib::Application::SimpleBinarySensor::mqtt__binary_sensor::MQTTBinarySensorComponentP"></span><span class="target" id="structesphomelib_1_1_application_1_1_simple_binary_sensor_1ae6f4073069ed5cbc8e54688bee3b42ec"></span>binary_sensor::<a class="reference internal" href="../binary_sensor/index.html#_CPPv2N10esphomelib13binary_sensor25MQTTBinarySensorComponentE" title="esphomelib::binary_sensor::MQTTBinarySensorComponent">MQTTBinarySensorComponent</a> *<code class="descname">mqtt</code><a class="headerlink" href="#_CPPv2N10esphomelib11Application18SimpleBinarySensor4mqttE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
