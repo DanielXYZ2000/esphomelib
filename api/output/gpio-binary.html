@@ -4,20 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>GPIO Binary Output &#8212; esphomelib 1.1.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -44,21 +35,21 @@
 <h1>GPIO Binary Output<a class="headerlink" href="#gpio-binary-output" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Create a binary output, *not a switch*</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a binary output, *not a switch*</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_gpio_output</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
 <span class="c1">// Custom pinMode</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_gpio_output</span><span class="p">(</span><span class="n">GPIOOutputPin</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="n">OUTPUT_OPEN_DRAIN</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application16make_gpio_outputE13GPIOOutputPin" title="esphomelib::Application::make_gpio_output"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_gpio_output()</span></code></a> (and <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application16make_gpio_switchE13GPIOOutputPinRKNSt6stringE" title="esphomelib::Application::make_gpio_switch"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_gpio_switch()</span></code></a>).</p>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv3N10esphomelib11Application16make_gpio_outputE13GPIOOutputPin" title="esphomelib::Application::make_gpio_output"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_gpio_output()</span></code></a> (and <a class="reference internal" href="../core/application.html#_CPPv3N10esphomelib11Application16make_gpio_switchE13GPIOOutputPinRKNSt6stringE" title="esphomelib::Application::make_gpio_switch"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_gpio_switch()</span></code></a>).</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="gpiobinaryoutputcomponent">
 <h3>GPIOBinaryOutputComponent<a class="headerlink" href="#gpiobinaryoutputcomponent" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponentE">
-<span id="esphomelib::output::GPIOBinaryOutputComponent"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component"></span><em class="property">class </em><code class="descclassname">esphomelib::output::</code><code class="descname">GPIOBinaryOutputComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponentE"></span><span id="esphomelib::output::GPIOBinaryOutputComponent"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output<code class="descclassname">::</code><code class="descname">GPIOBinaryOutputComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Simple binary output component for a GPIO pin. </p>
 <p>This component allows you to control a GPIO pin as a switch.</p>
 <p>Note that with this output component you actually have two ways of inverting the output: either through the <a class="reference internal" href="../core/helpers.html#classesphomelib_1_1_g_p_i_o_output_pin"><span class="std std-ref">GPIOOutputPin</span></a>, or the <a class="reference internal" href="index.html#classesphomelib_1_1output_1_1_binary_output"><span class="std std-ref">BinaryOutput</span></a> API. You can use either one of these.</p>
@@ -67,13 +58,13 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent25GPIOBinaryOutputComponentE13GPIOOutputPin">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::GPIOBinaryOutputComponent__GPIOOutputPin"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1ad55c63ece01018975cc71e960631814a"></span><code class="descname">GPIOBinaryOutputComponent</code><span class="sig-paren">(</span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent25GPIOBinaryOutputComponentE13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent25GPIOBinaryOutputComponentE13GPIOOutputPin">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent25GPIOBinaryOutputComponentE13GPIOOutputPin"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::GPIOBinaryOutputComponent__GPIOOutputPin"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1ad55c63ece01018975cc71e960631814a"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">GPIOBinaryOutputComponent</code><span class="sig-paren">(</span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent25GPIOBinaryOutputComponentE13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct the GPIO binary output. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">pin</span></code>: The output pin to use for this output, can be integer or <a class="reference internal" href="../core/helpers.html#classesphomelib_1_1_g_p_i_o_output_pin"><span class="std std-ref">GPIOOutputPin</span></a>. </li>
+<li><code class="docutils literal notranslate"><span class="pre">pin</span></code>: The output pin to use for this output, can be integer or <a class="reference internal" href="../core/helpers.html#classesphomelib_1_1_g_p_i_o_output_pin"><span class="std std-ref">GPIOOutputPin</span></a>. </li>
 </ul>
 </dd>
 </dl>
@@ -81,32 +72,32 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent7set_pinERK13GPIOOutputPin">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::set_pin__GPIOOutputPinCR"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a1c232a8440e278e9e8150624791dde29"></span>void <code class="descname">set_pin</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent7set_pinERK13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent7set_pinERK13GPIOOutputPin">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent7set_pinERK13GPIOOutputPin"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::set_pin__GPIOOutputPinCR"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a1c232a8440e278e9e8150624791dde29"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">set_pin</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent7set_pinERK13GPIOOutputPin" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Manually set the output pin. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent5setupEv">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::setup"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a5ce57467b1932c898b104bb4161b1103"></span>void <code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent5setupEv">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent5setupEv"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::setup"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a5ce57467b1932c898b104bb4161b1103"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set pin mode. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib6output25GPIOBinaryOutputComponent18get_setup_priorityEv">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a8b78cc4acf1c12551beb8aab724f634c"></span>float <code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib6output25GPIOBinaryOutputComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib6output25GPIOBinaryOutputComponent18get_setup_priorityEv">
+<span id="_CPPv2NK10esphomelib6output25GPIOBinaryOutputComponent18get_setup_priorityEv"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a8b78cc4acf1c12551beb8aab724f634c"></span>float <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib6output25GPIOBinaryOutputComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Hardware setup priority. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent7get_pinEv">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::get_pin"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a3d0b744b93c8f00aaa1fe4aad2c20359"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<code class="descname">get_pin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent7get_pinEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent7get_pinEv">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent7get_pinEv"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::get_pin"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a3d0b744b93c8f00aaa1fe4aad2c20359"></span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> &amp;<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">get_pin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent7get_pinEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the output pin. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent13write_enabledEb">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::write_enabled__b"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1aaa96f45d3e950ccc6fe54a114b21e15b"></span>void <code class="descname">write_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent13write_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent13write_enabledEb">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent13write_enabledEb"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::write_enabled__b"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1aaa96f45d3e950ccc6fe54a114b21e15b"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">write_enabled</code><span class="sig-paren">(</span>bool <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent13write_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override the <a class="reference internal" href="index.html#classesphomelib_1_1output_1_1_binary_output"><span class="std std-ref">BinaryOutput</span></a> method for writing values to HW. </p>
 </dd></dl>
 
@@ -114,8 +105,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent4pin_E">
-<span id="esphomelib::output::GPIOBinaryOutputComponent::pin___GPIOOutputPin"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a695dbeb9726211fc93dd129800eb16b1"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <code class="descname">pin_</code><a class="headerlink" href="#_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent4pin_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent4pin_E">
+<span id="_CPPv2N10esphomelib6output25GPIOBinaryOutputComponent4pin_E"></span><span id="esphomelib::output::GPIOBinaryOutputComponent::pin___GPIOOutputPin"></span><span class="target" id="classesphomelib_1_1output_1_1_g_p_i_o_binary_output_component_1a695dbeb9726211fc93dd129800eb16b1"></span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib13GPIOOutputPinE" title="esphomelib::GPIOOutputPin">GPIOOutputPin</a> <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::output::<a class="reference internal" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponentE" title="esphomelib::output::GPIOBinaryOutputComponent">GPIOBinaryOutputComponent</a><code class="descname">pin_</code><a class="headerlink" href="#_CPPv3N10esphomelib6output25GPIOBinaryOutputComponent4pin_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -141,12 +132,14 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -157,7 +150,7 @@
       &copy;2018, Otto Winter.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
@@ -167,6 +160,22 @@
 
     
 
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
   </body>
 </html>

@@ -4,20 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Switch &#8212; esphomelib 1.1.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -42,7 +33,7 @@
             
   <div class="section" id="switch">
 <h1>Switch<a class="headerlink" href="#switch" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="xref cpp cpp-any docutils literal"><span class="pre">esphomelib::switch_</span></code> namespace contains all switch helpers.</p>
+<p>The <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">esphomelib::switch_</span></code> namespace contains all switch helpers.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ir-transmitter.html">IR Transmitter</a><ul>
@@ -66,8 +57,8 @@
 <div class="section" id="id1">
 <h3>Switch<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib7switch_6SwitchE">
-<span id="esphomelib::switch_::Switch"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch"></span><em class="property">class </em><code class="descclassname">esphomelib::switch_::</code><code class="descname">Switch</code><a class="headerlink" href="#_CPPv2N10esphomelib7switch_6SwitchE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_6SwitchE">
+<span id="_CPPv2N10esphomelib7switch_6SwitchE"></span><span id="esphomelib::switch_::Switch"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_<code class="descclassname">::</code><code class="descname">Switch</code><a class="headerlink" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Base class for all switches. </p>
 <p>A switch is basically just a combination of a binary sensor (for reporting switch values) and a write_state method that writes a state to the hardware. </p>
 <p>Inherits from <a class="reference internal" href="../binary_sensor/index.html#classesphomelib_1_1binary__sensor_1_1_binary_sensor"><span class="std std-ref">esphomelib::binary_sensor::BinarySensor</span></a></p>
@@ -75,20 +66,20 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_6Switch7turn_onEv">
-<span id="esphomelib::switch_::Switch::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch_1a1771d5162a6344e0b2483d65d101e289"></span><em class="property">virtual</em> void <code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N10esphomelib7switch_6Switch7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_6Switch7turn_onEv">
+<span id="_CPPv2N10esphomelib7switch_6Switch7turn_onEv"></span><span id="esphomelib::switch_::Switch::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch_1a1771d5162a6344e0b2483d65d101e289"></span><em class="property">virtual</em> void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a><code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv3N10esphomelib7switch_6Switch7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turn this switch on. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_6Switch8turn_offEv">
-<span id="esphomelib::switch_::Switch::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch_1a467699d419ab972fa3b7f380ddc25a2c"></span><em class="property">virtual</em> void <code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N10esphomelib7switch_6Switch8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_6Switch8turn_offEv">
+<span id="_CPPv2N10esphomelib7switch_6Switch8turn_offEv"></span><span id="esphomelib::switch_::Switch::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch_1a467699d419ab972fa3b7f380ddc25a2c"></span><em class="property">virtual</em> void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a><code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv3N10esphomelib7switch_6Switch8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turn this switch off. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_6Switch4iconEv">
-<span id="esphomelib::switch_::Switch::icon"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch_1a2a8ea0dee0f291377fe0b8b2087ba5fb"></span>std::string <code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_6Switch4iconEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_6Switch4iconEv">
+<span id="_CPPv2N10esphomelib7switch_6Switch4iconEv"></span><span id="esphomelib::switch_::Switch::icon"></span><span class="target" id="classesphomelib_1_1switch___1_1_switch_1a2a8ea0dee0f291377fe0b8b2087ba5fb"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a><code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_6Switch4iconEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override this to set the Home Assistant icon for this switch. </p>
 <p>Return “” to disable this feature.</p>
 <p><dl class="docutils">
@@ -105,27 +96,27 @@
 <div class="section" id="simpleswitch">
 <h3>SimpleSwitch<a class="headerlink" href="#simpleswitch" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib7switch_12SimpleSwitchE">
-<span id="esphomelib::switch_::SimpleSwitch"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch"></span><em class="property">class </em><code class="descclassname">esphomelib::switch_::</code><code class="descname">SimpleSwitch</code><a class="headerlink" href="#_CPPv2N10esphomelib7switch_12SimpleSwitchE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_12SimpleSwitchE">
+<span id="_CPPv2N10esphomelib7switch_12SimpleSwitchE"></span><span id="esphomelib::switch_::SimpleSwitch"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_<code class="descclassname">::</code><code class="descname">SimpleSwitch</code><a class="headerlink" href="#_CPPv3N10esphomelib7switch_12SimpleSwitchE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A simple switch that exposes a binary output as a switch. </p>
 <p>Inherits from <a class="reference internal" href="#classesphomelib_1_1switch___1_1_switch"><span class="std std-ref">esphomelib::switch_::Switch</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_12SimpleSwitch12SimpleSwitchEPN6output12BinaryOutputE">
-<span id="esphomelib::switch_::SimpleSwitch::SimpleSwitch__output::BinaryOutputP"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1a86672271bce3429d2239fda3b356664d"></span><code class="descname">SimpleSwitch</code><span class="sig-paren">(</span>output::<a class="reference internal" href="../output/index.html#_CPPv2N10esphomelib6output12BinaryOutputE" title="esphomelib::output::BinaryOutput">BinaryOutput</a> *<em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_12SimpleSwitch12SimpleSwitchEPN6output12BinaryOutputE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_12SimpleSwitch12SimpleSwitchEPN6output12BinaryOutputE">
+<span id="_CPPv2N10esphomelib7switch_12SimpleSwitch12SimpleSwitchEPN6output12BinaryOutputE"></span><span id="esphomelib::switch_::SimpleSwitch::SimpleSwitch__output::BinaryOutputP"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1a86672271bce3429d2239fda3b356664d"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_12SimpleSwitchE" title="esphomelib::switch_::SimpleSwitch">SimpleSwitch</a><code class="descname">SimpleSwitch</code><span class="sig-paren">(</span>output::BinaryOutput *<em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_12SimpleSwitch12SimpleSwitchEPN6output12BinaryOutputE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct this <a class="reference internal" href="#classesphomelib_1_1switch___1_1_simple_switch"><span class="std std-ref">SimpleSwitch</span></a> with the provided BinaryOutput. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_12SimpleSwitch7turn_onEv">
-<span id="esphomelib::switch_::SimpleSwitch::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1a79b8ac689c0fd5e53fa13c299c6c7e54"></span>void <code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_12SimpleSwitch7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_12SimpleSwitch7turn_onEv">
+<span id="_CPPv2N10esphomelib7switch_12SimpleSwitch7turn_onEv"></span><span id="esphomelib::switch_::SimpleSwitch::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1a79b8ac689c0fd5e53fa13c299c6c7e54"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_12SimpleSwitchE" title="esphomelib::switch_::SimpleSwitch">SimpleSwitch</a><code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_12SimpleSwitch7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turn this <a class="reference internal" href="#classesphomelib_1_1switch___1_1_simple_switch"><span class="std std-ref">SimpleSwitch</span></a> on. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_12SimpleSwitch8turn_offEv">
-<span id="esphomelib::switch_::SimpleSwitch::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1a262f4a12d0fb5295dc7a701b2b5d180e"></span>void <code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_12SimpleSwitch8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_12SimpleSwitch8turn_offEv">
+<span id="_CPPv2N10esphomelib7switch_12SimpleSwitch8turn_offEv"></span><span id="esphomelib::switch_::SimpleSwitch::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1a262f4a12d0fb5295dc7a701b2b5d180e"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_12SimpleSwitchE" title="esphomelib::switch_::SimpleSwitch">SimpleSwitch</a><code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_12SimpleSwitch8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Turn this <a class="reference internal" href="#classesphomelib_1_1switch___1_1_simple_switch"><span class="std std-ref">SimpleSwitch</span></a> off. </p>
 </dd></dl>
 
@@ -133,8 +124,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib7switch_12SimpleSwitch7output_E">
-<span id="esphomelib::switch_::SimpleSwitch::output___output::BinaryOutputP"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1aba073426ae1c294289122f924e93dadf"></span>output::<a class="reference internal" href="../output/index.html#_CPPv2N10esphomelib6output12BinaryOutputE" title="esphomelib::output::BinaryOutput">BinaryOutput</a> *<code class="descname">output_</code><a class="headerlink" href="#_CPPv2N10esphomelib7switch_12SimpleSwitch7output_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_12SimpleSwitch7output_E">
+<span id="_CPPv2N10esphomelib7switch_12SimpleSwitch7output_E"></span><span id="esphomelib::switch_::SimpleSwitch::output___output::BinaryOutputP"></span><span class="target" id="classesphomelib_1_1switch___1_1_simple_switch_1aba073426ae1c294289122f924e93dadf"></span>output::<a class="reference internal" href="../output/index.html#_CPPv3N10esphomelib6output12BinaryOutputE" title="esphomelib::output::BinaryOutput">BinaryOutput</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_12SimpleSwitchE" title="esphomelib::switch_::SimpleSwitch">SimpleSwitch</a><code class="descname">output_</code><a class="headerlink" href="#_CPPv3N10esphomelib7switch_12SimpleSwitch7output_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -144,39 +135,39 @@
 <div class="section" id="mqttswitchcomponent">
 <h3>MQTTSwitchComponent<a class="headerlink" href="#mqttswitchcomponent" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponentE">
-<span id="esphomelib::switch_::MQTTSwitchComponent"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component"></span><em class="property">class </em><code class="descclassname">esphomelib::switch_::</code><code class="descname">MQTTSwitchComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponentE"></span><span id="esphomelib::switch_::MQTTSwitchComponent"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_<code class="descclassname">::</code><code class="descname">MQTTSwitchComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>MQTT representation of switches. </p>
 <p>Overrides MQTTBinarySensorComponent with a callback that can write values to hardware. </p>
 <p>Inherits from <a class="reference internal" href="../binary_sensor/index.html#classesphomelib_1_1binary__sensor_1_1_m_q_t_t_binary_sensor_component"><span class="std std-ref">esphomelib::binary_sensor::MQTTBinarySensorComponent</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent19MQTTSwitchComponentENSt6stringEPN7switch_6SwitchE">
-<span id="esphomelib::switch_::MQTTSwitchComponent::MQTTSwitchComponent__ss.switch_::SwitchP"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1ab056465bf1f75054cc441347f49ba6a6"></span><code class="descname">MQTTSwitchComponent</code><span class="sig-paren">(</span>std::string <em>friendly_name</em>, <a class="reference internal" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7switch_E" title="esphomelib::switch_::MQTTSwitchComponent::switch_">switch_</a>::Switch *<em>switch_</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent19MQTTSwitchComponentENSt6stringEPN7switch_6SwitchE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent19MQTTSwitchComponentENSt6stringEPN7switch_6SwitchE">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent19MQTTSwitchComponentENSt6stringEPN7switch_6SwitchE"></span><span id="esphomelib::switch_::MQTTSwitchComponent::MQTTSwitchComponent__ss.switch_::SwitchP"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1ab056465bf1f75054cc441347f49ba6a6"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">MQTTSwitchComponent</code><span class="sig-paren">(</span>std::string <em>friendly_name</em>, switch_::Switch *<em>switch_</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent19MQTTSwitchComponentENSt6stringEPN7switch_6SwitchE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent10set_switchEP6Switch">
-<span id="esphomelib::switch_::MQTTSwitchComponent::set_switch__SwitchP"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a96ba27dad7d867130044107ccc2a7534"></span>void <code class="descname">set_switch</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<em>switch_</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent10set_switchEP6Switch" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent10set_switchEP6Switch">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent10set_switchEP6Switch"></span><span id="esphomelib::switch_::MQTTSwitchComponent::set_switch__SwitchP"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a96ba27dad7d867130044107ccc2a7534"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">set_switch</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<em>switch_</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent10set_switchEP6Switch" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the internal switch object used for sending states, does not register the state callback. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent8set_iconERKNSt6stringE">
-<span id="esphomelib::switch_::MQTTSwitchComponent::set_icon__ssCR"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a39a9642c354f09b0a3f4274963380fc5"></span>void <code class="descname">set_icon</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent8set_iconERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent8set_iconERKNSt6stringE">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent8set_iconERKNSt6stringE"></span><span id="esphomelib::switch_::MQTTSwitchComponent::set_icon__ssCR"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a39a9642c354f09b0a3f4274963380fc5"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">set_icon</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent8set_iconERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the icon for this switch. “” for no icon. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent5setupEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::setup"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a668f93871dbe2678a858cbe5b5980fa1"></span>void <code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent5setupEv">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent5setupEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::setup"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a668f93871dbe2678a858cbe5b5980fa1"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Send discovery. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent28create_on_new_state_callbackEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::create_on_new_state_callback"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a516caa4c4269f5f9f3663e063aea1c24"></span>binary_callback_t <code class="descname">create_on_new_state_callback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent28create_on_new_state_callbackEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent28create_on_new_state_callbackEv">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent28create_on_new_state_callbackEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::create_on_new_state_callback"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a516caa4c4269f5f9f3663e063aea1c24"></span>binary_callback_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">create_on_new_state_callback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent28create_on_new_state_callbackEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override MQTTBinarySensor’s on state received from hw callback. </p>
 </dd></dl>
 
@@ -184,32 +175,32 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Functions</p>
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent10get_switchEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::get_switchC"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a15b1357a51c313892c8ff3913adf18a3"></span><a class="reference internal" href="#_CPPv2N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<code class="descname">get_switch</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent10get_switchEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib7switch_19MQTTSwitchComponent10get_switchEv">
+<span id="_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent10get_switchEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::get_switchC"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a15b1357a51c313892c8ff3913adf18a3"></span><a class="reference internal" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">get_switch</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib7switch_19MQTTSwitchComponent10get_switchEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the internal switch use for setting state. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent14component_typeEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::component_typeC"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1ab0c2a5439393f02b43202f57e761f4cf"></span>std::string <code class="descname">component_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent14component_typeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib7switch_19MQTTSwitchComponent14component_typeEv">
+<span id="_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent14component_typeEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::component_typeC"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1ab0c2a5439393f02b43202f57e761f4cf"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">component_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib7switch_19MQTTSwitchComponent14component_typeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>“switch” component type. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7turn_onEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1abca74ccb5d96ade1337c54bdfaed4321"></span>void <code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent7turn_onEv">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7turn_onEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::turn_on"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1abca74ccb5d96ade1337c54bdfaed4321"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">turn_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent7turn_onEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Helper method to turn the switch on. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent8turn_offEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a45c872ecc5dcc22756050a512257bc02"></span>void <code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent8turn_offEv">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent8turn_offEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::turn_off"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a45c872ecc5dcc22756050a512257bc02"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">turn_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent8turn_offEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Helper method to turn the switch off. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent8get_iconEv">
-<span id="esphomelib::switch_::MQTTSwitchComponent::get_iconC"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a9ae7b8e713d5c1acefb7e81f13783344"></span>std::string <code class="descname">get_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent8get_iconEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib7switch_19MQTTSwitchComponent8get_iconEv">
+<span id="_CPPv2NK10esphomelib7switch_19MQTTSwitchComponent8get_iconEv"></span><span id="esphomelib::switch_::MQTTSwitchComponent::get_iconC"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a9ae7b8e713d5c1acefb7e81f13783344"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">get_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib7switch_19MQTTSwitchComponent8get_iconEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the icon for this switch. </p>
 </dd></dl>
 
@@ -217,14 +208,14 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent5icon_E">
-<span id="esphomelib::switch_::MQTTSwitchComponent::icon___Optional:ss:"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a2ad480344d41a2e55704d8824400978c"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;std::string&gt; <code class="descname">icon_</code> = {}<a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent5icon_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent5icon_E">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent5icon_E"></span><span id="esphomelib::switch_::MQTTSwitchComponent::icon___Optional:ss:"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a2ad480344d41a2e55704d8824400978c"></span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;std::string&gt; <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">icon_</code> = {}<a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent5icon_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The icon shown here. Not set means use default from switch. Empty means no icon. </p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7switch_E">
-<span id="esphomelib::switch_::MQTTSwitchComponent::switch___SwitchP"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a08053185c2be8588fa2af21ac3965947"></span><a class="reference internal" href="#_CPPv2N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<code class="descname">switch_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7switch_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib7switch_19MQTTSwitchComponent7switch_E">
+<span id="_CPPv2N10esphomelib7switch_19MQTTSwitchComponent7switch_E"></span><span id="esphomelib::switch_::MQTTSwitchComponent::switch___SwitchP"></span><span class="target" id="classesphomelib_1_1switch___1_1_m_q_t_t_switch_component_1a08053185c2be8588fa2af21ac3965947"></span><a class="reference internal" href="#_CPPv3N10esphomelib7switch_6SwitchE" title="esphomelib::switch_::Switch">Switch</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::switch_::<a class="reference internal" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponentE" title="esphomelib::switch_::MQTTSwitchComponent">MQTTSwitchComponent</a><code class="descname">switch_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib7switch_19MQTTSwitchComponent7switch_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -252,12 +243,14 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -268,7 +261,7 @@
       &copy;2018, Otto Winter.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
@@ -278,6 +271,22 @@
 
     
 
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
   </body>
 </html>

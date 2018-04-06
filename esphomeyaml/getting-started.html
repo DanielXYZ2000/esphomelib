@@ -1,0 +1,257 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Getting Started with esphomeyaml &#8212; esphomelib 1.1.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-with-esphomeyaml">
+<h1>Getting Started with esphomeyaml<a class="headerlink" href="#getting-started-with-esphomeyaml" title="Permalink to this headline">¶</a></h1>
+<p>esphomeyaml is the perfect solution for creating custom firmwares for
+your ESP8266/ESP32 boards. In this guide we’ll go through how to setup a
+basic “node” in a few simple steps.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Installing epshomeyaml is very easy. All you need to do is have <a class="reference external" href="https://www.python.org/download/releases/2.7/">Python
+2.7</a> installed
+(because of platformio 😕) and install the console script script through
+<code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">esphomeyaml</span>
+</pre></div>
+</div>
+<p>Alternatively, there’s also a docker image available for easy
+installation:</p>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">OttoWinter</span><span class="o">/</span><span class="n">esphomeyaml</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-a-project">
+<h2>Creating A Project<a class="headerlink" href="#creating-a-project" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s setup a configuration file. Fortunately, esphomeyaml has a
+friendly setup wizard that will guide you through creating your first
+configuration file. For example, if you want to create a configuration
+file called <code class="docutils literal notranslate"><span class="pre">livingroom.yaml</span></code>:</p>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">wizard</span>
+<span class="cp"># On Docker:</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">wizard</span>
+</pre></div>
+</div>
+<p>At the end of this step, you will have your first YAML configuration
+file ready. It doesn’t do much yet and only makes your device connect to
+the WiFi network and MQTT broker, but still it’s a first step.</p>
+</div>
+<div class="section" id="adding-some-features">
+<h2>Adding some features<a class="headerlink" href="#adding-some-features" title="Permalink to this headline">¶</a></h2>
+<p>So now you should have a file called <code class="docutils literal notranslate"><span class="pre">livingroom.yaml</span></code> (or similar).
+Go open that file in an editor of your choice and let’s add a <a class="reference external" href="/esphomeyaml/components/switch/gpio.html">simple
+GPIO switch</a> to our app.</p>
+<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span><span class="o">:</span>
+  <span class="o">-</span> <span class="nl">platform</span><span class="p">:</span> <span class="n">gpio</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Living Room Dehumidifer&quot;</span>
+    <span class="nl">pin</span><span class="p">:</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>The configuration format should hopefully immediately seem similar to
+you. esphomeyaml has tried to keep it as close to Home Assistant’s
+<code class="docutils literal notranslate"><span class="pre">configuration.yaml</span></code> schema as possible. In above example, we’re
+simply adding a switch that’s called “Living Room Relay” (could control
+anything really, for example lights) and is connected to pin <code class="docutils literal notranslate"><span class="pre">GPIO5</span></code>.
+The nice thing about esphomeyaml is that it will automatically also try
+to translate pin numbers for you based on the board. For example in
+above configuration, if using a NodeMCU board, you could have just as
+well set <code class="docutils literal notranslate"><span class="pre">D1</span></code> as the <code class="docutils literal notranslate"><span class="pre">pin:</span></code> option.</p>
+</div>
+<div class="section" id="first-uploading">
+<h2>First Uploading<a class="headerlink" href="#first-uploading" title="Permalink to this headline">¶</a></h2>
+<p>Now you can go ahead and add some more components. Once you feel like
+you have something you want to upload to your ESP board, simply plug in
+the device via USB and type the following command (replacing
+<code class="docutils literal notranslate"><span class="pre">livingroom.yaml</span></code> with your configuration file):</p>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">run</span>
+</pre></div>
+</div>
+<p>You should see esphomeyaml validating the configuration and telling you
+about potential problems. Then esphomeyaml will proceed to compile and
+upload the custom firmware. You will also see that esphomeyaml created a
+new folder with the name of your node. This is a new platformio project
+that you can modify afterwards and play around with.</p>
+<p>On docker, the first upload is a bit more complicated, either you manage
+to map the serial device into docker with the <code class="docutils literal notranslate"><span class="pre">-v</span></code> option, or you just
+call <code class="docutils literal notranslate"><span class="pre">compile</span></code> within the container and let platformio do the
+uploading on the host system:</p>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">compile</span>
+<span class="n">platformio</span> <span class="o">-</span><span class="n">d</span> <span class="n">livingroom</span> <span class="o">-</span><span class="n">t</span> <span class="n">upload</span>
+</pre></div>
+</div>
+<p>Now if you have <a class="reference external" href="https://www.home-assistant.io/docs/mqtt/discovery/">MQTT
+Discovery</a>
+enabled in your Home Assistant configuration, the switch should already
+be automatically be added 🎉 (Make sure you’ve added it to a view too.)</p>
+<p><img alt="image0" class="align-center" src="../_images/gpio1.png" /></p>
+<p>After the first upload, you will probably never need to use the USB
+cable again, as all features of esphomelib are enabled remotely as well.
+No more opening hidden boxes stowed in places hard to reach. Yay!</p>
+</div>
+<div class="section" id="adding-a-binary-sensor">
+<h2>Adding A Binary Sensor<a class="headerlink" href="#adding-a-binary-sensor" title="Permalink to this headline">¶</a></h2>
+<p>Next, we’re going to add a very simple binary sensor that periodically
+checks a GPIO pin whether it’s pulled high or low - the <a class="reference external" href="/esphomeyaml/components/binary_sensor/gpio.html">GPIO Binary
+Sensor</a>.</p>
+<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">binary_sensor</span><span class="p">:</span>
+  <span class="o">-</span> <span class="nl">platform</span><span class="p">:</span> <span class="n">gpio</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Living Room Window&quot;</span>
+    <span class="nl">pin</span><span class="p">:</span>
+      <span class="nl">number</span><span class="p">:</span> <span class="n">D0</span>
+      <span class="nl">inverted</span><span class="p">:</span> <span class="n">True</span>
+      <span class="nl">mode</span><span class="p">:</span> <span class="n">INPUT_PULLUP</span>
+</pre></div>
+</div>
+<p>This is an advanced feature of esphomeyaml, almost all pins can
+optionally have a more complicated configuration schema with options for
+inversion and pinMode - the <a class="reference external" href="/esphomeyaml/configuration-types.html#pin-schema">Pin
+Schema</a>.</p>
+<p>This time when uploading, you don’t need to have the device plugged in
+through USB again. The upload will magically happen “over the air”.
+Using esphomeyaml directly, this is the same as from a USB cable, but
+for docker you need to supply an additional parameter:</p>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">run</span>
+<span class="cp"># On docker</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">6123</span><span class="o">:</span><span class="mi">6123</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">run</span>
+</pre></div>
+</div>
+<p><img alt="image1" src="../_images/gpio.png" /></p>
+</div>
+<div class="section" id="where-to-go-next">
+<h2>Where To Go Next<a class="headerlink" href="#where-to-go-next" title="Permalink to this headline">¶</a></h2>
+<p>Great 🎉! You’ve now successfully setup your first esphomeyaml project
+and uploaded your first esphomelib custom firmware to your node. You’ve
+also learned how to enable some basic components via the configuration
+file.</p>
+<p>So now is a great time to go take a look at the <a class="reference external" href="/esphomeyaml/index.html">Components
+Index</a>, hopefully you’ll find all
+sensors/outputs/… you’ll need in there. If you’re having any problems or
+want new features, please either create a new issue on the <a class="reference external" href="https://github.com/OttoWinter/esphomeyaml/issues">GitHub issue
+tracker</a> or contact
+me via the <a class="reference external" href="https://discord.gg/KhAMKrd">Discord chat</a>.</p>
+</div>
+<div class="section" id="using-custom-components">
+<h2>Using Custom components<a class="headerlink" href="#using-custom-components" title="Permalink to this headline">¶</a></h2>
+<p>esphomelib’s powerful core makes it easy to create own custom sensors.
+Please first follow the <a class="reference external" href="https://github.com/OttoWinter/esphomelib/wiki/Custom-Sensor-Component">Custom Sensor Component
+Guide</a>
+to see how this can be done. For using custom components with
+esphomeyaml you only need to open up the auto-generated <code class="docutils literal notranslate"><span class="pre">src/main.cpp</span></code>
+file in the platformio project folder. The lines in between
+<code class="docutils literal notranslate"><span class="pre">AUTO</span> <span class="pre">GENERATED</span> <span class="pre">CODE</span> <span class="pre">BEGIN</span></code> and <code class="docutils literal notranslate"><span class="pre">AUTO</span> <span class="pre">GENERATED</span> <span class="pre">CODE</span> <span class="pre">END</span></code> should not
+be edited and all changes in there will be overriden, but outside of
+those comments you can safely create custom sensors while still using
+esphomeyaml’s great configuration options.</p>
+<div class="code cpp highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Auto generated code by esphomeyaml</span>
+<span class="cp">#include</span> <span class="cpf">&quot;esphomelib/application.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">esphomelib</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// ===== DO NOT EDIT ANYTHING BELOW THIS LINE =====</span>
+  <span class="c1">// ========== AUTO GENERATED CODE BEGIN ===========</span>
+  <span class="n">App</span><span class="p">.</span><span class="n">set_name</span><span class="p">(</span><span class="s">&quot;cabinet&quot;</span><span class="p">);</span>
+  <span class="c1">// ...</span>
+  <span class="c1">// =========== AUTO GENERATED CODE END ============</span>
+  <span class="c1">// ========= YOU CAN EDIT AFTER THIS LINE =========</span>
+  <span class="n">App</span><span class="p">.</span><span class="n">setup</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">App</span><span class="p">.</span><span class="n">loop</span><span class="p">();</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/esphomeyaml/getting-started.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

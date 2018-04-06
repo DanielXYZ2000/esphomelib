@@ -4,20 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>GPIO Binary Sensor &#8212; esphomelib 1.1.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -44,7 +35,7 @@
 <h1>GPIO Binary Sensor<a class="headerlink" href="#gpio-binary-sensor" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_gpio_binary_sensor</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="s">&quot;Window Open&quot;</span><span class="p">,</span>
                             <span class="n">binary_sensor</span><span class="o">::</span><span class="n">device_class</span><span class="o">::</span><span class="n">WINDOW</span><span class="p">);</span>
 <span class="c1">// Custom pinMode</span>
@@ -52,26 +43,26 @@
                             <span class="n">binary_sensor</span><span class="o">::</span><span class="n">device_class</span><span class="o">::</span><span class="n">WINDOW</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinRKNSt6stringERKNSt6stringE" title="esphomelib::Application::make_gpio_binary_sensor"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_gpio_binary_sensor()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv3N10esphomelib11Application23make_gpio_binary_sensorE12GPIOInputPinRKNSt6stringERKNSt6stringE" title="esphomelib::Application::make_gpio_binary_sensor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_gpio_binary_sensor()</span></code></a>.</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponentE">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component"></span><em class="property">class </em><code class="descclassname">esphomelib::binary_sensor::</code><code class="descname">GPIOBinarySensorComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponentE"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor<code class="descclassname">::</code><code class="descname">GPIOBinarySensorComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="#classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component"><span class="std std-ref">GPIOBinarySensorComponent</span></a> - Simple binary_sensor component for a GPIO pin. </p>
 <p>This class allows you to observe the digital state of a certain GPIO pin. </p>
 <p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1binary__sensor_1_1_binary_sensor"><span class="std std-ref">esphomelib::binary_sensor::BinarySensor</span></a>, <a class="reference internal" href="../core/component.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent25GPIOBinarySensorComponentE12GPIOInputPin">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::GPIOBinarySensorComponent__GPIOInputPin"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1ad6ba25303a80860522401dc88aa2c3d4"></span><code class="descname">GPIOBinarySensorComponent</code><span class="sig-paren">(</span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent25GPIOBinarySensorComponentE12GPIOInputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent25GPIOBinarySensorComponentE12GPIOInputPin">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent25GPIOBinarySensorComponentE12GPIOInputPin"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::GPIOBinarySensorComponent__GPIOInputPin"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1ad6ba25303a80860522401dc88aa2c3d4"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">GPIOBinarySensorComponent</code><span class="sig-paren">(</span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent25GPIOBinarySensorComponentE12GPIOInputPin" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a <a class="reference internal" href="#classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component"><span class="std std-ref">GPIOBinarySensorComponent</span></a>. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">pin</span></code>: The input pin, can either be an integer or <a class="reference internal" href="../core/helpers.html#classesphomelib_1_1_g_p_i_o_input_pin"><span class="std std-ref">GPIOInputPin</span></a>. </li>
+<li><code class="docutils literal notranslate"><span class="pre">pin</span></code>: The input pin, can either be an integer or <a class="reference internal" href="../core/helpers.html#classesphomelib_1_1_g_p_i_o_input_pin"><span class="std std-ref">GPIOInputPin</span></a>. </li>
 </ul>
 </dd>
 </dl>
@@ -79,32 +70,32 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent7set_pinERK12GPIOInputPin">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::set_pin__GPIOInputPinCR"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1af9d1483c31dcd232f510a17ef8e375de"></span>void <code class="descname">set_pin</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> &amp;<em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent7set_pinERK12GPIOInputPin" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent7set_pinERK12GPIOInputPin">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent7set_pinERK12GPIOInputPin"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::set_pin__GPIOInputPinCR"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1af9d1483c31dcd232f510a17ef8e375de"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">set_pin</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> &amp;<em>pin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent7set_pinERK12GPIOInputPin" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the pin for this GPIO binary sensor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent5setupEv">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::setup"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a33a1b138fd5f4665f30a0c6669d36e3a"></span>void <code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent5setupEv">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent5setupEv"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::setup"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a33a1b138fd5f4665f30a0c6669d36e3a"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setup pin. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib13binary_sensor25GPIOBinarySensorComponent18get_setup_priorityEv">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1ab14699166be3ee53f2589231c224cdd4"></span>float <code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13binary_sensor25GPIOBinarySensorComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib13binary_sensor25GPIOBinarySensorComponent18get_setup_priorityEv">
+<span id="_CPPv2NK10esphomelib13binary_sensor25GPIOBinarySensorComponent18get_setup_priorityEv"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1ab14699166be3ee53f2589231c224cdd4"></span>float <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13binary_sensor25GPIOBinarySensorComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Hardware priority. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent4loopEv">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::loop"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a5a0997bc3bce4056ade88b9d86f7bbf3"></span>void <code class="descname">loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent4loopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent4loopEv">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent4loopEv"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::loop"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a5a0997bc3bce4056ade88b9d86f7bbf3"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent4loopEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Check sensor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent7get_pinEv">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::get_pin"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a1f0c48bf50bafdea6da591f823786a05"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> &amp;<code class="descname">get_pin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent7get_pinEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent7get_pinEv">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent7get_pinEv"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::get_pin"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a1f0c48bf50bafdea6da591f823786a05"></span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> &amp;<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">get_pin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent7get_pinEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the pin for this GPIO binary sensor. </p>
 </dd></dl>
 
@@ -112,8 +103,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent4pin_E">
-<span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::pin___GPIOInputPin"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a4b769e9753e524a215a549f259c26e5a"></span><a class="reference internal" href="../core/helpers.html#_CPPv2N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <code class="descname">pin_</code><a class="headerlink" href="#_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent4pin_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent4pin_E">
+<span id="_CPPv2N10esphomelib13binary_sensor25GPIOBinarySensorComponent4pin_E"></span><span id="esphomelib::binary_sensor::GPIOBinarySensorComponent::pin___GPIOInputPin"></span><span class="target" id="classesphomelib_1_1binary__sensor_1_1_g_p_i_o_binary_sensor_component_1a4b769e9753e524a215a549f259c26e5a"></span><a class="reference internal" href="../core/helpers.html#_CPPv3N10esphomelib12GPIOInputPinE" title="esphomelib::GPIOInputPin">GPIOInputPin</a> <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::binary_sensor::<a class="reference internal" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponentE" title="esphomelib::binary_sensor::GPIOBinarySensorComponent">GPIOBinarySensorComponent</a><code class="descname">pin_</code><a class="headerlink" href="#_CPPv3N10esphomelib13binary_sensor25GPIOBinarySensorComponent4pin_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -138,12 +129,14 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -154,7 +147,7 @@
       &copy;2018, Otto Winter.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
@@ -164,6 +157,22 @@
 
     
 
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
   </body>
 </html>

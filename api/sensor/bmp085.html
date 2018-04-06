@@ -4,20 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>BMP085 Pressure/Temperature Sensor &#8212; esphomelib 1.1.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -53,33 +44,33 @@ i2c-based devices, first initialize the i2c bus using the pins you have for SDA 
 then create the sensors themselves as in below example.</p>
 <div class="section" id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// inside setup()</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// inside setup()</span>
 <span class="n">App</span><span class="p">.</span><span class="n">init_i2c</span><span class="p">(</span><span class="n">SDA_PIN</span><span class="p">,</span> <span class="n">SCL_PIN</span><span class="p">);</span> <span class="c1">// change these values for your pins.</span>
 <span class="c1">// create sensors</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_bmp085_sensor</span><span class="p">(</span><span class="s">&quot;Outside Temperature&quot;</span><span class="p">,</span> <span class="s">&quot;Outside Pressure&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv2N10esphomelib11Application18make_bmp085_sensorERKNSt6stringERKNSt6stringE8uint32_t" title="esphomelib::Application::make_bmp085_sensor"><code class="xref cpp cpp-func docutils literal"><span class="pre">Application::make_bmp085_sensor()</span></code></a>.</p>
+<p>See <a class="reference internal" href="../core/application.html#_CPPv3N10esphomelib11Application18make_bmp085_sensorERKNSt6stringERKNSt6stringE8uint32_t" title="esphomelib::Application::make_bmp085_sensor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_bmp085_sensor()</span></code></a>.</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085ComponentE">
-<span id="esphomelib::sensor::BMP085Component"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component"></span><em class="property">class </em><code class="descclassname">esphomelib::sensor::</code><code class="descname">BMP085Component</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085ComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085ComponentE">
+<span id="_CPPv2N10esphomelib6sensor15BMP085ComponentE"></span><span id="esphomelib::sensor::BMP085Component"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor<code class="descclassname">::</code><code class="descname">BMP085Component</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This <a class="reference internal" href="../core/component.html#classesphomelib_1_1_component"><span class="std std-ref">Component</span></a> represents a BMP085/BMP180/BMP280 Pressure+Temperature i2c sensor. </p>
 <p>It’s built up similar to the DHT component: a central hub that has two sensors. </p>
 <p>Inherits from <a class="reference internal" href="../core/component.html#classesphomelib_1_1_polling_component"><span class="std std-ref">esphomelib::PollingComponent</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component15BMP085ComponentE8uint32_t">
-<span id="esphomelib::sensor::BMP085Component::BMP085Component__uint32_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a62e6818cb4c8b3bc39d7f9e04a74f13c"></span><code class="descname">BMP085Component</code><span class="sig-paren">(</span>uint32_t <em>update_interval</em> = 30000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component15BMP085ComponentE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component15BMP085ComponentE8uint32_t">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component15BMP085ComponentE8uint32_t"></span><span id="esphomelib::sensor::BMP085Component::BMP085Component__uint32_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a62e6818cb4c8b3bc39d7f9e04a74f13c"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">BMP085Component</code><span class="sig-paren">(</span>uint32_t <em>update_interval</em> = 30000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component15BMP085ComponentE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct the <a class="reference internal" href="#classesphomelib_1_1sensor_1_1_b_m_p085_component"><span class="std std-ref">BMP085Component</span></a> using the provided address and update interval. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">address</span></code>: The i2c address of the sensor, defaults to 0x77. </li>
-<li><code class="docutils literal"><span class="pre">update_interval</span></code>: The interval in ms to check the sensor. </li>
+<li><code class="docutils literal notranslate"><span class="pre">address</span></code>: The i2c address of the sensor, defaults to 0x77. </li>
+<li><code class="docutils literal notranslate"><span class="pre">update_interval</span></code>: The interval in ms to check the sensor. </li>
 </ul>
 </dd>
 </dl>
@@ -87,44 +78,44 @@ then create the sensors themselves as in below example.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component11set_addressE7uint8_t">
-<span id="esphomelib::sensor::BMP085Component::set_address__uint8_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a4a45435c62e0f483c76c27131488e628"></span>void <code class="descname">set_address</code><span class="sig-paren">(</span>uint8_t <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component11set_addressE7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component11set_addressE7uint8_t">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component11set_addressE7uint8_t"></span><span id="esphomelib::sensor::BMP085Component::set_address__uint8_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a4a45435c62e0f483c76c27131488e628"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">set_address</code><span class="sig-paren">(</span>uint8_t <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component11set_addressE7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the i2c address of this sensor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib6sensor15BMP085Component11get_addressEv">
-<span id="esphomelib::sensor::BMP085Component::get_addressC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a7c4a299b770f92cdae8e78c82c893df0"></span>uint8_t <code class="descname">get_address</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib6sensor15BMP085Component11get_addressEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib6sensor15BMP085Component11get_addressEv">
+<span id="_CPPv2NK10esphomelib6sensor15BMP085Component11get_addressEv"></span><span id="esphomelib::sensor::BMP085Component::get_addressC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a7c4a299b770f92cdae8e78c82c893df0"></span>uint8_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">get_address</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib6sensor15BMP085Component11get_addressEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the i2c address for this sensor. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component7get_bmpEv">
-<span id="esphomelib::sensor::BMP085Component::get_bmp"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1acee3647edf76558db7a6f515149430ba"></span>BMP085 &amp;<code class="descname">get_bmp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component7get_bmpEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component7get_bmpEv">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component7get_bmpEv"></span><span id="esphomelib::sensor::BMP085Component::get_bmp"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1acee3647edf76558db7a6f515149430ba"></span>BMP085 &amp;<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">get_bmp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component7get_bmpEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a handle to the internal i2cdevlib BMP085 object, be careful with this. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib6sensor15BMP085Component22get_temperature_sensorEv">
-<span id="esphomelib::sensor::BMP085Component::get_temperature_sensorC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a95bb0d213eb1aed908f299097b6dcf38"></span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a> *<code class="descname">get_temperature_sensor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib6sensor15BMP085Component22get_temperature_sensorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib6sensor15BMP085Component22get_temperature_sensorEv">
+<span id="_CPPv2NK10esphomelib6sensor15BMP085Component22get_temperature_sensorEv"></span><span id="esphomelib::sensor::BMP085Component::get_temperature_sensorC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a95bb0d213eb1aed908f299097b6dcf38"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">get_temperature_sensor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib6sensor15BMP085Component22get_temperature_sensorEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the internal temperature sensor used to expose the temperature as a sensor object. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib6sensor15BMP085Component19get_pressure_sensorEv">
-<span id="esphomelib::sensor::BMP085Component::get_pressure_sensorC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a4924a14d11d7c89a5df38d6c8011f385"></span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a> *<code class="descname">get_pressure_sensor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib6sensor15BMP085Component19get_pressure_sensorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib6sensor15BMP085Component19get_pressure_sensorEv">
+<span id="_CPPv2NK10esphomelib6sensor15BMP085Component19get_pressure_sensorEv"></span><span id="esphomelib::sensor::BMP085Component::get_pressure_sensorC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a4924a14d11d7c89a5df38d6c8011f385"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">get_pressure_sensor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib6sensor15BMP085Component19get_pressure_sensorEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the internal pressure sensor used to expose the pressure as a sensor object. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component6updateEv">
-<span id="esphomelib::sensor::BMP085Component::update"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a0a2fa532e301c5566c65a15d179b9e61"></span>void <code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component6updateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component6updateEv">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component6updateEv"></span><span id="esphomelib::sensor::BMP085Component::update"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a0a2fa532e301c5566c65a15d179b9e61"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component6updateEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Schedule temperature+pressure readings. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component5setupEv">
-<span id="esphomelib::sensor::BMP085Component::setup"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a48101d74e940e630a3a3a4c4d8446317"></span>void <code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component5setupEv">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component5setupEv"></span><span id="esphomelib::sensor::BMP085Component::setup"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a48101d74e940e630a3a3a4c4d8446317"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component5setupEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setup the sensor and test for a connection. </p>
 </dd></dl>
 
@@ -132,22 +123,22 @@ then create the sensors themselves as in below example.</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Types</p>
 <dl class="type">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component12__anonymous3E">
-<span id="esphomelib::sensor::BMP085Component::__anonymous3"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eeb"></span><em class="property">enum </em><code class="descname"><strong>[anonymous]</strong></code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component12__anonymous3E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component12__anonymous3E">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component12__anonymous3E"></span><span id="esphomelib::sensor::BMP085Component::__anonymous3"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eeb"></span><em class="property">enum </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib"><strong>[anonymous]</strong></a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">__anonymous3</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component12__anonymous3E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component4IDLEE">
-<span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eebabcfe912c141adae343a55486711eb2a1"></span><code class="descname">IDLE</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component4IDLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component4IDLEE">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component4IDLEE"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eebabcfe912c141adae343a55486711eb2a1"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">IDLE</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component4IDLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component11TEMPERATUREE">
-<span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eeba0d902611ac4734fe33b3ea20857ba9db"></span><code class="descname">TEMPERATURE</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component11TEMPERATUREE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component11TEMPERATUREE">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component11TEMPERATUREE"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eeba0d902611ac4734fe33b3ea20857ba9db"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">TEMPERATURE</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component11TEMPERATUREE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component8PRESSUREE">
-<span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eeba8492b60490c8bb4c9cead1be3241f620"></span><code class="descname">PRESSURE</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component8PRESSUREE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component8PRESSUREE">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component8PRESSUREE"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a5d07fb3959a01c34d4c0e7062dc78eeba8492b60490c8bb4c9cead1be3241f620"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">PRESSURE</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component8PRESSUREE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -156,14 +147,14 @@ then create the sensors themselves as in below example.</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component17read_temperature_Ev">
-<span id="esphomelib::sensor::BMP085Component::read_temperature_"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1ad0269d6973691602a7fcf3c37e5a8618"></span>void <code class="descname">read_temperature_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component17read_temperature_Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component17read_temperature_Ev">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component17read_temperature_Ev"></span><span id="esphomelib::sensor::BMP085Component::read_temperature_"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1ad0269d6973691602a7fcf3c37e5a8618"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">read_temperature_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component17read_temperature_Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Internal method to read the temperature from the component after it has been scheduled. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component14read_pressure_Ev">
-<span id="esphomelib::sensor::BMP085Component::read_pressure_"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a738efe59e9e25407adcaeb8b3de8ea1a"></span>void <code class="descname">read_pressure_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component14read_pressure_Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component14read_pressure_Ev">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component14read_pressure_Ev"></span><span id="esphomelib::sensor::BMP085Component::read_pressure_"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a738efe59e9e25407adcaeb8b3de8ea1a"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">read_pressure_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component14read_pressure_Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Internal method to read the pressure from the component after it has been scheduled. </p>
 </dd></dl>
 
@@ -171,13 +162,13 @@ then create the sensors themselves as in below example.</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component4bmp_E">
-<span id="esphomelib::sensor::BMP085Component::bmp___BMP085"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a22ee3695b028ae4a9a31334b9f9c3bfa"></span>BMP085 <code class="descname">bmp_</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component4bmp_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component4bmp_E">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component4bmp_E"></span><span id="esphomelib::sensor::BMP085Component::bmp___BMP085"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a22ee3695b028ae4a9a31334b9f9c3bfa"></span>BMP085 <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">bmp_</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component4bmp_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component8address_E">
-<span id="esphomelib::sensor::BMP085Component::address___uint8_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a4691aabac3718447da866b9f51538663"></span>uint8_t <code class="descname">address_</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component8address_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component8address_E">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component8address_E"></span><span id="esphomelib::sensor::BMP085Component::address___uint8_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a4691aabac3718447da866b9f51538663"></span>uint8_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">address_</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component8address_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
@@ -187,33 +178,33 @@ then create the sensors themselves as in below example.</p>
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component12temperature_E">
-<span id="esphomelib::sensor::BMP085Component::temperature___BMP085TemperatureSensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a939946ea2246219e57e44d524b7138a2"></span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a> *<code class="descname">temperature_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component12temperature_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component12temperature_E">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component12temperature_E"></span><span id="esphomelib::sensor::BMP085Component::temperature___BMP085TemperatureSensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a939946ea2246219e57e44d524b7138a2"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">temperature_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component12temperature_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor15BMP085Component9pressure_E">
-<span id="esphomelib::sensor::BMP085Component::pressure___BMP085PressureSensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a6906cbadc770a41265206dfa39d7756d"></span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a> *<code class="descname">pressure_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib6sensor15BMP085Component9pressure_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor15BMP085Component9pressure_E">
+<span id="_CPPv2N10esphomelib6sensor15BMP085Component9pressure_E"></span><span id="esphomelib::sensor::BMP085Component::pressure___BMP085PressureSensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_component_1a6906cbadc770a41265206dfa39d7756d"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a><code class="descname">pressure_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor15BMP085Component9pressure_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensorE">
-<span id="esphomelib::sensor::BMP085TemperatureSensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor"></span><em class="property">class </em><code class="descclassname">esphomelib::sensor::</code><code class="descname">BMP085TemperatureSensor</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensorE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensorE"></span><span id="esphomelib::sensor::BMP085TemperatureSensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor<code class="descclassname">::</code><code class="descname">BMP085TemperatureSensor</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Internal sensor class to represent the temperature state of the BMP085 as a sensor. </p>
 <p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1sensor_1_1_sensor"><span class="std std-ref">esphomelib::sensor::Sensor</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor23BMP085TemperatureSensorEP15BMP085Component">
-<span id="esphomelib::sensor::BMP085TemperatureSensor::BMP085TemperatureSensor__BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a9477f68a219ebf7554eb09d3b7693ae6"></span><code class="descname">BMP085TemperatureSensor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor23BMP085TemperatureSensorEP15BMP085Component" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor23BMP085TemperatureSensorEP15BMP085Component">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor23BMP085TemperatureSensorEP15BMP085Component"></span><span id="esphomelib::sensor::BMP085TemperatureSensor::BMP085TemperatureSensor__BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a9477f68a219ebf7554eb09d3b7693ae6"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a><code class="descname">BMP085TemperatureSensor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor23BMP085TemperatureSensorEP15BMP085Component" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor19unit_of_measurementEv">
-<span id="esphomelib::sensor::BMP085TemperatureSensor::unit_of_measurement"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1ac4da1ba011df70462d64d01c5da31750"></span>std::string <code class="descname">unit_of_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor19unit_of_measurementEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor19unit_of_measurementEv">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor19unit_of_measurementEv"></span><span id="esphomelib::sensor::BMP085TemperatureSensor::unit_of_measurement"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1ac4da1ba011df70462d64d01c5da31750"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a><code class="descname">unit_of_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor19unit_of_measurementEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override this to set the Home Assistant unit of measurement for this sensor. </p>
 <p>Return “” to disable this feature.</p>
 <p><dl class="docutils">
@@ -224,8 +215,8 @@ then create the sensors themselves as in below example.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor4iconEv">
-<span id="esphomelib::sensor::BMP085TemperatureSensor::icon"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a5ed15a0691c1218a876f373773526f52"></span>std::string <code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor4iconEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor4iconEv">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor4iconEv"></span><span id="esphomelib::sensor::BMP085TemperatureSensor::icon"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a5ed15a0691c1218a876f373773526f52"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a><code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor4iconEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override this to set the Home Assistant icon for this sensor. </p>
 <p>Return “” to disable this feature.</p>
 <p><dl class="docutils">
@@ -236,14 +227,14 @@ then create the sensors themselves as in below example.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor15update_intervalEv">
-<span id="esphomelib::sensor::BMP085TemperatureSensor::update_interval"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a57492a1cbca085ad9b9291bd75c6811f"></span>uint32_t <code class="descname">update_interval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor15update_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor15update_intervalEv">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor15update_intervalEv"></span><span id="esphomelib::sensor::BMP085TemperatureSensor::update_interval"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a57492a1cbca085ad9b9291bd75c6811f"></span>uint32_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a><code class="descname">update_interval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor15update_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return with which interval the sensor is polled. Return 0 for non-polling mode. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor17accuracy_decimalsEv">
-<span id="esphomelib::sensor::BMP085TemperatureSensor::accuracy_decimals"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a55bbc8769eb68c80240248d8f1bc923c"></span>int8_t <code class="descname">accuracy_decimals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor17accuracy_decimalsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor17accuracy_decimalsEv">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor17accuracy_decimalsEv"></span><span id="esphomelib::sensor::BMP085TemperatureSensor::accuracy_decimals"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a55bbc8769eb68c80240248d8f1bc923c"></span>int8_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a><code class="descname">accuracy_decimals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor17accuracy_decimalsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the accuracy in decimals for this sensor. </p>
 </dd></dl>
 
@@ -251,28 +242,28 @@ then create the sensors themselves as in below example.</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor7parent_E">
-<span id="esphomelib::sensor::BMP085TemperatureSensor::parent___BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a3486e0b8e370c8ffa0ae77d135c444de"></span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<code class="descname">parent_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor7parent_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor7parent_E">
+<span id="_CPPv2N10esphomelib6sensor23BMP085TemperatureSensor7parent_E"></span><span id="esphomelib::sensor::BMP085TemperatureSensor::parent___BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_temperature_sensor_1a3486e0b8e370c8ffa0ae77d135c444de"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensorE" title="esphomelib::sensor::BMP085TemperatureSensor">BMP085TemperatureSensor</a><code class="descname">parent_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor23BMP085TemperatureSensor7parent_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensorE">
-<span id="esphomelib::sensor::BMP085PressureSensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor"></span><em class="property">class </em><code class="descclassname">esphomelib::sensor::</code><code class="descname">BMP085PressureSensor</code><a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensorE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensorE">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensorE"></span><span id="esphomelib::sensor::BMP085PressureSensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor<code class="descclassname">::</code><code class="descname">BMP085PressureSensor</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Internal sensor class to represent the pressure state of the BMP085 as a sensor. </p>
 <p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1sensor_1_1_sensor"><span class="std std-ref">esphomelib::sensor::Sensor</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor20BMP085PressureSensorEP15BMP085Component">
-<span id="esphomelib::sensor::BMP085PressureSensor::BMP085PressureSensor__BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a87a2d534b8b55db2f9f6ef25021ce0f5"></span><code class="descname">BMP085PressureSensor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensor20BMP085PressureSensorEP15BMP085Component" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensor20BMP085PressureSensorEP15BMP085Component">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor20BMP085PressureSensorEP15BMP085Component"></span><span id="esphomelib::sensor::BMP085PressureSensor::BMP085PressureSensor__BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a87a2d534b8b55db2f9f6ef25021ce0f5"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a><code class="descname">BMP085PressureSensor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensor20BMP085PressureSensorEP15BMP085Component" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor19unit_of_measurementEv">
-<span id="esphomelib::sensor::BMP085PressureSensor::unit_of_measurement"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a365891a234569395942fed4401127ab1"></span>std::string <code class="descname">unit_of_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensor19unit_of_measurementEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensor19unit_of_measurementEv">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor19unit_of_measurementEv"></span><span id="esphomelib::sensor::BMP085PressureSensor::unit_of_measurement"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a365891a234569395942fed4401127ab1"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a><code class="descname">unit_of_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensor19unit_of_measurementEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override this to set the Home Assistant unit of measurement for this sensor. </p>
 <p>Return “” to disable this feature.</p>
 <p><dl class="docutils">
@@ -283,8 +274,8 @@ then create the sensors themselves as in below example.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor4iconEv">
-<span id="esphomelib::sensor::BMP085PressureSensor::icon"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a4c100738be44f2ac61362f6477ed0f15"></span>std::string <code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensor4iconEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensor4iconEv">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor4iconEv"></span><span id="esphomelib::sensor::BMP085PressureSensor::icon"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a4c100738be44f2ac61362f6477ed0f15"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a><code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensor4iconEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Override this to set the Home Assistant icon for this sensor. </p>
 <p>Return “” to disable this feature.</p>
 <p><dl class="docutils">
@@ -295,14 +286,14 @@ then create the sensors themselves as in below example.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor15update_intervalEv">
-<span id="esphomelib::sensor::BMP085PressureSensor::update_interval"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1af37ac2056c4ad1803874fefdda2067e1"></span>uint32_t <code class="descname">update_interval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensor15update_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensor15update_intervalEv">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor15update_intervalEv"></span><span id="esphomelib::sensor::BMP085PressureSensor::update_interval"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1af37ac2056c4ad1803874fefdda2067e1"></span>uint32_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a><code class="descname">update_interval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensor15update_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return with which interval the sensor is polled. Return 0 for non-polling mode. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor17accuracy_decimalsEv">
-<span id="esphomelib::sensor::BMP085PressureSensor::accuracy_decimals"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a353b27bb172076c04795118ff21a9e9d"></span>int8_t <code class="descname">accuracy_decimals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensor17accuracy_decimalsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensor17accuracy_decimalsEv">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor17accuracy_decimalsEv"></span><span id="esphomelib::sensor::BMP085PressureSensor::accuracy_decimals"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a353b27bb172076c04795118ff21a9e9d"></span>int8_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a><code class="descname">accuracy_decimals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensor17accuracy_decimalsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return the accuracy in decimals for this sensor. </p>
 </dd></dl>
 
@@ -310,8 +301,8 @@ then create the sensors themselves as in below example.</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor7parent_E">
-<span id="esphomelib::sensor::BMP085PressureSensor::parent___BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a923249b7209ea1ed1b10ed1c50524250"></span><a class="reference internal" href="#_CPPv2N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<code class="descname">parent_</code> = {nullptr}<a class="headerlink" href="#_CPPv2N10esphomelib6sensor20BMP085PressureSensor7parent_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib6sensor20BMP085PressureSensor7parent_E">
+<span id="_CPPv2N10esphomelib6sensor20BMP085PressureSensor7parent_E"></span><span id="esphomelib::sensor::BMP085PressureSensor::parent___BMP085ComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_b_m_p085_pressure_sensor_1a923249b7209ea1ed1b10ed1c50524250"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15BMP085ComponentE" title="esphomelib::sensor::BMP085Component">BMP085Component</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensorE" title="esphomelib::sensor::BMP085PressureSensor">BMP085PressureSensor</a><code class="descname">parent_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor20BMP085PressureSensor7parent_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -336,12 +327,14 @@ then create the sensors themselves as in below example.</p>
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -352,7 +345,7 @@ then create the sensors themselves as in below example.</p>
       &copy;2018, Otto Winter.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
@@ -362,6 +355,22 @@ then create the sensors themselves as in below example.</p>
 
     
 
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
   </body>
 </html>

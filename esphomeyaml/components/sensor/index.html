@@ -1,0 +1,244 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sensor Component &#8212; esphomelib 1.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sensor-component">
+<h1>Sensor Component<a class="headerlink" href="#sensor-component" title="Permalink to this headline">¶</a></h1>
+<p>esphomelib has support for many different sensors. Each of them is a
+platform of the <code class="docutils literal notranslate"><span class="pre">sensor</span></code> domain and each sensor has several base
+configuration options.</p>
+<p>Currently supported sensor platforms:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="/esphomeyaml/components/sensor/adc.html"><img alt="ADC" class="component-image" src="../../../_images/flash.svg" /></a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/ads1115.html"><img alt="ADS1115" class="component-image" src="../../../_images/ads1115.jpg" /></a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/bmp085.html"><img alt="BMP085" class="component-image" src="../../../_images/bmp180.jpg" /></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="/esphomeyaml/components/sensor/adc.html">ADC</a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/ads1115.html">ADS1115</a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/bmp085.html">BMP085</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="/esphomeyaml/components/sensor/dallas.html"><img alt="Dallas" class="component-image" src="../../../_images/ds18b20.jpg" /></a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/dht.html"><img alt="DHT" class="component-image" src="../../../_images/dht22.jpg" /></a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/hdc1080.html"><img alt="HDC1080" class="component-image" src="../../../_images/HDC1080.jpg" /></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="/esphomeyaml/components/sensor/dallas.html">Dallas</a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/dht.html">DHT</a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/hdc1080.html">HDC1080</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="/esphomeyaml/components/sensor/htu21d.html"><img alt="HTU21D" class="component-image" src="../../../_images/htu21d.jpg" /></a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/pulse_counter.html"><img alt="Pulse Counter" class="component-image" src="../../../_images/pulse.svg" /></a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/ultrasonic.html"><img alt="Ultrasonic Sensor" class="component-image" src="../../../_images/hc-sr04.png" /></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="/esphomeyaml/components/sensor/htu21d.html">HTU21D</a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/pulse_counter.html">Pulse Counter</a></td>
+<td><a class="reference external" href="/esphomeyaml/components/sensor/ultrasonic.html">Ultrasonic Sensor</a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="base-sensor-configuration">
+<h2>Base Sensor Configuration<a class="headerlink" href="#base-sensor-configuration" title="Permalink to this headline">¶</a></h2>
+<p>All sensors in esphomeyaml/esphomelib have a name and some other
+optional configuration options. By default, the sensor platform will
+chose appropriate values for all of these by default, but you can always
+override them if you want to.</p>
+<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp"># Example sensor configuration</span>
+<span class="nl">name</span><span class="p">:</span> <span class="n">Livingroom</span> <span class="n">Temperature</span>
+
+<span class="cp"># Optional variables:</span>
+<span class="nl">unit_of_measurement</span><span class="p">:</span> <span class="s">&quot;°C&quot;</span>
+<span class="nl">icon</span><span class="p">:</span> <span class="s">&quot;mdi:water-percent&quot;</span>
+<span class="nl">accuracy_decimals</span><span class="p">:</span> <span class="mi">1</span>
+<span class="nl">expire_after</span><span class="p">:</span> <span class="mi">30</span><span class="n">s</span>
+<span class="nl">filters</span><span class="p">:</span>
+  <span class="o">-</span> <span class="nl">sliding_window_moving_average</span><span class="p">:</span>
+      <span class="nl">window_size</span><span class="p">:</span> <span class="mi">15</span>
+      <span class="nl">send_every</span><span class="p">:</span> <span class="mi">15</span>
+</pre></div>
+</div>
+<p>Configuration variables:</p>
+<ul class="simple">
+<li><strong>name</strong> (<strong>Required</strong>, string): The name for the sensor.</li>
+<li><strong>unit_of_measurement</strong> (<em>Optional</em>, string): Manually set the unit
+of measurement the sensor should advertise its values with. This does
+not actually do any maths (conversion between units).</li>
+<li><strong>icon</strong> (<em>Optional</em>, icon): Manually set the icon to use for the
+sensor in the frontend.</li>
+<li><strong>accuracy_decimals</strong> (<em>Optional</em>, int): Manually set the accuracy of
+decimals to use when reporting values.</li>
+<li><strong>expire_after</strong> (<em>Optional</em>, <a class="reference external" href="/esphomeyaml/configuration-types.html#time">time</a>): Manually set the time in which
+the sensor values should be marked as “expired”/“unknown”. Not
+providing any value means no expiry.</li>
+<li><strong>filters</strong> (<em>Optional</em>): Specify filters to use for some basic
+transforming of values. Defaults to a basic sliding window moving
+average over the last few values. See <a class="reference external" href="#sensor-filters">Sensor
+Filters</a> for more information.</li>
+<li>All other options from <a class="reference external" href="/esphomeyaml/components/mqtt.html#mqtt-component-base-configuration">MQTT
+Component</a>.</li>
+</ul>
+</div>
+<div class="section" id="sensor-filters">
+<h2>Sensor Filters<a class="headerlink" href="#sensor-filters" title="Permalink to this headline">¶</a></h2>
+<p>esphomeyaml/esphomelib allow you to do some basic preprocessing of
+sensor values before they’re sent to Home Assistant. This is for example
+useful if you want to apply some average over the last few values to
+relief Home Assistant’s state machine and keep the history graphs in the
+front-end a bit more clean. More sophisticated filters should be done
+with Home Assistant <a class="reference external" href="https://www.home-assistant.io/components/sensor.filter/">filter
+sensor</a>.</p>
+<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp"># Example filters:</span>
+<span class="nl">filters</span><span class="p">:</span>
+  <span class="o">-</span> <span class="nl">offset</span><span class="p">:</span> <span class="mf">2.0</span>
+  <span class="o">-</span> <span class="nl">multiply</span><span class="p">:</span> <span class="mf">1.2</span>
+  <span class="o">-</span> <span class="nl">filter_out</span><span class="p">:</span> <span class="mf">42.0</span>
+  <span class="o">-</span> <span class="nl">filter_nan</span><span class="p">:</span>
+  <span class="o">-</span> <span class="nl">sliding_window_moving_average</span><span class="p">:</span>
+      <span class="nl">window_size</span><span class="p">:</span> <span class="mi">15</span>
+      <span class="nl">send_every</span><span class="p">:</span> <span class="mi">15</span>
+  <span class="o">-</span> <span class="nl">exponential_moving_average</span><span class="p">:</span>
+      <span class="nl">alpha</span><span class="p">:</span> <span class="mf">0.1</span>
+      <span class="nl">send_every</span><span class="p">:</span> <span class="mi">15</span>
+  <span class="o">-</span> <span class="nl">lambda</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mf">9.0</span><span class="o">/</span><span class="mf">5.0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">32.0</span>
+</pre></div>
+</div>
+<p>Above example configuration entry is probably a bit useless, but shows
+every filter there is currently:</p>
+<ul class="simple">
+<li><strong>offset</strong>: Add an offset to every sensor value.</li>
+<li><strong>multiply</strong>: Multiply each sensor value by this number.</li>
+<li><strong>filter_out</strong>: Remove every sensor value that equals this number.</li>
+<li><strong>filter_nan</strong>: Remove every value that is considered <code class="docutils literal notranslate"><span class="pre">NAN</span></code> (not a
+number) in C.</li>
+<li><strong>sliding_window_moving_average</strong>: A <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average">simple moving
+average</a>
+over the last few values.<ul>
+<li><strong>window_size</strong>: The number of values over which to perform an
+average when pushing out a value.</li>
+<li><strong>send_every</strong>: How often a sensor value should be pushed out. For
+example, in above configuration the weighted average is only
+pushed out on every 15th received sensor value.</li>
+</ul>
+</li>
+<li><strong>exponential_moving_average</strong>: A simple <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average">exponential moving
+average</a>
+over the last few values.<ul>
+<li><strong>alpha</strong>: The forget factor/alpha value of the filter.</li>
+<li><strong>send_every</strong>: How often a sensor value should be pushed out.</li>
+</ul>
+</li>
+<li><strong>lambda</strong>: Perform a simple mathematical operation over the sensor
+values. The input value is <code class="docutils literal notranslate"><span class="pre">x</span></code> and the result of the lambda is used
+as output. Each floating point operation should have <code class="docutils literal notranslate"><span class="pre">.0</span></code> attached
+as in above configuration. This will be copied over to the C++ code
+as a raw string.</li>
+</ul>
+<div class="section" id="example-converting-celsius-to-fahrenheit">
+<h3>Example: Converting Celsius to Fahrenheit<a class="headerlink" href="#example-converting-celsius-to-fahrenheit" title="Permalink to this headline">¶</a></h3>
+<p>While I personally don’t like the Fahrenheit temperature scale, I do
+understand that having temperature values appear in the fahrenheit unit
+is quite useful to some users. esphomelib uses the celsius temperature
+unit internally, and I’m not planning on making converting between the
+two simple (😉), but you can use this filter to convert celsius values to
+fahrenheit.</p>
+<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">fiters</span><span class="p">:</span>
+  <span class="o">-</span> <span class="nl">lambda</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mf">9.0</span><span class="o">/</span><span class="mf">5.0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">32.0</span>
+<span class="nl">unit_of_measurement</span><span class="p">:</span> <span class="s">&quot;°F&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../../_sources/esphomeyaml/components/sensor/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

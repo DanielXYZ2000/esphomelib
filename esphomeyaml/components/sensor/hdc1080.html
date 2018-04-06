@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HDC1080 Temperature+Humidity Sensor &#8212; esphomelib 1.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hdc1080-temperature-humidity-sensor">
+<h1>HDC1080 Temperature+Humidity Sensor<a class="headerlink" href="#hdc1080-temperature-humidity-sensor" title="Permalink to this headline">¶</a></h1>
+<p>The HDC1080 Temperature+Humidity sensor allows you to use your HDC1080
+(<a class="reference external" href="http://www.ti.com/lit/ds/symlink/hdc1080.pdf">datasheet</a>,
+<a class="reference external" href="https://www.adafruit.com/product/2635">adafruit</a>) sensors with
+esphomelib. The <a class="reference external" href="/esphomeyaml/components/i2c.html">I²C bus</a>) is
+required to be set up in your configuration for this sensor to work.</p>
+<div class="figure align-center" id="id1">
+<a class="reference external image-reference" href="https://www.adafruit.com/product/2635"><img alt="../../../_images/hdc1080-full.jpg" src="../../../_images/hdc1080-full.jpg" style="width: 50.0%;" /></a>
+<p class="caption"><span class="caption-text">HDC1080 Temperature &amp; Humidity Sensor. Image by <a class="reference external" href="https://www.adafruit.com/product/2635">Adafruit</a>.</span></p>
+</div>
+<p><a class="align-center reference internal" href="../../../_images/temperature-humidity.png"><img alt="image0" class="align-center" src="../../../_images/temperature-humidity.png" style="width: 80.0%;" /></a></p>
+<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp"># Example configuration entry</span>
+<span class="nl">sensor</span><span class="p">:</span>
+  <span class="o">-</span> <span class="nl">platform</span><span class="p">:</span> <span class="n">hdc1080</span>
+    <span class="nl">temperature</span><span class="p">:</span>
+      <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Living Room Temperature&quot;</span>
+    <span class="nl">humidity</span><span class="p">:</span>
+      <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Living Room Pressure&quot;</span>
+    <span class="nl">update_interval</span><span class="p">:</span> <span class="mi">15</span><span class="n">s</span>
+</pre></div>
+</div>
+<div class="section" id="configuration-variables">
+<h2>Configuration variables:<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>temperature</strong> (<strong>Required</strong>): The information for the temperature
+sensor<ul>
+<li><strong>name</strong> (<strong>Required</strong>, string): The name for the temperature
+sensor.</li>
+<li>All other options from
+<a class="reference external" href="/esphomeyaml/components/sensor/index.html#base-sensor-configuration">Sensor</a>
+and <a class="reference external" href="/esphomeyaml/components/mqtt.html#mqtt-component-base-configuration">MQTT
+Component</a>.</li>
+</ul>
+</li>
+<li><strong>humidity</strong> (<strong>Required</strong>): The information for the humidity sensor<ul>
+<li><strong>name</strong> (<strong>Required</strong>, string): The name for the humidity sensor.</li>
+<li>All other options from
+<a class="reference external" href="/esphomeyaml/components/sensor/index.html#base-sensor-configuration">Sensor</a>
+and <a class="reference external" href="/esphomeyaml/components/mqtt.html#mqtt-component-base-configuration">MQTT
+Component</a>.</li>
+</ul>
+</li>
+<li><strong>update_interval</strong> (<em>Optional</em>, <a class="reference external" href="/esphomeyaml/configuration-types.html#time">time</a>): The interval to check the
+sensor. Defaults to <code class="docutils literal notranslate"><span class="pre">15s</span></code>.</li>
+<li><strong>id</strong> (<em>Optional</em>, <a class="reference external" href="/esphomeyaml/configuration-types.html#id">id</a>): Manually specify the ID used for code
+generation.</li>
+</ul>
+<p>Currently, the platform doesn’t support activating the built-in heater,
+as it seems to only be rarely of use. If you need it, please open an
+issue.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../../_sources/esphomeyaml/components/sensor/hdc1080.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

@@ -4,20 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>WiFi &#8212; esphomelib 1.1.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -31,8 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   
 
     <div class="document">
@@ -44,7 +35,7 @@
 <h1>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="example-usage">
 <h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
 <span class="n">App</span><span class="p">.</span><span class="n">init_wifi</span><span class="p">(</span><span class="s">&quot;YOUR_SSID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
 <span class="c1">// Manual IP</span>
 <span class="k">auto</span> <span class="o">*</span><span class="n">wifi</span> <span class="o">=</span> <span class="n">App</span><span class="p">.</span><span class="n">init_wifi</span><span class="p">(</span><span class="s">&quot;YOUR_SSID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
@@ -61,22 +52,22 @@
 <div class="section" id="wificomponent">
 <h3>WiFiComponent<a class="headerlink" href="#wificomponent" title="Permalink to this headline">¶</a></h3>
 <dl class="class">
-<dt id="_CPPv2N10esphomelib13WiFiComponentE">
-<span id="esphomelib::WiFiComponent"></span><span class="target" id="classesphomelib_1_1_wi_fi_component"></span><em class="property">class </em><code class="descclassname">esphomelib::</code><code class="descname">WiFiComponent</code><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponentE">
+<span id="_CPPv2N10esphomelib13WiFiComponentE"></span><span id="esphomelib::WiFiComponent"></span><span class="target" id="classesphomelib_1_1_wi_fi_component"></span><em class="property">class </em><a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a><code class="descclassname">::</code><code class="descname">WiFiComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponentE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This component is responsible for managing the ESP WiFi interface. </p>
 <p>Inherits from <a class="reference internal" href="component.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent13WiFiComponentENSt6stringENSt6stringENSt6stringE">
-<span id="esphomelib::WiFiComponent::WiFiComponent__ss.ss.ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a2e83b7f927cc7f3b2da199484dbccb31"></span><code class="descname">WiFiComponent</code><span class="sig-paren">(</span>std::string <em>ssid</em>, std::string <em>password</em>, std::string <em>hostname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent13WiFiComponentENSt6stringENSt6stringENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent13WiFiComponentENSt6stringENSt6stringENSt6stringE">
+<span id="_CPPv2N10esphomelib13WiFiComponent13WiFiComponentENSt6stringENSt6stringENSt6stringE"></span><span id="esphomelib::WiFiComponent::WiFiComponent__ss.ss.ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a2e83b7f927cc7f3b2da199484dbccb31"></span><a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">WiFiComponent</code><span class="sig-paren">(</span>std::string <em>ssid</em>, std::string <em>password</em>, std::string <em>hostname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13WiFiComponentENSt6stringENSt6stringENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Construct a <a class="reference internal" href="#classesphomelib_1_1_wi_fi_component"><span class="std std-ref">WiFiComponent</span></a>. </p>
 <p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">ssid</span></code>: The station ssid. </li>
-<li><code class="docutils literal"><span class="pre">password</span></code>: The station password, leave empty for an open network. </li>
-<li><code class="docutils literal"><span class="pre">hostname</span></code>: The hostname of this device, leave empty for standard one. </li>
+<li><code class="docutils literal notranslate"><span class="pre">ssid</span></code>: The station ssid. </li>
+<li><code class="docutils literal notranslate"><span class="pre">password</span></code>: The station password, leave empty for an open network. </li>
+<li><code class="docutils literal notranslate"><span class="pre">hostname</span></code>: The hostname of this device, leave empty for standard one. </li>
 </ul>
 </dd>
 </dl>
@@ -84,62 +75,62 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent12set_hostnameERKNSt6stringE">
-<span id="esphomelib::WiFiComponent::set_hostname__ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad0d1f11b0c3ef84508796acf4fc7db71"></span>void <code class="descname">set_hostname</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>hostname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent12set_hostnameERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent12set_hostnameERKNSt6stringE">
+<span id="_CPPv2N10esphomelib13WiFiComponent12set_hostnameERKNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_hostname__ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad0d1f11b0c3ef84508796acf4fc7db71"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_hostname</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>hostname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent12set_hostnameERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the hostname, automatically sanitizes it. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent13set_manual_ipE8OptionalI8ManualIPE">
-<span id="esphomelib::WiFiComponent::set_manual_ip__Optional:ManualIP:"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7b1b9796ec47a0ee6c03b580632d4201"></span>void <code class="descname">set_manual_ip</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;ManualIP&gt; <em>manual_ip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent13set_manual_ipE8OptionalI8ManualIPE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent13set_manual_ipE8OptionalI8ManualIPE">
+<span id="_CPPv2N10esphomelib13WiFiComponent13set_manual_ipE8OptionalI8ManualIPE"></span><span id="esphomelib::WiFiComponent::set_manual_ip__Optional:ManualIP:"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7b1b9796ec47a0ee6c03b580632d4201"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_manual_ip</code><span class="sig-paren">(</span><a class="reference internal" href="helpers.html#_CPPv3N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;ManualIP&gt; <em>manual_ip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13set_manual_ipE8OptionalI8ManualIPE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Manually set a static IP for this WiFi interface. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent8set_ssidERKNSt6stringE">
-<span id="esphomelib::WiFiComponent::set_ssid__ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad743dd474d314b59e02c7b1f8c6c99fb"></span>void <code class="descname">set_ssid</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent8set_ssidERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent8set_ssidERKNSt6stringE">
+<span id="_CPPv2N10esphomelib13WiFiComponent8set_ssidERKNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_ssid__ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad743dd474d314b59e02c7b1f8c6c99fb"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_ssid</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent8set_ssidERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent12set_passwordERKNSt6stringE">
-<span id="esphomelib::WiFiComponent::set_password__ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad7dfe5432f1482805b1bb01d01a71145"></span>void <code class="descname">set_password</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent12set_passwordERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent12set_passwordERKNSt6stringE">
+<span id="_CPPv2N10esphomelib13WiFiComponent12set_passwordERKNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_password__ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad7dfe5432f1482805b1bb01d01a71145"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_password</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent12set_passwordERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib13WiFiComponent12get_hostnameEv">
-<span id="esphomelib::WiFiComponent::get_hostnameC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a582a327814db3bf56ef30a54700dafa5"></span><em class="property">const</em> std::string &amp;<code class="descname">get_hostname</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13WiFiComponent12get_hostnameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib13WiFiComponent12get_hostnameEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent12get_hostnameEv"></span><span id="esphomelib::WiFiComponent::get_hostnameC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a582a327814db3bf56ef30a54700dafa5"></span><em class="property">const</em> std::string &amp;<a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_hostname</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent12get_hostnameEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib13WiFiComponent13get_manual_ipEv">
-<span id="esphomelib::WiFiComponent::get_manual_ipC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7fffcd50322d976418e16a6d4c121786"></span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;ManualIP&gt; &amp;<code class="descname">get_manual_ip</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13WiFiComponent13get_manual_ipEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib13WiFiComponent13get_manual_ipEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent13get_manual_ipEv"></span><span id="esphomelib::WiFiComponent::get_manual_ipC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7fffcd50322d976418e16a6d4c121786"></span><em class="property">const</em> <a class="reference internal" href="helpers.html#_CPPv3N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;ManualIP&gt; &amp;<a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_manual_ip</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent13get_manual_ipEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib13WiFiComponent8get_ssidEv">
-<span id="esphomelib::WiFiComponent::get_ssidC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a10df4be1305edbba1b1674113ec0d784"></span><em class="property">const</em> std::string &amp;<code class="descname">get_ssid</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13WiFiComponent8get_ssidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib13WiFiComponent8get_ssidEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent8get_ssidEv"></span><span id="esphomelib::WiFiComponent::get_ssidC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a10df4be1305edbba1b1674113ec0d784"></span><em class="property">const</em> std::string &amp;<a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_ssid</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent8get_ssidEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib13WiFiComponent12get_passwordEv">
-<span id="esphomelib::WiFiComponent::get_passwordC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a0d61da63316cd773249c75a73819679d"></span><em class="property">const</em> std::string &amp;<code class="descname">get_password</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13WiFiComponent12get_passwordEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib13WiFiComponent12get_passwordEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent12get_passwordEv"></span><span id="esphomelib::WiFiComponent::get_passwordC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a0d61da63316cd773249c75a73819679d"></span><em class="property">const</em> std::string &amp;<a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_password</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent12get_passwordEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent5setupEv">
-<span id="esphomelib::WiFiComponent::setup"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7efaa3d2130bb0e5dbc5ea837c1b1cd5"></span>void <code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent5setupEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent5setupEv"></span><span id="esphomelib::WiFiComponent::setup"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7efaa3d2130bb0e5dbc5ea837c1b1cd5"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Setup WiFi interface. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK10esphomelib13WiFiComponent18get_setup_priorityEv">
-<span id="esphomelib::WiFiComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a617443ba03a7887c57d6de9473e033d0"></span>float <code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10esphomelib13WiFiComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3NK10esphomelib13WiFiComponent18get_setup_priorityEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent18get_setup_priorityEv"></span><span id="esphomelib::WiFiComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a617443ba03a7887c57d6de9473e033d0"></span>float <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>WIFI <a class="reference internal" href="component.html#namespaceesphomelib_1_1setup__priority"><span class="std std-ref">setup_priority</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent4loopEv">
-<span id="esphomelib::WiFiComponent::loop"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a9f3ed67afd996719a36cdfa625cf8de5"></span>void <code class="descname">loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent4loopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent4loopEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent4loopEv"></span><span id="esphomelib::WiFiComponent::loop"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a9f3ed67afd996719a36cdfa625cf8de5"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent4loopEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reconnect WiFi if required. </p>
 </dd></dl>
 
@@ -147,8 +138,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent19wait_for_connectionEv">
-<span id="esphomelib::WiFiComponent::wait_for_connection"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a3973f132444bfb680647283f8df31b79"></span>void <code class="descname">wait_for_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent19wait_for_connectionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent19wait_for_connectionEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent19wait_for_connectionEv"></span><span id="esphomelib::WiFiComponent::wait_for_connection"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a3973f132444bfb680647283f8df31b79"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">wait_for_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent19wait_for_connectionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Waits for the WiFi class to return a connected state. </p>
 </dd></dl>
 
@@ -156,31 +147,31 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N10esphomelib13WiFiComponent5ssid_E">
-<span id="esphomelib::WiFiComponent::ssid___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ae49eaee151eec7af46c92f7a7feee551"></span>std::string <code class="descname">ssid_</code><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent5ssid_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent5ssid_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent5ssid_E"></span><span id="esphomelib::WiFiComponent::ssid___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ae49eaee151eec7af46c92f7a7feee551"></span>std::string <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ssid_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent5ssid_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib13WiFiComponent9password_E">
-<span id="esphomelib::WiFiComponent::password___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad38e307db9fdd15140645d0efb2d9097"></span>std::string <code class="descname">password_</code><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent9password_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent9password_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent9password_E"></span><span id="esphomelib::WiFiComponent::password___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ad38e307db9fdd15140645d0efb2d9097"></span>std::string <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">password_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent9password_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib13WiFiComponent9hostname_E">
-<span id="esphomelib::WiFiComponent::hostname___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac7ab81d80abac2f110b58c62975f0340"></span>std::string <code class="descname">hostname_</code><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent9hostname_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent9hostname_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent9hostname_E"></span><span id="esphomelib::WiFiComponent::hostname___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac7ab81d80abac2f110b58c62975f0340"></span>std::string <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">hostname_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent9hostname_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N10esphomelib13WiFiComponent10manual_ip_E">
-<span id="esphomelib::WiFiComponent::manual_ip___Optional:ManualIP:"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac00c9a3a8782570423b6010e668aac56"></span><a class="reference internal" href="helpers.html#_CPPv2N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;ManualIP&gt; <code class="descname">manual_ip_</code><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent10manual_ip_E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent10manual_ip_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent10manual_ip_E"></span><span id="esphomelib::WiFiComponent::manual_ip___Optional:ManualIP:"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac00c9a3a8782570423b6010e668aac56"></span><a class="reference internal" href="helpers.html#_CPPv3N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;ManualIP&gt; <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">manual_ip_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent10manual_ip_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Protected Static Functions</p>
 <dl class="function">
-<dt id="_CPPv2N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t">
-<span id="esphomelib::WiFiComponent::on_wifi_event__WiFiEvent_t"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a1311f4495bc7b7f441255f8294a3103f"></span>void <code class="descname">on_wifi_event</code><span class="sig-paren">(</span>WiFiEvent_t <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv3N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t">
+<span id="_CPPv2N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t"></span><span id="esphomelib::WiFiComponent::on_wifi_event__WiFiEvent_t"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a1311f4495bc7b7f441255f8294a3103f"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">on_wifi_event</code><span class="sig-paren">(</span>WiFiEvent_t <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Used for logging WiFi events. </p>
 </dd></dl>
 
@@ -211,12 +202,14 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -227,7 +220,7 @@
       &copy;2018, Otto Winter.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
@@ -237,6 +230,22 @@
 
     
 
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-113203480-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
   </body>
 </html>
