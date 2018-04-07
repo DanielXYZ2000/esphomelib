@@ -34,6 +34,38 @@
 <p>Hi there! This is the documentation for esphomeyaml, a project that aims to make using ESP8266/ESP32 boards with Home Assistant very easy with no programming experience required.</p>
 <p>To get started, please see the <a class="reference external" href="/esphomeyaml/getting-started.html">Getting Started Guide</a>.</p>
 <p>You can find the source for this project <a class="reference external" href="https://github.com/OttoWinter/esphomeyaml">on Github</a>, and the core of this project, <a class="reference external" href="https://github.com/OttoWinter/esphomelib">esphomelib is also hosted on Github</a>.</p>
+<div class="section" id="about-esphomeyaml">
+<h2>About esphomeyaml<a class="headerlink" href="#about-esphomeyaml" title="Permalink to this headline">¶</a></h2>
+<p>esphomeyaml will:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Read your configuration file and warn you about potential errors (like using the invalid pins.)</li>
+<li>Create a custom C++ sketch file for you using esphomeyaml’s powerful C++ generation engine.</li>
+<li>Compile the sketch file for you using <a class="reference external" href="http://platformio.org/">platformio</a>.</li>
+<li>Upload the binary to your ESP via Over the Air updates.</li>
+<li>Automatically start remote logs via MQTT.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>No programming experience required:</strong> just edit YAML configuration</dt>
+<dd>files like you’re used to with Home Assistant.</dd>
+</dl>
+</li>
+<li><strong>Flexible:</strong> Use <a class="reference external" href="https://github.com/OttoWinter/esphomelib">esphomelib</a>’s powerful core to create custom sensors/outputs.</li>
+<li><strong>Fast and efficient:</strong> Written in C++ and keeps memory consumption to a minimum.</li>
+<li><strong>Made for Home Assistant:</strong> Almost all Home Assistant features are supported out of the box. Including RGB lights and many more.</li>
+<li><strong>Easy reproducible configuration:</strong> No need to go through a long setup process for every single node. Just copy a configuration file and run a single command.</li>
+<li><strong>Smart Over The Air Updates:</strong> esphomeyaml has OTA updates deeply integrated into the system. It even automatically enters a recovery mode if a boot loop is detected.</li>
+<li><strong>Powerful logging engine:</strong> View colorful logs and debug issues remotely.</li>
+<li><strong>It’s Open Source 😺</strong></li>
+</ul>
+</div></blockquote>
+</div>
 <div class="section" id="core-components">
 <h2>Core Components<a class="headerlink" href="#core-components" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
