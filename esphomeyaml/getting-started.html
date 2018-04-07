@@ -45,7 +45,7 @@ basic “node” in a few simple steps.</p>
 </div>
 <p>Alternatively, there’s also a docker image available for easy
 installation:</p>
-<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">OttoWinter</span><span class="o">/</span><span class="n">esphomeyaml</span>
+<div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">ottowinter</span><span class="o">/</span><span class="n">esphomeyaml</span>
 </pre></div>
 </div>
 </div>
@@ -57,7 +57,7 @@ configuration file. For example, if you want to create a configuration
 file called <code class="docutils literal notranslate"><span class="pre">livingroom.yaml</span></code>:</p>
 <div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">wizard</span>
 <span class="cp"># On Docker:</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">wizard</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">ottowinter</span><span class="o">/</span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">wizard</span>
 </pre></div>
 </div>
 <p>At the end of this step, you will have your first YAML configuration
@@ -125,7 +125,7 @@ Sensor</a>.</p>
   <span class="o">-</span> <span class="nl">platform</span><span class="p">:</span> <span class="n">gpio</span>
     <span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Living Room Window&quot;</span>
     <span class="nl">pin</span><span class="p">:</span>
-      <span class="nl">number</span><span class="p">:</span> <span class="n">D0</span>
+      <span class="nl">number</span><span class="p">:</span> <span class="mi">16</span>
       <span class="nl">inverted</span><span class="p">:</span> <span class="n">True</span>
       <span class="nl">mode</span><span class="p">:</span> <span class="n">INPUT_PULLUP</span>
 </pre></div>
@@ -140,7 +140,7 @@ Using esphomeyaml directly, this is the same as from a USB cable, but
 for docker you need to supply an additional parameter:</p>
 <div class="code bash highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">run</span>
 <span class="cp"># On docker</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">6123</span><span class="o">:</span><span class="mi">6123</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">run</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">6123</span><span class="o">:</span><span class="mi">6123</span> <span class="o">-</span><span class="n">v</span> <span class="s">&quot;`pwd`&quot;</span><span class="o">:/</span><span class="n">config</span> <span class="o">-</span><span class="n">it</span> <span class="n">ottowinter</span><span class="o">/</span><span class="n">esphomeyaml</span> <span class="n">livingroom</span><span class="p">.</span><span class="n">yaml</span> <span class="n">run</span>
 </pre></div>
 </div>
 <p><img alt="image1" src="../_images/gpio.png" /></p>
