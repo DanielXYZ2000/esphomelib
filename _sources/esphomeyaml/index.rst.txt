@@ -41,9 +41,13 @@ Core Components
 ------------------  ------------------  ------------------
 `Core`_             `WiFi`_             `MQTT`_
 ------------------  ------------------  ------------------
-|I²C Bus|_          |OTA Updates|_      |Power Supply|_
+|I²C Bus|_          |OTA Updates|_      |Logger|_
 ------------------  ------------------  ------------------
-`I²C Bus`_          `OTA Updates`_      `Power Supply`_
+`I²C Bus`_          `OTA Updates`_      `Logger`_
+------------------  ------------------  ------------------
+|Power Supply|_
+------------------  ------------------  ------------------
+`Power Supply`_
 ==================  ==================  ==================
 
 .. |Core| image:: /esphomeyaml/cloud-circle.svg
@@ -65,6 +69,10 @@ Core Components
 .. |OTA Updates| image:: /esphomeyaml/system-update.svg
     :class: component-image
 .. _OTA Updates: /esphomeyaml/components/ota.html
+
+.. |Logger| image:: /esphomeyaml/file-document-box.svg
+    :class: component-image
+.. _Logger: /esphomeyaml/components/logger.html
 
 .. |Power Supply| image:: /esphomeyaml/power.svg
     :class: component-image
