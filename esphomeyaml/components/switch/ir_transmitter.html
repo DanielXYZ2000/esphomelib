@@ -1,45 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ESP32 IR Transmitter Switch &#8212; esphomelib 1.2.1 documentation</title>
-    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-   
-  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="esp32-ir-transmitter-switch">
-<h1>ESP32 IR Transmitter Switch<a class="headerlink" href="#esp32-ir-transmitter-switch" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">ir_transmitter</span></code> switch platform allows you to create switches
-that send an IR code using the <a class="reference external" href="/esphomeyaml/components/ir_transmitter.html">IR Transmitter
-Component</a>. Every time
-the switch is turned on, the IR signal with the provided IR code is sent
-out.</p>
-<p>Theoretically this platform can also be used to create arbitrary output
-signals on any pin by using the <code class="docutils literal notranslate"><span class="pre">raw:</span></code> option.</p>
-<p><a class="align-center reference internal" href="../../../_images/ir-transmitter.png"><img alt="image0" class="align-center" src="../../../_images/ir-transmitter.png" style="width: 80.0%;" /></a></p>
-<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span># Example configuration entry
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="X-UA-Compatible"content="IE=Edge"><meta http-equiv="Content-Type"content="text/html; charset=utf-8"><title>ESP32 IR Transmitter Switch &#8212; esphomelib 1.2.1 documentation</title><link rel="stylesheet"href="../../../_static/alabaster.css"type="text/css"><link rel="stylesheet"href="../../../_static/pygments.css"type="text/css"><script src="../../../_static/documentation_options.js"></script><script src="../../../_static/jquery.js"></script><script src="../../../_static/underscore.js"></script><script src="../../../_static/doctools.js"></script><link rel="index"title="Index"href="../../../genindex.html"><link rel="search"title="Search"href="../../../search.html"><link rel="stylesheet"href="../../../_static/custom.css"type="text/css"><meta name="viewport"content="width=device-width,initial-scale=0.9,maximum-scale=0.9"><div class="document"><div class="documentwrapper"><div class="bodywrapper"><div class="body"role="main"><div class="section"id="esp32-ir-transmitter-switch"><h1>ESP32 IR Transmitter Switch<a class="headerlink"href="#esp32-ir-transmitter-switch"title="Permalink to this headline">¶</a></h1><p>The <code class="docutils literal notranslate"><span class="pre">ir_transmitter</span></code> switch platform allows you to create switches that send an IR code using the <a class="reference external"href="/esphomeyaml/components/ir_transmitter.html">IR Transmitter Component</a>. Every time the switch is turned on, the IR signal with the provided IR code is sent out.<p>Theoretically this platform can also be used to create arbitrary output signals on any pin by using the <code class="docutils literal notranslate"><span class="pre">raw:</span></code> option.<p><a class="align-center reference internal"href="../../../_images/ir-transmitter.png"><img alt="image0"class="align-center"src="../../../_images/ir-transmitter.png"style="width: 80.0%;"></a><div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span># Example configuration entry
 ir_transmitter:
   - id: &#39;ir_hub1&#39;
     pin: 32
@@ -53,39 +12,7 @@ switch:
       address: 0x4004
       command: 0x100BCBD
     repeat: 25
-</pre></div>
-</div>
-<div class="section" id="configuration-variables">
-<h2>Configuration variables:<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>ir_transmitter_id</strong> (<strong>Required</strong>,
-<a class="reference external" href="/esphomeyaml/configuration-types.html#id">id</a>): The id of the <a class="reference external" href="/esphomeyaml/components/ir_transmitter.html">IR
-Transmitter
-Component</a>.</li>
-<li><strong>name</strong> (<strong>Required</strong>, string): The name for the switch.</li>
-<li>The IR code, see <a class="reference external" href="#defining-ir-codes">Defining IR Codes</a>. Only one
-of them can be specified per switch.</li>
-<li><strong>repeat</strong> (<em>Optional</em>, int): How often the command should be
-repeated. Additionally, an <code class="docutils literal notranslate"><span class="pre">wait_time_us</span></code> option can be specified
-to set how long to wait in between repeats. Defaults to 1 (code is
-sent once).</li>
-<li><strong>id</strong> (<em>Optional</em>,
-<a class="reference external" href="/esphomeyaml/configuration-types.html#id">id</a>): Manually specify
-the ID used for code generation.</li>
-<li>All other options from
-<a class="reference external" href="/esphomeyaml/components/switch/index.html#base-switch-configuration">Switch</a>
-and <a class="reference external" href="/esphomeyaml/components/mqtt.html#mqtt-component-base-configuration">MQTT
-Component</a>.</li>
-</ul>
-</div>
-<div class="section" id="defining-ir-codes">
-<h2>Defining IR Codes<a class="headerlink" href="#defining-ir-codes" title="Permalink to this headline">¶</a></h2>
-<p>To get the IR codes, first use an Arduino or similar device with an IR
-Receiver and upload the <a class="reference external" href="https://github.com/z3t0/Arduino-IRremote/blob/master/examples/IRrecvDumpV2/IRrecvDumpV2.ino">Aruino-IRRemote IRRecvDump
-sketch</a>.
-Then press the buttons on the remote and observe the serial monitor. It
-should include all the information needed to setup these IR codes.</p>
-<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">nec</span><span class="p">:</span>
+</pre></div></div><div class="section"id="configuration-variables"><h2>Configuration variables:<a class="headerlink"href="#configuration-variables"title="Permalink to this headline">¶</a></h2><ul class="simple"><li><strong>ir_transmitter_id</strong> (<strong>Required</strong>, <a class="reference external"href="/esphomeyaml/configuration-types.html#id">id</a>): The id of the <a class="reference external"href="/esphomeyaml/components/ir_transmitter.html">IR Transmitter Component</a>.<li><strong>name</strong> (<strong>Required</strong>, string): The name for the switch.<li>The IR code, see <a class="reference external"href="#defining-ir-codes">Defining IR Codes</a>. Only one of them can be specified per switch.<li><strong>repeat</strong> (<em>Optional</em>, int): How often the command should be repeated. Additionally, an <code class="docutils literal notranslate"><span class="pre">wait_time_us</span></code> option can be specified to set how long to wait in between repeats. Defaults to 1 (code is sent once).<li><strong>id</strong> (<em>Optional</em>, <a class="reference external"href="/esphomeyaml/configuration-types.html#id">id</a>): Manually specify the ID used for code generation.<li>All other options from <a class="reference external"href="/esphomeyaml/components/switch/index.html#base-switch-configuration">Switch</a> and <a class="reference external"href="/esphomeyaml/components/mqtt.html#mqtt-component-base-configuration">MQTT Component</a>.</ul></div><div class="section"id="defining-ir-codes"><h2>Defining IR Codes<a class="headerlink"href="#defining-ir-codes"title="Permalink to this headline">¶</a></h2><p>To get the IR codes, first use an Arduino or similar device with an IR Receiver and upload the <a class="reference external"href="https://github.com/z3t0/Arduino-IRremote/blob/master/examples/IRrecvDumpV2/IRrecvDumpV2.ino">Aruino-IRRemote IRRecvDump sketch</a>. Then press the buttons on the remote and observe the serial monitor. It should include all the information needed to setup these IR codes.<div class="code yaml highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">nec</span><span class="p">:</span>
   <span class="nl">address</span><span class="p">:</span> <span class="mh">0x4242</span>
   <span class="nl">command</span><span class="p">:</span> <span class="mh">0x8484</span>
 <span class="nl">lg</span><span class="p">:</span>
@@ -102,89 +29,7 @@ should include all the information needed to setup these IR codes.</p>
   <span class="nl">data</span><span class="p">:</span>
     <span class="o">-</span> <span class="mi">1000</span>
     <span class="o">-</span> <span class="o">-</span><span class="mi">1000</span>
-</pre></div>
-</div>
-<p>Configuration variables:</p>
-<ul class="simple">
-<li><strong>nec</strong>: Send a NEC IR code.<ul>
-<li><strong>address</strong>: The address of the device.</li>
-<li><strong>command</strong>: The command to send.</li>
-</ul>
-</li>
-<li><strong>lg</strong>: Send an LG IR code.<ul>
-<li><strong>data</strong>: The data bytes to send.</li>
-<li><strong>nbits</strong>: The number of bits to send, defaults to 28.</li>
-</ul>
-</li>
-<li><strong>sony</strong>: Send an Sony IR code.<ul>
-<li><strong>data</strong>: The data bytes to send.</li>
-<li><strong>nbits</strong>: The number of bits to send, defaults to 12.</li>
-</ul>
-</li>
-<li><strong>panasonic</strong>: Send a Panasonic IR code.<ul>
-<li><strong>address</strong>: The address of the device.</li>
-<li><strong>command</strong>: The command to send.</li>
-</ul>
-</li>
-<li><strong>raw</strong>: Send an arbitrary signal.<ul>
-<li><strong>carrier_frequency</strong>: The frequency to use for the carrier. A lot
-of IR sensors only respond to a very specific frequency.</li>
-<li><strong>data</strong>: List containing integers describing the signal to send.
-Each value is a time in µs declaring how long the carrier should
-be switched on or off. Positive values mean ON, negative values
-mean OFF.</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../../index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2018, Otto Winter.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="../../../_sources/esphomeyaml/components/switch/ir_transmitter.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
+</pre></div></div><p>Configuration variables:<ul class="simple"><li><strong>nec</strong>: Send a NEC IR code.<ul><li><strong>address</strong>: The address of the device.<li><strong>command</strong>: The command to send.</ul><li><strong>lg</strong>: Send an LG IR code.<ul><li><strong>data</strong>: The data bytes to send.<li><strong>nbits</strong>: The number of bits to send, defaults to 28.</ul><li><strong>sony</strong>: Send an Sony IR code.<ul><li><strong>data</strong>: The data bytes to send.<li><strong>nbits</strong>: The number of bits to send, defaults to 12.</ul><li><strong>panasonic</strong>: Send a Panasonic IR code.<ul><li><strong>address</strong>: The address of the device.<li><strong>command</strong>: The command to send.</ul><li><strong>raw</strong>: Send an arbitrary signal.<ul><li><strong>carrier_frequency</strong>: The frequency to use for the carrier. A lot of IR sensors only respond to a very specific frequency.<li><strong>data</strong>: List containing integers describing the signal to send. Each value is a time in µs declaring how long the carrier should be switched on or off. Positive values mean ON, negative values mean OFF.</ul></ul></div></div></div></div></div><div class="sphinxsidebar"role="navigation"aria-label="main navigation"><div class="sphinxsidebarwrapper"><div class="relations"><h3>Related Topics</h3><ul><li><a href="../../../index.html">Documentation overview</a><ul></ul></ul></div><div id="searchbox"style="display: none"role="search"><h3>Quick search</h3><div class="searchformwrapper"><form class="search"action="../../../search.html"><input name="q"> <input type="submit"value="Go"> <input type="hidden"name="check_keywords"value="yes"> <input type="hidden"name="area"value="default"></form></div></div><script>$('#searchbox').show(0);</script></div></div><div class="clearer"></div></div><div class="footer">&copy;2018, Otto Winter. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a> | <a href="../../../_sources/esphomeyaml/components/switch/ir_transmitter.rst.txt"rel="nofollow">Page source</a></div><script>var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-113203480-2']);
       _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_setAllowLinker', true]);
@@ -194,9 +39,4 @@ mean OFF.</li>
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-    
-  </body>
-</html>
+      })();</script>

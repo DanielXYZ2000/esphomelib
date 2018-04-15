@@ -1,41 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ADC Sensor &#8212; esphomelib 1.2.1 documentation</title>
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ADS1115 ADC Component" href="ads1115.html" />
-    <link rel="prev" title="PCA9685 PWM" href="../output/pca9685.html" />
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="adc-sensor">
-<h1>ADC Sensor<a class="headerlink" href="#adc-sensor" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="example-usage">
-<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="X-UA-Compatible"content="IE=Edge"><meta http-equiv="Content-Type"content="text/html; charset=utf-8"><title>ADC Sensor &#8212; esphomelib 1.2.1 documentation</title><link rel="stylesheet"href="../../_static/alabaster.css"type="text/css"><link rel="stylesheet"href="../../_static/pygments.css"type="text/css"><script src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script><script src="../../_static/underscore.js"></script><script src="../../_static/doctools.js"></script><link rel="index"title="Index"href="../../genindex.html"><link rel="search"title="Search"href="../../search.html"><link rel="next"title="ADS1115 ADC Component"href="ads1115.html"><link rel="prev"title="PCA9685 PWM"href="../output/pca9685.html"><link rel="stylesheet"href="../../_static/custom.css"type="text/css"><meta name="viewport"content="width=device-width,initial-scale=0.9,maximum-scale=0.9"><div class="document"><div class="documentwrapper"><div class="bodywrapper"><div class="body"role="main"><div class="section"id="adc-sensor"><h1>ADC Sensor<a class="headerlink"href="#adc-sensor"title="Permalink to this headline">¶</a></h1><div class="section"id="example-usage"><h2>Example Usage<a class="headerlink"href="#example-usage"title="Permalink to this headline">¶</a></h2><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_adc_sensor</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s">&quot;Analog Voltage&quot;</span><span class="p">);</span>
 <span class="c1">// Custom update interval 30 seconds</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_adc_sensor</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s">&quot;Analog Voltage&quot;</span><span class="p">,</span> <span class="mi">30000</span><span class="p">);</span>
@@ -44,67 +7,7 @@
 <span class="c1">// ESP32: Attenuation</span>
 <span class="k">auto</span> <span class="n">adc</span> <span class="o">=</span> <span class="n">App</span><span class="p">.</span><span class="n">make_adc_sensor</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s">&quot;Analog Voltage&quot;</span><span class="p">);</span>
 <span class="n">adc</span><span class="p">.</span><span class="n">adc</span><span class="p">.</span><span class="n">set_attenuation</span><span class="p">(</span><span class="n">ADC_11db</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_adc_sensor()</span></code>.</p>
-</div>
-<div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">doxygenclass: Cannot find class “esphomelib::sensor::ADCSensorComponent” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
-</div>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../output/pca9685.html" title="previous chapter">PCA9685 PWM</a></li>
-      <li>Next: <a href="ads1115.html" title="next chapter">ADS1115 ADC Component</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2018, Otto Winter.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="../../_sources/api/sensor/adc-sensor.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
+</pre></div></div><p>See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_adc_sensor()</span></code>.</div><div class="section"id="api-reference"><h2>API Reference<a class="headerlink"href="#api-reference"title="Permalink to this headline">¶</a></h2><div class="admonition warning"><p class="first admonition-title">Warning<p class="last">doxygenclass: Cannot find class “esphomelib::sensor::ADCSensorComponent” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</div></div></div></div></div></div><div class="sphinxsidebar"role="navigation"aria-label="main navigation"><div class="sphinxsidebarwrapper"><div class="relations"><h3>Related Topics</h3><ul><li><a href="../../index.html">Documentation overview</a><ul><li>Previous: <a href="../output/pca9685.html"title="previous chapter">PCA9685 PWM</a><li>Next: <a href="ads1115.html"title="next chapter">ADS1115 ADC Component</a></ul></ul></div><div id="searchbox"style="display: none"role="search"><h3>Quick search</h3><div class="searchformwrapper"><form class="search"action="../../search.html"><input name="q"> <input type="submit"value="Go"> <input type="hidden"name="check_keywords"value="yes"> <input type="hidden"name="area"value="default"></form></div></div><script>$('#searchbox').show(0);</script></div></div><div class="clearer"></div></div><div class="footer">&copy;2018, Otto Winter. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a> | <a href="../../_sources/api/sensor/adc-sensor.rst.txt"rel="nofollow">Page source</a></div><script>var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-113203480-2']);
       _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_setAllowLinker', true]);
@@ -114,9 +17,4 @@
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-    
-  </body>
-</html>
+      })();</script>

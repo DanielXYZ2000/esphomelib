@@ -1,41 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>IR Transmitter &#8212; esphomelib 1.2.1 documentation</title>
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="API Reference" href="../index.html" />
-    <link rel="prev" title="Ultrasonic Sensor" href="../sensor/ultrasonic.html" />
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="ir-transmitter">
-<h1>IR Transmitter<a class="headerlink" href="#ir-transmitter" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="example-usage">
-<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// at the top of your file:</span>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="X-UA-Compatible"content="IE=Edge"><meta http-equiv="Content-Type"content="text/html; charset=utf-8"><title>IR Transmitter &#8212; esphomelib 1.2.1 documentation</title><link rel="stylesheet"href="../../_static/alabaster.css"type="text/css"><link rel="stylesheet"href="../../_static/pygments.css"type="text/css"><script src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script><script src="../../_static/underscore.js"></script><script src="../../_static/doctools.js"></script><link rel="index"title="Index"href="../../genindex.html"><link rel="search"title="Search"href="../../search.html"><link rel="next"title="API Reference"href="../index.html"><link rel="prev"title="Ultrasonic Sensor"href="../sensor/ultrasonic.html"><link rel="stylesheet"href="../../_static/custom.css"type="text/css"><meta name="viewport"content="width=device-width,initial-scale=0.9,maximum-scale=0.9"><div class="document"><div class="documentwrapper"><div class="bodywrapper"><div class="body"role="main"><div class="section"id="ir-transmitter"><h1>IR Transmitter<a class="headerlink"href="#ir-transmitter"title="Permalink to this headline">¶</a></h1><div class="section"id="example-usage"><h2>Example Usage<a class="headerlink"href="#example-usage"title="Permalink to this headline">¶</a></h2><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// at the top of your file:</span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">esphomelib</span><span class="o">::</span><span class="n">switch_</span><span class="o">::</span><span class="n">ir_</span><span class="p">;</span>
 
 <span class="c1">// Create the hub</span>
@@ -44,81 +7,7 @@
 <span class="k">auto</span> <span class="o">*</span><span class="n">panasonic_on</span> <span class="o">=</span> <span class="n">ir</span><span class="o">-&gt;</span><span class="n">create_transmitter</span><span class="p">(</span><span class="n">SendData</span><span class="o">::</span><span class="n">from_panasonic</span><span class="p">(</span><span class="mh">0x4004</span><span class="p">,</span> <span class="mh">0x100BCBD</span><span class="p">).</span><span class="n">repeat</span><span class="p">(</span><span class="mi">25</span><span class="p">));</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_mqtt_switch_for</span><span class="p">(</span><span class="s">&quot;Panasonic TV On&quot;</span><span class="p">,</span> <span class="n">panasonic_on</span><span class="p">);</span>
 <span class="n">App</span><span class="p">.</span><span class="n">make_mqtt_switch_for</span><span class="p">(</span><span class="s">&quot;Panasonic TV Volume Up&quot;</span><span class="p">,</span> <span class="n">ir</span><span class="o">-&gt;</span><span class="n">create_transmitter</span><span class="p">(</span><span class="n">SendData</span><span class="o">::</span><span class="n">from_panasonic</span><span class="p">(</span><span class="mh">0x4004</span><span class="p">,</span> <span class="mh">0x1000405</span><span class="p">)));</span>
-</pre></div>
-</div>
-<p>See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_ir_transmitter()</span></code> and <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_mqtt_switch_for()</span></code>.</p>
-</div>
-<div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="irtransmittercomponent">
-<h3>IRTransmitterComponent<a class="headerlink" href="#irtransmittercomponent" title="Permalink to this headline">¶</a></h3>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">doxygenclass: Cannot find class “esphomelib::switch_::IRTransmitterComponent” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">doxygenvariable: Cannot find variable “esphomelib::switch_::next_rmt_channel” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
-</div>
-</div>
-<div class="section" id="senddata">
-<h3>SendData<a class="headerlink" href="#senddata" title="Permalink to this headline">¶</a></h3>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">doxygennamespace: Cannot find namespace “esphomelib::switch_::ir” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
-</div>
-</div>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../sensor/ultrasonic.html" title="previous chapter">Ultrasonic Sensor</a></li>
-      <li>Next: <a href="../index.html" title="next chapter">API Reference</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2018, Otto Winter.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="../../_sources/api/switch/ir-transmitter.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
+</pre></div></div><p>See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_ir_transmitter()</span></code> and <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_mqtt_switch_for()</span></code>.</div><div class="section"id="api-reference"><h2>API Reference<a class="headerlink"href="#api-reference"title="Permalink to this headline">¶</a></h2><div class="section"id="irtransmittercomponent"><h3>IRTransmitterComponent<a class="headerlink"href="#irtransmittercomponent"title="Permalink to this headline">¶</a></h3><div class="admonition warning"><p class="first admonition-title">Warning<p class="last">doxygenclass: Cannot find class “esphomelib::switch_::IRTransmitterComponent” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</div><div class="admonition warning"><p class="first admonition-title">Warning<p class="last">doxygenvariable: Cannot find variable “esphomelib::switch_::next_rmt_channel” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</div></div><div class="section"id="senddata"><h3>SendData<a class="headerlink"href="#senddata"title="Permalink to this headline">¶</a></h3><div class="admonition warning"><p class="first admonition-title">Warning<p class="last">doxygennamespace: Cannot find namespace “esphomelib::switch_::ir” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</div></div></div></div></div></div></div><div class="sphinxsidebar"role="navigation"aria-label="main navigation"><div class="sphinxsidebarwrapper"><div class="relations"><h3>Related Topics</h3><ul><li><a href="../../index.html">Documentation overview</a><ul><li>Previous: <a href="../sensor/ultrasonic.html"title="previous chapter">Ultrasonic Sensor</a><li>Next: <a href="../index.html"title="next chapter">API Reference</a></ul></ul></div><div id="searchbox"style="display: none"role="search"><h3>Quick search</h3><div class="searchformwrapper"><form class="search"action="../../search.html"><input name="q"> <input type="submit"value="Go"> <input type="hidden"name="check_keywords"value="yes"> <input type="hidden"name="area"value="default"></form></div></div><script>$('#searchbox').show(0);</script></div></div><div class="clearer"></div></div><div class="footer">&copy;2018, Otto Winter. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a> | <a href="../../_sources/api/switch/ir-transmitter.rst.txt"rel="nofollow">Page source</a></div><script>var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-113203480-2']);
       _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_setAllowLinker', true]);
@@ -128,9 +17,4 @@
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-    
-  </body>
-</html>
+      })();</script>
