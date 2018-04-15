@@ -50,193 +50,22 @@ then create the sensors themselves as in below example.</p>
 <span class="n">App</span><span class="p">.</span><span class="n">make_htu21d_sensor</span><span class="p">(</span><span class="s">&quot;Outside Temperature&quot;</span><span class="p">,</span> <span class="s">&quot;Outside Humidity&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../core/application.html#_CPPv3N10esphomelib11Application18make_htu21d_sensorERKNSt6stringERKNSt6stringE8uint32_t" title="esphomelib::Application::make_htu21d_sensor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_htu21d_sensor()</span></code></a>.</p>
+<p>See <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">Application::make_htu21d_sensor()</span></code>.</p>
 </div>
 <div class="section" id="api-reference">
 <h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponentE">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponentE"></span><span id="esphomelib::sensor::HTU21DComponent"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor<code class="descclassname">::</code><code class="descname">HTU21DComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This component represents the HTU21D i2c temperature+humidity sensor in esphomelib. </p>
-<p>It’s basically an i2c-based accurate temperature and humidity sensor. See <a class="reference external" href="https://www.adafruit.com/product/1899">https://www.adafruit.com/product/1899</a> for more information. </p>
-<p>Inherits from <a class="reference internal" href="../core/component.html#classesphomelib_1_1_polling_component"><span class="std std-ref">esphomelib::PollingComponent</span></a></p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent15HTU21DComponentE8uint32_t">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent15HTU21DComponentE8uint32_t"></span><span id="esphomelib::sensor::HTU21DComponent::HTU21DComponent__uint32_t"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1a272ecdb14373ed24235771addcab409b"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">HTU21DComponent</code><span class="sig-paren">(</span>uint32_t <em>update_interval</em> = 15000<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent15HTU21DComponentE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct the HTU21D with the given update interval. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent10get_htu21dEv">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent10get_htu21dEv"></span><span id="esphomelib::sensor::HTU21DComponent::get_htu21d"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1ac7cfd618330c76b75b6a971e656cfaaf"></span>HTU21D &amp;<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">get_htu21d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent10get_htu21dEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a reference to the internal i2cdevlib HTU21D object used for communication. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3NK10esphomelib6sensor15HTU21DComponent22get_temperature_sensorEv">
-<span id="_CPPv2NK10esphomelib6sensor15HTU21DComponent22get_temperature_sensorEv"></span><span id="esphomelib::sensor::HTU21DComponent::get_temperature_sensorC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1a660b5d439cb5cf13331859c6587aa338"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">get_temperature_sensor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib6sensor15HTU21DComponent22get_temperature_sensorEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a pointer to the temperature sensor object used to expose temperatures as a sensor. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3NK10esphomelib6sensor15HTU21DComponent19get_humidity_sensorEv">
-<span id="_CPPv2NK10esphomelib6sensor15HTU21DComponent19get_humidity_sensorEv"></span><span id="esphomelib::sensor::HTU21DComponent::get_humidity_sensorC"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1a301842335fc982d374eb8495f6acbd8b"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">get_humidity_sensor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib6sensor15HTU21DComponent19get_humidity_sensorEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a pointer to the humidity sensor object used to expose humidities as a sensor. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent5setupEv">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent5setupEv"></span><span id="esphomelib::sensor::HTU21DComponent::setup"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1a1c91ac0243f47386b3e0f7ed588ccaea"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Setup (reset) the sensor and check connection. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent6updateEv">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent6updateEv"></span><span id="esphomelib::sensor::HTU21DComponent::update"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1ae0dc0cf11747f37f6adb958685641c56"></span>void <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent6updateEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Update the sensor values (temperature+humidity). </p>
-</dd></dl>
-
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenclass: Cannot find class “esphomelib::sensor::HTU21DComponent” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
 </div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
-<dl class="member">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent7htu21d_E">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent7htu21d_E"></span><span id="esphomelib::sensor::HTU21DComponent::htu21d___HTU21D"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1aaf4ecfbd6cb1a4602119c3a6b215986c"></span>HTU21D <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">htu21d_</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent7htu21d_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent12temperature_E">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent12temperature_E"></span><span id="esphomelib::sensor::HTU21DComponent::temperature___HTU21DTemperatureSensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1a55dd4c44c983c0b7380aefc4ff4396e5"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">temperature_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent12temperature_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv3N10esphomelib6sensor15HTU21DComponent9humidity_E">
-<span id="_CPPv2N10esphomelib6sensor15HTU21DComponent9humidity_E"></span><span id="esphomelib::sensor::HTU21DComponent::humidity___HTU21DHumiditySensorP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_component_1a82ca6c81fe16a7bad2575b1d07b1904f"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a><code class="descname">humidity_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor15HTU21DComponent9humidity_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenclass: Cannot find class “esphomelib::sensor::HTU21DTemperatureSensor” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
 </div>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensorE"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor<code class="descclassname">::</code><code class="descname">HTU21DTemperatureSensor</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Internal helper class to expose temperatures from the HTU21D as a sensor. </p>
-<p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1sensor_1_1_sensor"><span class="std std-ref">esphomelib::sensor::Sensor</span></a></p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor23HTU21DTemperatureSensorEP15HTU21DComponent">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensor23HTU21DTemperatureSensorEP15HTU21DComponent"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor::HTU21DTemperatureSensor__HTU21DComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor_1ae7ee2227cc7d7bdf6e4269a8715ab183"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a><code class="descname">HTU21DTemperatureSensor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor23HTU21DTemperatureSensorEP15HTU21DComponent" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor19unit_of_measurementEv">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensor19unit_of_measurementEv"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor::unit_of_measurement"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor_1a8b17086454d8014cd66d0af768710c4a"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a><code class="descname">unit_of_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor19unit_of_measurementEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Override this to set the Home Assistant unit of measurement for this sensor. </p>
-<p>Return “” to disable this feature.</p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The icon of this sensor, for example “°C”. </dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor4iconEv">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensor4iconEv"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor::icon"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor_1aea520a40bc4a92d57a1fbb727b7eb606"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a><code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor4iconEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Override this to set the Home Assistant icon for this sensor. </p>
-<p>Return “” to disable this feature.</p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The icon of this sensor, for example “mdi:battery”. </dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor15update_intervalEv">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensor15update_intervalEv"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor::update_interval"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor_1a729599d61847e0bd1d113a54379ff42d"></span>uint32_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a><code class="descname">update_interval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor15update_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return with which interval the sensor is polled. Return 0 for non-polling mode. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor17accuracy_decimalsEv">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensor17accuracy_decimalsEv"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor::accuracy_decimals"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor_1af08c0c1f85711c701feeb6da6151cbe9"></span>int8_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a><code class="descname">accuracy_decimals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor17accuracy_decimalsEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return the accuracy in decimals for this sensor. </p>
-</dd></dl>
-
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenclass: Cannot find class “esphomelib::sensor::HTU21DHumiditySensor” in doxygen xml output for project “esphomelib” from directory: ./_doxyxml/</p>
 </div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
-<dl class="member">
-<dt id="_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor7parent_E">
-<span id="_CPPv2N10esphomelib6sensor23HTU21DTemperatureSensor7parent_E"></span><span id="esphomelib::sensor::HTU21DTemperatureSensor::parent___HTU21DComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_temperature_sensor_1aa4797491f0d8fc30a01cddcd7d8c7991"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensorE" title="esphomelib::sensor::HTU21DTemperatureSensor">HTU21DTemperatureSensor</a><code class="descname">parent_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor23HTU21DTemperatureSensor7parent_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensorE"></span><span id="esphomelib::sensor::HTU21DHumiditySensor"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor"></span><em class="property">class </em><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor<code class="descclassname">::</code><code class="descname">HTU21DHumiditySensor</code><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Internal helper class to expose humidities from the HTU21D as a sensor. </p>
-<p>Inherits from <a class="reference internal" href="index.html#classesphomelib_1_1sensor_1_1_sensor"><span class="std std-ref">esphomelib::sensor::Sensor</span></a></p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor20HTU21DHumiditySensorEP15HTU21DComponent">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensor20HTU21DHumiditySensorEP15HTU21DComponent"></span><span id="esphomelib::sensor::HTU21DHumiditySensor::HTU21DHumiditySensor__HTU21DComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor_1ae9f14076f5338440c2a45df0c19762a4"></span><a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a><code class="descname">HTU21DHumiditySensor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor20HTU21DHumiditySensorEP15HTU21DComponent" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor19unit_of_measurementEv">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensor19unit_of_measurementEv"></span><span id="esphomelib::sensor::HTU21DHumiditySensor::unit_of_measurement"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor_1a703d8e76e3f22e36eb1a721008647d88"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a><code class="descname">unit_of_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor19unit_of_measurementEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Override this to set the Home Assistant unit of measurement for this sensor. </p>
-<p>Return “” to disable this feature.</p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The icon of this sensor, for example “°C”. </dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor4iconEv">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensor4iconEv"></span><span id="esphomelib::sensor::HTU21DHumiditySensor::icon"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor_1a0e071c656bd40cef41905b4f2433cb5c"></span>std::string <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a><code class="descname">icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor4iconEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Override this to set the Home Assistant icon for this sensor. </p>
-<p>Return “” to disable this feature.</p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The icon of this sensor, for example “mdi:battery”. </dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor15update_intervalEv">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensor15update_intervalEv"></span><span id="esphomelib::sensor::HTU21DHumiditySensor::update_interval"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor_1a244cb620d8c6a0b2439b810fe4aaf696"></span>uint32_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a><code class="descname">update_interval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor15update_intervalEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return with which interval the sensor is polled. Return 0 for non-polling mode. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor17accuracy_decimalsEv">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensor17accuracy_decimalsEv"></span><span id="esphomelib::sensor::HTU21DHumiditySensor::accuracy_decimals"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor_1a62d5f81dfa965d331aeb550fab1b8928"></span>int8_t <a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a><code class="descname">accuracy_decimals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor17accuracy_decimalsEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return the accuracy in decimals for this sensor. </p>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
-<dl class="member">
-<dt id="_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor7parent_E">
-<span id="_CPPv2N10esphomelib6sensor20HTU21DHumiditySensor7parent_E"></span><span id="esphomelib::sensor::HTU21DHumiditySensor::parent___HTU21DComponentP"></span><span class="target" id="classesphomelib_1_1sensor_1_1_h_t_u21_d_humidity_sensor_1af3c7c6b8d5c3866d1f8ae9cee309b5e7"></span><a class="reference internal" href="#_CPPv3N10esphomelib6sensor15HTU21DComponentE" title="esphomelib::sensor::HTU21DComponent">HTU21DComponent</a> *<a class="reference internal" href="../core/helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::sensor::<a class="reference internal" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensorE" title="esphomelib::sensor::HTU21DHumiditySensor">HTU21DHumiditySensor</a><code class="descname">parent_</code> = {nullptr}<a class="headerlink" href="#_CPPv3N10esphomelib6sensor20HTU21DHumiditySensor7parent_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
 </div>
 </div>
 

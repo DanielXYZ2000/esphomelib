@@ -63,13 +63,18 @@
 <dd></dd></dl>
 
 <dl class="enumerator">
+<dt id="_CPPv327ESPHOMELIB_LOG_LEVEL_CONFIG">
+<span id="_CPPv227ESPHOMELIB_LOG_LEVEL_CONFIG"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940abbb65e5befa4bd64d676213f3ace3d99"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_CONFIG</code> = 4<a class="headerlink" href="#_CPPv327ESPHOMELIB_LOG_LEVEL_CONFIG" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
 <dt id="_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG">
-<span id="_CPPv226ESPHOMELIB_LOG_LEVEL_DEBUG"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a0da406a72b62d44faa98e5c9d1380d8e"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_DEBUG</code> = 4<a class="headerlink" href="#_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv226ESPHOMELIB_LOG_LEVEL_DEBUG"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a0da406a72b62d44faa98e5c9d1380d8e"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_DEBUG</code> = 5<a class="headerlink" href="#_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE">
-<span id="_CPPv228ESPHOMELIB_LOG_LEVEL_VERBOSE"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940afa92171a3cb2191f9fa2e72c39e5bbb4"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_VERBOSE</code> = 5<a class="headerlink" href="#_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv228ESPHOMELIB_LOG_LEVEL_VERBOSE"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940afa92171a3cb2191f9fa2e72c39e5bbb4"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_VERBOSE</code> = 6<a class="headerlink" href="#_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -112,18 +117,6 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N10esphomelib12LogComponent24set_custom_logging_topicERKNSt6stringE">
-<span id="_CPPv2N10esphomelib12LogComponent24set_custom_logging_topicERKNSt6stringE"></span><span id="esphomelib::LogComponent::set_custom_logging_topic__ssCR"></span><span class="target" id="classesphomelib_1_1_log_component_1a280e7c307f15c6273252af5ddd8463ad"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_custom_logging_topic</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>custom_logging_topic</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent24set_custom_logging_topicERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set a custom MQTT logging topic. Set to “” for default behavior. This will also enable logging. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3N10esphomelib12LogComponent24set_mqtt_logging_enabledEb">
-<span id="_CPPv2N10esphomelib12LogComponent24set_mqtt_logging_enabledEb"></span><span id="esphomelib::LogComponent::set_mqtt_logging_enabled__b"></span><span class="target" id="classesphomelib_1_1_log_component_1af34b23afbd3f9c0bc64db9e006b193bb"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_mqtt_logging_enabled</code><span class="sig-paren">(</span>bool <em>mqtt_logging_enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent24set_mqtt_logging_enabledEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Enable/Disable logging to MQTT. </p>
-</dd></dl>
-
-<dl class="function">
 <dt id="_CPPv3N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t">
 <span id="_CPPv2N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t"></span><span id="esphomelib::LogComponent::set_tx_buffer_size__s"></span><span class="target" id="classesphomelib_1_1_log_component_1abc856218ddc5fca5e432d531db5e668c"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_tx_buffer_size</code><span class="sig-paren">(</span>size_t <em>tx_buffer_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the buffer size that’s used for constructing log messages. Log messages longer than this will be truncated. </p>
@@ -153,18 +146,6 @@
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv3N10esphomelib12LogComponent17get_logging_topicEv">
-<span id="_CPPv2N10esphomelib12LogComponent17get_logging_topicEv"></span><span id="esphomelib::LogComponent::get_logging_topic"></span><span class="target" id="classesphomelib_1_1_log_component_1a0da4f4a79708dcf7f6ee892e4e21c8e6"></span>std::string <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">get_logging_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent17get_logging_topicEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return the logging topic, opting for the default if it hasn’t been customized. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv3NK10esphomelib12LogComponent23is_mqtt_logging_enabledEv">
-<span id="_CPPv2NK10esphomelib12LogComponent23is_mqtt_logging_enabledEv"></span><span id="esphomelib::LogComponent::is_mqtt_logging_enabledC"></span><span class="target" id="classesphomelib_1_1_log_component_1a27cbb4e51ff751a31964222103b24843"></span>bool <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">is_mqtt_logging_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib12LogComponent23is_mqtt_logging_enabledEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Whether logging to MQTT is enabled. </p>
-</dd></dl>
-
-<dl class="function">
 <dt id="_CPPv3NK10esphomelib12LogComponent18get_tx_buffer_sizeEv">
 <span id="_CPPv2NK10esphomelib12LogComponent18get_tx_buffer_sizeEv"></span><span id="esphomelib::LogComponent::get_tx_buffer_sizeC"></span><span class="target" id="classesphomelib_1_1_log_component_1ab15ce56e96e4627f19cad5bdd5440623"></span>size_t <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">get_tx_buffer_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib12LogComponent18get_tx_buffer_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -172,6 +153,11 @@
 <dl class="function">
 <dt id="_CPPv3N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelRKNSt6stringEPKc7va_list">
 <span id="_CPPv2N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelRKNSt6stringEPKc7va_list"></span><span id="esphomelib::LogComponent::log_vprintf___ESPLogLevel.ssCR.cCP.va_list"></span><span class="target" id="classesphomelib_1_1_log_component_1a2eaba349b7c7bede8ec9f08b91191094"></span>int <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_vprintf_</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a> <em>level</em>, <em class="property">const</em> std::string &amp;<em>tag</em>, <em class="property">const</em> char *<em>format</em>, va_list <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelRKNSt6stringEPKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelNSt6stringEEEE">
+<span id="_CPPv2N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelNSt6stringEEEE"></span><span class="target" id="classesphomelib_1_1_log_component_1a492dcc1e061e22aa9358f788c886c459"></span>void <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">add_on_log_callback</code><span class="sig-paren">(</span>std::function&lt;void<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a>, std::string<span class="sig-paren">)</span>&gt; &amp;&amp;<em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelNSt6stringEEEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -188,16 +174,6 @@
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv3N10esphomelib12LogComponent19mqtt_logging_topic_E">
-<span id="_CPPv2N10esphomelib12LogComponent19mqtt_logging_topic_E"></span><span id="esphomelib::LogComponent::mqtt_logging_topic___ss"></span><span class="target" id="classesphomelib_1_1_log_component_1a1d83be9f345121e883d904bacce901a8"></span>std::string <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">mqtt_logging_topic_</code><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent19mqtt_logging_topic_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv3N10esphomelib12LogComponent21mqtt_logging_enabled_E">
-<span id="_CPPv2N10esphomelib12LogComponent21mqtt_logging_enabled_E"></span><span id="esphomelib::LogComponent::mqtt_logging_enabled___b"></span><span class="target" id="classesphomelib_1_1_log_component_1a66a04e25746f968e1d7334740f458707"></span>bool <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">mqtt_logging_enabled_</code> = {true}<a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent21mqtt_logging_enabled_E" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="member">
 <dt id="_CPPv3N10esphomelib12LogComponent17global_log_level_E">
 <span id="_CPPv2N10esphomelib12LogComponent17global_log_level_E"></span><span id="esphomelib::LogComponent::global_log_level___ESPLogLevel"></span><span class="target" id="classesphomelib_1_1_log_component_1a316d815f5402ede199e8a9d7c662948c"></span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a> <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">global_log_level_</code> = {ESPHOMELIB_LOG_LEVEL}<a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent17global_log_level_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -205,6 +181,11 @@
 <dl class="member">
 <dt id="_CPPv3N10esphomelib12LogComponent11log_levels_E">
 <span id="_CPPv2N10esphomelib12LogComponent11log_levels_E"></span><span id="esphomelib::LogComponent::log_levels___std::unordered_map:ss.ESPLogLevel:"></span><span class="target" id="classesphomelib_1_1_log_component_1a4c8fc9405981ebef6a5e4fd0db2d8053"></span>std::unordered_map&lt;std::string, <a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a>&gt; <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_levels_</code><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent11log_levels_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib12LogComponent13log_callback_E">
+<span id="_CPPv2N10esphomelib12LogComponent13log_callback_E"></span><span class="target" id="classesphomelib_1_1_log_component_1a6359180be8bcf4422f7fa81d917f4e50"></span>CallbackManager&lt;void<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a>, std::string<span class="sig-paren">)</span>&gt; <a class="reference internal" href="helpers.html#_CPPv310esphomelib" title="esphomelib">esphomelib</a>::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_callback_</code> = {}<a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent13log_callback_E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
