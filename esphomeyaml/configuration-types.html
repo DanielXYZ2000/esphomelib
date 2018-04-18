@@ -1,74 +1,6 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Configuration Types &#8212; esphomelib 1.3.0 documentation</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-   
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="configuration-types">
-<h1>Configuration Types<a class="headerlink" href="#configuration-types" title="Permalink to this headline">¶</a></h1>
-<p>esphomeyaml’s configuration files have several configuration types. This
-page describes them.</p>
-<div class="section" id="id">
-<h2>ID<a class="headerlink" href="#id" title="Permalink to this headline">¶</a></h2>
-<p>Quite an important aspect of esphomeyaml are “ids”. They are used to
-connect components from different domains. For example, you define an
-output component together with an id and then later specify that same id
-in the light component. IDs should always be unique within a
-configuration and esphomeyaml will warn you if you try to use the same
-ID twice.</p>
-<p>Because esphomeyaml converts your configuration into C++ code and the
-ids are in reality just C++ variable names, they must also adhere to
-C++’s naming conventions. <a class="reference external" href="http://venus.cs.qc.cuny.edu/~krishna/cs111/lectures/D3_C++_Variables.pdf">C++ Variable
-names</a>
-…</p>
-<ul class="simple">
-<li>… must start with a letter and can end with numbers.</li>
-<li>… must not have a space in the name.</li>
-<li>… can not have special characters except the underscore (“_“).</li>
-<li>… must not be a keyword.</li>
-</ul>
-</div>
-<div class="section" id="pin">
-<h2>Pin<a class="headerlink" href="#pin" title="Permalink to this headline">¶</a></h2>
-<p>esphomeyaml always uses the microcontroller-internal GPIO numbers for
-simplicity. For most boards (defined in <a class="reference external" href="/esphomeyaml/components/esphomeyaml.html">esphomeyaml
-section</a>), there are helper
-functions available though. For example, on the NodeMCU ESP8266, you can
-specify the GPIO16 through the abreviation <code class="docutils literal notranslate"><span class="pre">D0</span></code>.</p>
-<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_config_option</span><span class="p">:</span>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="X-UA-Compatible"content="IE=Edge"><meta http-equiv="Content-Type"content="text/html; charset=utf-8"><title>Configuration Types &#8212; esphomelib 1.3.0 documentation</title><link rel="stylesheet"href="../_static/alabaster.css"type="text/css"><link rel="stylesheet"href="../_static/pygments.css"type="text/css"><script src="../_static/documentation_options.js"></script><script src="../_static/jquery.js"></script><script src="../_static/underscore.js"></script><script src="../_static/doctools.js"></script><link rel="index"title="Index"href="../genindex.html"><link rel="search"title="Search"href="../search.html"><link rel="stylesheet"href="../_static/custom.css"type="text/css"><meta name="viewport"content="width=device-width,initial-scale=0.9,maximum-scale=0.9"><div class="document"><div class="documentwrapper"><div class="bodywrapper"><div class="body"role="main"><div class="section"id="configuration-types"><h1>Configuration Types<a class="headerlink"href="#configuration-types"title="Permalink to this headline">¶</a></h1><p>esphomeyaml’s configuration files have several configuration types. This page describes them.<div class="section"id="id"><h2>ID<a class="headerlink"href="#id"title="Permalink to this headline">¶</a></h2><p>Quite an important aspect of esphomeyaml are “ids”. They are used to connect components from different domains. For example, you define an output component together with an id and then later specify that same id in the light component. IDs should always be unique within a configuration and esphomeyaml will warn you if you try to use the same ID twice.<p>Because esphomeyaml converts your configuration into C++ code and the ids are in reality just C++ variable names, they must also adhere to C++’s naming conventions. <a class="reference external"href="http://venus.cs.qc.cuny.edu/~krishna/cs111/lectures/D3_C++_Variables.pdf">C++ Variable names</a> …<ul class="simple"><li>… must start with a letter and can end with numbers.<li>… must not have a space in the name.<li>… can not have special characters except the underscore (“_“).<li>… must not be a keyword.</ul></div><div class="section"id="pin"><h2>Pin<a class="headerlink"href="#pin"title="Permalink to this headline">¶</a></h2><p>esphomeyaml always uses the microcontroller-internal GPIO numbers for simplicity. For most boards (defined in <a class="reference external"href="/esphomeyaml/components/esphomeyaml.html">esphomeyaml section</a>), there are helper functions available though. For example, on the NodeMCU ESP8266, you can specify the GPIO16 through the abreviation <code class="docutils literal notranslate"><span class="pre">D0</span></code>.<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_config_option</span><span class="p">:</span>
   <span class="n">pin</span><span class="p">:</span> <span class="n">D0</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="pin-schema">
-<h2>Pin Schema<a class="headerlink" href="#pin-schema" title="Permalink to this headline">¶</a></h2>
-<p>In some places, esphomeyaml also supports a more advanced “pin schema”.</p>
-<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_config_option</span><span class="p">:</span>
+</pre></div></div></div><div class="section"id="pin-schema"><h2>Pin Schema<a class="headerlink"href="#pin-schema"title="Permalink to this headline">¶</a></h2><p>In some places, esphomeyaml also supports a more advanced “pin schema”.<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_config_option</span><span class="p">:</span>
   <span class="c1"># Basic:</span>
   <span class="n">pin</span><span class="p">:</span> <span class="n">D0</span>
 
@@ -77,48 +9,7 @@ specify the GPIO16 through the abreviation <code class="docutils literal notrans
     <span class="n">number</span><span class="p">:</span> <span class="n">D0</span>
     <span class="n">inverted</span><span class="p">:</span> <span class="kc">True</span>
     <span class="n">mode</span><span class="p">:</span> <span class="n">INPUT_PULLUP</span>
-</pre></div>
-</div>
-<p>Configuration variables:</p>
-<ul class="simple">
-<li><strong>number</strong> (<strong>Required</strong>, pin): The pin number.</li>
-<li><strong>inverted</strong> (<em>Optional</em>, boolean): If all read and written values
-should be treated as inverted. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
-<li><strong>mode</strong> (<em>Optional</em>, string): A pin mode to set for the pin at
-startup, corresponds to Arduino’s <code class="docutils literal notranslate"><span class="pre">pinMode</span></code> call.</li>
-</ul>
-<p>Available Pin Modes:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">INPUT</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">OUTPUT</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">INPUT_PULLDOWN</span></code> (only on ESP32)</li>
-<li><code class="docutils literal notranslate"><span class="pre">INPUT_PULLUP</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">OUTPUT_OPEN_DRAIN</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">WAKEUP_PULLUP</span></code> (only on ESP8266)</li>
-<li><code class="docutils literal notranslate"><span class="pre">WAKEUP_PULLDOWN</span></code> (only on ESP8266)</li>
-<li><code class="docutils literal notranslate"><span class="pre">INPUT_PULLDOWN_16</span></code> (only on ESP8266 and only on GPIO16)</li>
-<li><code class="docutils literal notranslate"><span class="pre">OPEN_DRAIN</span></code> (only on ESP32)</li>
-<li><code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> (only on ESP32)</li>
-<li><code class="docutils literal notranslate"><span class="pre">PULLDOWN</span></code> (only on ESP32)</li>
-<li><code class="docutils literal notranslate"><span class="pre">ANALOG</span></code> (only on ESP32)</li>
-<li><code class="docutils literal notranslate"><span class="pre">SPECIAL</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_0</span></code> (only on ESP8266)</li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_1</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_2</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_3</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_4</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_5</span></code> (only on ESP32)</li>
-<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_6</span></code> (only on ESP32)</li>
-</ul>
-</div>
-<div class="section" id="time">
-<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
-<p>In lots of places in esphomeyaml you need to define time lengths, most
-notably of these is an <code class="docutils literal notranslate"><span class="pre">update_interval</span></code> in milliseconds. Internally,
-epshomelib always tries to work with millisecond values. But as
-esphomeyaml is trying to make your lifes as easy as possible, there are
-lots of helpers for defining times in a more simple manner.</p>
-<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_config_option</span><span class="p">:</span>
+</pre></div></div><p>Configuration variables:<ul class="simple"><li><strong>number</strong> (<strong>Required</strong>, pin): The pin number.<li><strong>inverted</strong> (<em>Optional</em>, boolean): If all read and written values should be treated as inverted. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.<li><strong>mode</strong> (<em>Optional</em>, string): A pin mode to set for the pin at startup, corresponds to Arduino’s <code class="docutils literal notranslate"><span class="pre">pinMode</span></code> call.</ul><p>Available Pin Modes:<ul class="simple"><li><code class="docutils literal notranslate"><span class="pre">INPUT</span></code><li><code class="docutils literal notranslate"><span class="pre">OUTPUT</span></code><li><code class="docutils literal notranslate"><span class="pre">INPUT_PULLDOWN</span></code> (only on ESP32)<li><code class="docutils literal notranslate"><span class="pre">INPUT_PULLUP</span></code><li><code class="docutils literal notranslate"><span class="pre">OUTPUT_OPEN_DRAIN</span></code><li><code class="docutils literal notranslate"><span class="pre">WAKEUP_PULLUP</span></code> (only on ESP8266)<li><code class="docutils literal notranslate"><span class="pre">WAKEUP_PULLDOWN</span></code> (only on ESP8266)<li><code class="docutils literal notranslate"><span class="pre">INPUT_PULLDOWN_16</span></code> (only on ESP8266 and only on GPIO16)<li><code class="docutils literal notranslate"><span class="pre">OPEN_DRAIN</span></code> (only on ESP32)<li><code class="docutils literal notranslate"><span class="pre">PULLUP</span></code> (only on ESP32)<li><code class="docutils literal notranslate"><span class="pre">PULLDOWN</span></code> (only on ESP32)<li><code class="docutils literal notranslate"><span class="pre">ANALOG</span></code> (only on ESP32)<li><code class="docutils literal notranslate"><span class="pre">SPECIAL</span></code><li><code class="docutils literal notranslate"><span class="pre">FUNCTION_0</span></code> (only on ESP8266)<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_1</span></code><li><code class="docutils literal notranslate"><span class="pre">FUNCTION_2</span></code><li><code class="docutils literal notranslate"><span class="pre">FUNCTION_3</span></code><li><code class="docutils literal notranslate"><span class="pre">FUNCTION_4</span></code><li><code class="docutils literal notranslate"><span class="pre">FUNCTION_5</span></code> (only on ESP32)<li><code class="docutils literal notranslate"><span class="pre">FUNCTION_6</span></code> (only on ESP32)</ul></div><div class="section"id="time"><h2>Time<a class="headerlink"href="#time"title="Permalink to this headline">¶</a></h2><p>In lots of places in esphomeyaml you need to define time lengths, most notably of these is an <code class="docutils literal notranslate"><span class="pre">update_interval</span></code> in milliseconds. Internally, epshomelib always tries to work with millisecond values. But as esphomeyaml is trying to make your lifes as easy as possible, there are lots of helpers for defining times in a more simple manner.<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_config_option</span><span class="p">:</span>
   <span class="n">some_time_option</span><span class="p">:</span> <span class="mi">1000</span>  <span class="c1"># integer value is interpreted as milliseconds</span>
   <span class="n">some_time_option</span><span class="p">:</span> <span class="mi">1000</span><span class="n">ms</span>  <span class="c1"># the same as above</span>
   <span class="n">some_time_option</span><span class="p">:</span> <span class="mf">1.5</span><span class="n">s</span>  <span class="c1"># 1.5 seconds</span>
@@ -130,57 +21,7 @@ lots of helpers for defining times in a more simple manner.</p>
     <span class="n">minutes</span><span class="p">:</span> <span class="mi">25</span>
     <span class="n">hours</span><span class="p">:</span> <span class="mi">3</span>
     <span class="n">days</span><span class="p">:</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2018, Otto Winter.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
-      
-      |
-      <a href="../_sources/esphomeyaml/configuration-types.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
+</pre></div></div></div></div></div></div></div><div class="sphinxsidebar"role="navigation"aria-label="main navigation"><div class="sphinxsidebarwrapper"><div class="relations"><h3>Related Topics</h3><ul><li><a href="../index.html">Documentation overview</a><ul></ul></ul></div><div id="searchbox"style="display: none"role="search"><h3>Quick search</h3><div class="searchformwrapper"><form class="search"action="../search.html"><input name="q"> <input type="submit"value="Go"> <input type="hidden"name="check_keywords"value="yes"> <input type="hidden"name="area"value="default"></form></div></div><script>$('#searchbox').show(0);</script></div></div><div class="clearer"></div></div><div class="footer">&copy;2018, Otto Winter. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a> | <a href="../_sources/esphomeyaml/configuration-types.rst.txt"rel="nofollow">Page source</a></div><script>var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-113203480-2']);
       _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_setAllowLinker', true]);
@@ -190,9 +31,4 @@ lots of helpers for defining times in a more simple manner.</p>
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-    
-  </body>
-</html>
+      })();</script>
