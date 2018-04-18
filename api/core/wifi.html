@@ -1,4 +1,41 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="X-UA-Compatible"content="IE=Edge"><meta http-equiv="Content-Type"content="text/html; charset=utf-8"><title>WiFi &#8212; esphomelib 1.3.0 documentation</title><link rel="stylesheet"href="../../_static/alabaster.css"type="text/css"><link rel="stylesheet"href="../../_static/pygments.css"type="text/css"><script src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script><script src="../../_static/underscore.js"></script><script src="../../_static/doctools.js"></script><link rel="index"title="Index"href="../../genindex.html"><link rel="search"title="Search"href="../../search.html"><link rel="next"title="MQTT Client"href="mqtt.html"><link rel="prev"title="Component"href="component.html"><link rel="stylesheet"href="../../_static/custom.css"type="text/css"><meta name="viewport"content="width=device-width,initial-scale=0.9,maximum-scale=0.9"><div class="document"><div class="documentwrapper"><div class="bodywrapper"><div class="body"role="main"><div class="section"id="wifi"><h1>WiFi<a class="headerlink"href="#wifi"title="Permalink to this headline">¶</a></h1><div class="section"id="example-usage"><h2>Example Usage<a class="headerlink"href="#example-usage"title="Permalink to this headline">¶</a></h2><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WiFi &#8212; esphomelib 1.3.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MQTT Client" href="mqtt.html" />
+    <link rel="prev" title="Component" href="component.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wifi">
+<h1>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Basic</span>
 <span class="n">App</span><span class="p">.</span><span class="n">init_wifi</span><span class="p">(</span><span class="s">&quot;YOUR_SSID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
 <span class="c1">// Manual IP</span>
 <span class="k">auto</span> <span class="o">*</span><span class="n">wifi</span> <span class="o">=</span> <span class="n">App</span><span class="p">.</span><span class="n">init_wifi</span><span class="p">(</span><span class="s">&quot;YOUR_SSID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
@@ -9,7 +46,285 @@
 <span class="p">});</span>
 <span class="c1">// AP</span>
 <span class="n">wifi</span><span class="o">-&gt;</span><span class="n">set_ap</span><span class="p">(</span><span class="s">&quot;AP SSID&quot;</span><span class="p">,</span> <span class="s">&quot;Optional AP Password&quot;</span><span class="p">);</span>
-</pre></div></div></div><div class="section"id="api-reference"><h2>API Reference<a class="headerlink"href="#api-reference"title="Permalink to this headline">¶</a></h2><div class="section"id="wificomponent"><h3>WiFiComponent<a class="headerlink"href="#wificomponent"title="Permalink to this headline">¶</a></h3><dl class="class"><dt id="_CPPv3N10esphomelib13WiFiComponentE"><span id="_CPPv2N10esphomelib13WiFiComponentE"></span><span id="esphomelib::WiFiComponent"></span><span class="target"id="classesphomelib_1_1_wi_fi_component"></span><em class="property">class </em>esphomelib<code class="descclassname">::</code><code class="descname">WiFiComponent</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponentE"title="Permalink to this definition">¶</a><br><dd><p>This component is responsible for managing the ESP WiFi interface.<p>Inherits from <a class="reference internal"href="controller.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a><div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Public Functions<dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent13WiFiComponentEv"><span id="_CPPv2N10esphomelib13WiFiComponent13WiFiComponentEv"></span><span id="esphomelib::WiFiComponent::WiFiComponent"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1abc50ff11cbbd7f42fc49aeb2e6e8e924"></span>esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">WiFiComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent13WiFiComponentEv"title="Permalink to this definition">¶</a><br><dd><p>Construct a <a class="reference internal"href="#classesphomelib_1_1_wi_fi_component"><span class="std std-ref">WiFiComponent</span></a>.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent7set_staERKNSt6stringERKNSt6stringE"><span id="_CPPv2N10esphomelib13WiFiComponent7set_staERKNSt6stringERKNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_sta__ssCR.ssCR"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1aa8dcc2af5cd4bd420242e7f6126848a0"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_sta</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em>, <em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent7set_staERKNSt6stringERKNSt6stringE"title="Permalink to this definition">¶</a><br><dd><p>Setup the STA (client) mode. The parameters define which station to connect to.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent17set_sta_manual_ipE8ManualIP"><span id="_CPPv2N10esphomelib13WiFiComponent17set_sta_manual_ipE8ManualIP"></span><span id="esphomelib::WiFiComponent::set_sta_manual_ip__ManualIP"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a32d6ff1f8ffd74f5f26196c021ade830"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_sta_manual_ip</code><span class="sig-paren">(</span><a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a> <em>manual_ip</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent17set_sta_manual_ipE8ManualIP"title="Permalink to this definition">¶</a><br><dd><p>Manually set a static IP for this WiFi interface.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent6set_apERKNSt6stringERKNSt6stringE7uint8_t"><span id="_CPPv2N10esphomelib13WiFiComponent6set_apERKNSt6stringERKNSt6stringE7uint8_t"></span><span id="esphomelib::WiFiComponent::set_ap__ssCR.ssCR.uint8_t"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a1f0b0b23ffea05182cdaf98690639f23"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_ap</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em>, <em class="property">const</em> std::string &amp;<em>password</em> = &quot;&quot;, uint8_t <em>channel</em> = 1<span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent6set_apERKNSt6stringERKNSt6stringE7uint8_t"title="Permalink to this definition">¶</a><br><dd><p>Setup an Access Point that should be created if no connection to a station can be made.<p>This can also be used without <a class="reference internal"href="#classesphomelib_1_1_wi_fi_component_1aa8dcc2af5cd4bd420242e7f6126848a0"><span class="std std-ref">set_sta()</span></a>. Then the AP will always be active.<p>If both STA and AP are defined, then both will be enabled at startup, but if a connection to a station can be made, the AP will be turned off again.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent16set_ap_manual_ipE8ManualIP"><span id="_CPPv2N10esphomelib13WiFiComponent16set_ap_manual_ipE8ManualIP"></span><span id="esphomelib::WiFiComponent::set_ap_manual_ip__ManualIP"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1aa1d7b23afdce1d11ae71520dacb680b7"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_ap_manual_ip</code><span class="sig-paren">(</span><a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a> <em>manual_ip</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent16set_ap_manual_ipE8ManualIP"title="Permalink to this definition">¶</a><br><dd><p>Manually set the manual IP for the AP.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent12set_hostnameERRNSt6stringE"><span id="_CPPv2N10esphomelib13WiFiComponent12set_hostnameERRNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_hostname__ssRR"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a36edff1e04b361e82d64e9c354b06f71"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_hostname</code><span class="sig-paren">(</span>std::string &amp;&amp;<em>hostname</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent12set_hostnameERRNSt6stringE"title="Permalink to this definition">¶</a><br><dd><p>Set the advertised hostname, defaults to the App name.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent12get_hostnameEv"><span id="_CPPv2N10esphomelib13WiFiComponent12get_hostnameEv"></span><span id="esphomelib::WiFiComponent::get_hostname"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1ab1faf3791f06eaa08ebee3a48c1e5670"></span><em class="property">const</em> std::string &amp;esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_hostname</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent12get_hostnameEv"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent5setupEv"><span id="_CPPv2N10esphomelib13WiFiComponent5setupEv"></span><span id="esphomelib::WiFiComponent::setup"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a7efaa3d2130bb0e5dbc5ea837c1b1cd5"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent5setupEv"title="Permalink to this definition">¶</a><br><dd><p>Setup WiFi interface.</dl><dl class="function"><dt id="_CPPv3NK10esphomelib13WiFiComponent18get_setup_priorityEv"><span id="_CPPv2NK10esphomelib13WiFiComponent18get_setup_priorityEv"></span><span id="esphomelib::WiFiComponent::get_setup_priorityC"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a617443ba03a7887c57d6de9473e033d0"></span>float esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink"href="#_CPPv3NK10esphomelib13WiFiComponent18get_setup_priorityEv"title="Permalink to this definition">¶</a><br><dd><p>WIFI <a class="reference internal"href="component.html#namespaceesphomelib_1_1setup__priority"><span class="std std-ref">setup_priority</span></a>.</dl><dl class="function"><dt id="_CPPv3NK10esphomelib13WiFiComponent17get_loop_priorityEv"><span id="_CPPv2NK10esphomelib13WiFiComponent17get_loop_priorityEv"></span><span id="esphomelib::WiFiComponent::get_loop_priorityC"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a7f5465d26114b2e379545a745303125d"></span>float esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_loop_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink"href="#_CPPv3NK10esphomelib13WiFiComponent17get_loop_priorityEv"title="Permalink to this definition">¶</a><br><dd><p>priority of <a class="reference internal"href="#classesphomelib_1_1_wi_fi_component_1a9f3ed67afd996719a36cdfa625cf8de5"><span class="std std-ref">loop()</span></a>.<p>higher -&gt; executed earlier<p>Defaults to 0.<p><dl class="docutils"><dt><strong>Return</strong><dd>The loop priority of this component</dl><p></dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent4loopEv"><span id="_CPPv2N10esphomelib13WiFiComponent4loopEv"></span><span id="esphomelib::WiFiComponent::loop"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a9f3ed67afd996719a36cdfa625cf8de5"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent4loopEv"title="Permalink to this definition">¶</a><br><dd><p>Reconnect WiFi if required.</dl><dl class="function"><dt id="_CPPv3NK10esphomelib13WiFiComponent7has_staEv"><span id="_CPPv2NK10esphomelib13WiFiComponent7has_staEv"></span><span id="esphomelib::WiFiComponent::has_staC"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1ab2e2846eb31b9a0b24cfd4e989ba0b33"></span>bool esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">has_sta</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink"href="#_CPPv3NK10esphomelib13WiFiComponent7has_staEv"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3NK10esphomelib13WiFiComponent6has_apEv"><span id="_CPPv2NK10esphomelib13WiFiComponent6has_apEv"></span><span id="esphomelib::WiFiComponent::has_apC"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a1106b9ffec992bac556634ffde392687"></span>bool esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">has_ap</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink"href="#_CPPv3NK10esphomelib13WiFiComponent6has_apEv"title="Permalink to this definition">¶</a><br><dd></dl></div><div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Protected Functions<dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent16setup_sta_configEb"><span id="_CPPv2N10esphomelib13WiFiComponent16setup_sta_configEb"></span><span id="esphomelib::WiFiComponent::setup_sta_config__b"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a4e1b747bed5e787dbe673b89c9327870"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup_sta_config</code><span class="sig-paren">(</span>bool <em>show_config</em> = true<span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent16setup_sta_configEb"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent15setup_ap_configEv"><span id="_CPPv2N10esphomelib13WiFiComponent15setup_ap_configEv"></span><span id="esphomelib::WiFiComponent::setup_ap_config"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a72ea68745dab3f73168870044d2dce19"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup_ap_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent15setup_ap_configEv"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent12wait_for_staEv"><span id="_CPPv2N10esphomelib13WiFiComponent12wait_for_staEv"></span><span id="esphomelib::WiFiComponent::wait_for_sta"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a2df7b996df1789e3046caa7fa3d9fdec"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">wait_for_sta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent12wait_for_staEv"title="Permalink to this definition">¶</a><br><dd><p>Waits for the WiFi class to return a connected state.</dl><dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent13sta_connectedEv"><span id="_CPPv2N10esphomelib13WiFiComponent13sta_connectedEv"></span><span id="esphomelib::WiFiComponent::sta_connected"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1af95b09e49e23ddaf698f4bd681a3ef30"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_connected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent13sta_connectedEv"title="Permalink to this definition">¶</a><br><dd></dl></div><div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Protected Attributes<dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent9hostname_E"><span id="_CPPv2N10esphomelib13WiFiComponent9hostname_E"></span><span id="esphomelib::WiFiComponent::hostname___ss"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1ac7ab81d80abac2f110b58c62975f0340"></span>std::string esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">hostname_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent9hostname_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent7sta_on_E"><span id="_CPPv2N10esphomelib13WiFiComponent7sta_on_E"></span><span id="esphomelib::WiFiComponent::sta_on___b"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a94b0e643de8207ce031e9908cf447bb7"></span>bool esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_on_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent7sta_on_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent9sta_ssid_E"><span id="_CPPv2N10esphomelib13WiFiComponent9sta_ssid_E"></span><span id="esphomelib::WiFiComponent::sta_ssid___ss"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a99977cfe732e9999b678f8fe0f78d5d9"></span>std::string esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_ssid_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent9sta_ssid_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent13sta_password_E"><span id="_CPPv2N10esphomelib13WiFiComponent13sta_password_E"></span><span id="esphomelib::WiFiComponent::sta_password___ss"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1ac6c0f9a638a63fc4023a2b4695c7dbe1"></span>std::string esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_password_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent13sta_password_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent14sta_manual_ip_E"><span id="_CPPv2N10esphomelib13WiFiComponent14sta_manual_ip_E"></span><span id="esphomelib::WiFiComponent::sta_manual_ip___Optional:ManualIP:"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a7e9f0f47e22eab1aa7bc609fe715bb51"></span><a class="reference internal"href="helpers.html#_CPPv3N10esphomelib8OptionalE"title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a>&gt; esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_manual_ip_</code> = {}<a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent14sta_manual_ip_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent6ap_on_E"><span id="_CPPv2N10esphomelib13WiFiComponent6ap_on_E"></span><span id="esphomelib::WiFiComponent::ap_on___b"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a83d5f0ed4bd451e2fb90050e8bc26fb1"></span>bool esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_on_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent6ap_on_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent8ap_ssid_E"><span id="_CPPv2N10esphomelib13WiFiComponent8ap_ssid_E"></span><span id="esphomelib::WiFiComponent::ap_ssid___ss"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a121adbc019937e8b5d8194ca77097836"></span>std::string esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_ssid_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent8ap_ssid_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent12ap_password_E"><span id="_CPPv2N10esphomelib13WiFiComponent12ap_password_E"></span><span id="esphomelib::WiFiComponent::ap_password___ss"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a05aaf23d67020b59747e1a20be272bd7"></span>std::string esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_password_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent12ap_password_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent11ap_channel_E"><span id="_CPPv2N10esphomelib13WiFiComponent11ap_channel_E"></span><span id="esphomelib::WiFiComponent::ap_channel___uint8_t"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1ac3cdb051e9c5f3bb01343811c75f3f5c"></span>uint8_t esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_channel_</code><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent11ap_channel_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib13WiFiComponent13ap_manual_ip_E"><span id="_CPPv2N10esphomelib13WiFiComponent13ap_manual_ip_E"></span><span id="esphomelib::WiFiComponent::ap_manual_ip___Optional:ManualIP:"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a864cb397f74256eb28654d67106ad286"></span><a class="reference internal"href="helpers.html#_CPPv3N10esphomelib8OptionalE"title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a>&gt; esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_manual_ip_</code> = {}<a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent13ap_manual_ip_E"title="Permalink to this definition">¶</a><br><dd></dl></div><div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Protected Static Functions<dl class="function"><dt id="_CPPv3N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t"><span id="_CPPv2N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t"></span><span id="esphomelib::WiFiComponent::on_wifi_event__WiFiEvent_t"></span><span class="target"id="classesphomelib_1_1_wi_fi_component_1a1311f4495bc7b7f441255f8294a3103f"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib13WiFiComponentE"title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">on_wifi_event</code><span class="sig-paren">(</span>WiFiEvent_t <em>event</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t"title="Permalink to this definition">¶</a><br><dd><p>Used for logging WiFi events.</dl></div></dl><dl class="class"><dt id="_CPPv3N10esphomelib8ManualIPE"><span id="_CPPv2N10esphomelib8ManualIPE"></span><span id="esphomelib::ManualIP"></span><span class="target"id="structesphomelib_1_1_manual_i_p"></span><em class="property">struct </em>esphomelib<code class="descclassname">::</code><code class="descname">ManualIP</code><a class="headerlink"href="#_CPPv3N10esphomelib8ManualIPE"title="Permalink to this definition">¶</a><br><dd><p>Struct for setting static IPs in <a class="reference internal"href="#classesphomelib_1_1_wi_fi_component"><span class="std std-ref">WiFiComponent</span></a>.<div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Public Members<dl class="member"><dt id="_CPPv3N10esphomelib8ManualIP9static_ipE"><span id="_CPPv2N10esphomelib8ManualIP9static_ipE"></span><span id="esphomelib::ManualIP::static_ip__IPAddress"></span><span class="target"id="structesphomelib_1_1_manual_i_p_1a2e0e831407b046b1ef23ee7e5aa51cdd"></span>IPAddress esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a><code class="descname">static_ip</code><a class="headerlink"href="#_CPPv3N10esphomelib8ManualIP9static_ipE"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib8ManualIP7gatewayE"><span id="_CPPv2N10esphomelib8ManualIP7gatewayE"></span><span id="esphomelib::ManualIP::gateway__IPAddress"></span><span class="target"id="structesphomelib_1_1_manual_i_p_1aa08153c5882993d39a7f06b859f07489"></span>IPAddress esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a><code class="descname">gateway</code><a class="headerlink"href="#_CPPv3N10esphomelib8ManualIP7gatewayE"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib8ManualIP6subnetE"><span id="_CPPv2N10esphomelib8ManualIP6subnetE"></span><span id="esphomelib::ManualIP::subnet__IPAddress"></span><span class="target"id="structesphomelib_1_1_manual_i_p_1a32cd5863094e270e7e651f7ea61bb117"></span>IPAddress esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a><code class="descname">subnet</code><a class="headerlink"href="#_CPPv3N10esphomelib8ManualIP6subnetE"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib8ManualIP4dns1E"><span id="_CPPv2N10esphomelib8ManualIP4dns1E"></span><span id="esphomelib::ManualIP::dns1__IPAddress"></span><span class="target"id="structesphomelib_1_1_manual_i_p_1ae72e8c6cbaabf21155e1db8abc5d5339"></span>IPAddress esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a><code class="descname">dns1</code><a class="headerlink"href="#_CPPv3N10esphomelib8ManualIP4dns1E"title="Permalink to this definition">¶</a><br><dd><p>The first DNS server. 0.0.0.0 for default.</dl><dl class="member"><dt id="_CPPv3N10esphomelib8ManualIP4dns2E"><span id="_CPPv2N10esphomelib8ManualIP4dns2E"></span><span id="esphomelib::ManualIP::dns2__IPAddress"></span><span class="target"id="structesphomelib_1_1_manual_i_p_1a4d1546397bed1ede9a7689457118c130"></span>IPAddress esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib8ManualIPE"title="esphomelib::ManualIP">ManualIP</a><code class="descname">dns2</code><a class="headerlink"href="#_CPPv3N10esphomelib8ManualIP4dns2E"title="Permalink to this definition">¶</a><br><dd><p>The second DNS server. 0.0.0.0 for default.</dl></div></dl></div></div></div></div></div></div><div class="sphinxsidebar"role="navigation"aria-label="main navigation"><div class="sphinxsidebarwrapper"><div class="relations"><h3>Related Topics</h3><ul><li><a href="../../index.html">Documentation overview</a><ul><li><a href="../index.html">API Reference</a><ul><li><a href="index.html">Core</a><ul><li>Previous: <a href="component.html"title="previous chapter">Component</a><li>Next: <a href="mqtt.html"title="next chapter">MQTT Client</a></ul></ul></ul></ul></div><div id="searchbox"style="display: none"role="search"><h3>Quick search</h3><div class="searchformwrapper"><form class="search"action="../../search.html"><input name="q"> <input type="submit"value="Go"> <input type="hidden"name="check_keywords"value="yes"> <input type="hidden"name="area"value="default"></form></div></div><script>$('#searchbox').show(0);</script></div></div><div class="clearer"></div></div><div class="footer">&copy;2018, Otto Winter. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a> | <a href="../../_sources/api/core/wifi.rst.txt"rel="nofollow">Page source</a></div><script>var _gaq = _gaq || [];
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wificomponent">
+<h3>WiFiComponent<a class="headerlink" href="#wificomponent" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv3N10esphomelib13WiFiComponentE">
+<span id="_CPPv2N10esphomelib13WiFiComponentE"></span><span id="esphomelib::WiFiComponent"></span><span class="target" id="classesphomelib_1_1_wi_fi_component"></span><em class="property">class </em>esphomelib<code class="descclassname">::</code><code class="descname">WiFiComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This component is responsible for managing the ESP WiFi interface. </p>
+<p>Inherits from <a class="reference internal" href="controller.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent13WiFiComponentEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent13WiFiComponentEv"></span><span id="esphomelib::WiFiComponent::WiFiComponent"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1abc50ff11cbbd7f42fc49aeb2e6e8e924"></span>esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">WiFiComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13WiFiComponentEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classesphomelib_1_1_wi_fi_component"><span class="std std-ref">WiFiComponent</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent7set_staERKNSt6stringERKNSt6stringE">
+<span id="_CPPv2N10esphomelib13WiFiComponent7set_staERKNSt6stringERKNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_sta__ssCR.ssCR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1aa8dcc2af5cd4bd420242e7f6126848a0"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_sta</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em>, <em class="property">const</em> std::string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent7set_staERKNSt6stringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Setup the STA (client) mode. The parameters define which station to connect to. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent17set_sta_manual_ipE8ManualIP">
+<span id="_CPPv2N10esphomelib13WiFiComponent17set_sta_manual_ipE8ManualIP"></span><span id="esphomelib::WiFiComponent::set_sta_manual_ip__ManualIP"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a32d6ff1f8ffd74f5f26196c021ade830"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_sta_manual_ip</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a> <em>manual_ip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent17set_sta_manual_ipE8ManualIP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manually set a static IP for this WiFi interface. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent6set_apERKNSt6stringERKNSt6stringE7uint8_t">
+<span id="_CPPv2N10esphomelib13WiFiComponent6set_apERKNSt6stringERKNSt6stringE7uint8_t"></span><span id="esphomelib::WiFiComponent::set_ap__ssCR.ssCR.uint8_t"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a1f0b0b23ffea05182cdaf98690639f23"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_ap</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>ssid</em>, <em class="property">const</em> std::string &amp;<em>password</em> = &quot;&quot;, uint8_t <em>channel</em> = 1<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent6set_apERKNSt6stringERKNSt6stringE7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Setup an Access Point that should be created if no connection to a station can be made. </p>
+<p>This can also be used without <a class="reference internal" href="#classesphomelib_1_1_wi_fi_component_1aa8dcc2af5cd4bd420242e7f6126848a0"><span class="std std-ref">set_sta()</span></a>. Then the AP will always be active.</p>
+<p>If both STA and AP are defined, then both will be enabled at startup, but if a connection to a station can be made, the AP will be turned off again. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent16set_ap_manual_ipE8ManualIP">
+<span id="_CPPv2N10esphomelib13WiFiComponent16set_ap_manual_ipE8ManualIP"></span><span id="esphomelib::WiFiComponent::set_ap_manual_ip__ManualIP"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1aa1d7b23afdce1d11ae71520dacb680b7"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_ap_manual_ip</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a> <em>manual_ip</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent16set_ap_manual_ipE8ManualIP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manually set the manual IP for the AP. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent12set_hostnameERRNSt6stringE">
+<span id="_CPPv2N10esphomelib13WiFiComponent12set_hostnameERRNSt6stringE"></span><span id="esphomelib::WiFiComponent::set_hostname__ssRR"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a36edff1e04b361e82d64e9c354b06f71"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">set_hostname</code><span class="sig-paren">(</span>std::string &amp;&amp;<em>hostname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent12set_hostnameERRNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the advertised hostname, defaults to the App name. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent12get_hostnameEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent12get_hostnameEv"></span><span id="esphomelib::WiFiComponent::get_hostname"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ab1faf3791f06eaa08ebee3a48c1e5670"></span><em class="property">const</em> std::string &amp;esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_hostname</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent12get_hostnameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent5setupEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent5setupEv"></span><span id="esphomelib::WiFiComponent::setup"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7efaa3d2130bb0e5dbc5ea837c1b1cd5"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent5setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Setup WiFi interface. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK10esphomelib13WiFiComponent18get_setup_priorityEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent18get_setup_priorityEv"></span><span id="esphomelib::WiFiComponent::get_setup_priorityC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a617443ba03a7887c57d6de9473e033d0"></span>float esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_setup_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent18get_setup_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>WIFI <a class="reference internal" href="component.html#namespaceesphomelib_1_1setup__priority"><span class="std std-ref">setup_priority</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK10esphomelib13WiFiComponent17get_loop_priorityEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent17get_loop_priorityEv"></span><span id="esphomelib::WiFiComponent::get_loop_priorityC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7f5465d26114b2e379545a745303125d"></span>float esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">get_loop_priority</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent17get_loop_priorityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>priority of <a class="reference internal" href="#classesphomelib_1_1_wi_fi_component_1a9f3ed67afd996719a36cdfa625cf8de5"><span class="std std-ref">loop()</span></a>. </p>
+<p>higher -&gt; executed earlier</p>
+<p>Defaults to 0.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The loop priority of this component </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent4loopEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent4loopEv"></span><span id="esphomelib::WiFiComponent::loop"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a9f3ed67afd996719a36cdfa625cf8de5"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent4loopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reconnect WiFi if required. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK10esphomelib13WiFiComponent7has_staEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent7has_staEv"></span><span id="esphomelib::WiFiComponent::has_staC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ab2e2846eb31b9a0b24cfd4e989ba0b33"></span>bool esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">has_sta</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent7has_staEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK10esphomelib13WiFiComponent6has_apEv">
+<span id="_CPPv2NK10esphomelib13WiFiComponent6has_apEv"></span><span id="esphomelib::WiFiComponent::has_apC"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a1106b9ffec992bac556634ffde392687"></span>bool esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">has_ap</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib13WiFiComponent6has_apEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Functions</p>
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent16setup_sta_configEb">
+<span id="_CPPv2N10esphomelib13WiFiComponent16setup_sta_configEb"></span><span id="esphomelib::WiFiComponent::setup_sta_config__b"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a4e1b747bed5e787dbe673b89c9327870"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup_sta_config</code><span class="sig-paren">(</span>bool <em>show_config</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent16setup_sta_configEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent15setup_ap_configEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent15setup_ap_configEv"></span><span id="esphomelib::WiFiComponent::setup_ap_config"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a72ea68745dab3f73168870044d2dce19"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">setup_ap_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent15setup_ap_configEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent12wait_for_staEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent12wait_for_staEv"></span><span id="esphomelib::WiFiComponent::wait_for_sta"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a2df7b996df1789e3046caa7fa3d9fdec"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">wait_for_sta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent12wait_for_staEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Waits for the WiFi class to return a connected state. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent13sta_connectedEv">
+<span id="_CPPv2N10esphomelib13WiFiComponent13sta_connectedEv"></span><span id="esphomelib::WiFiComponent::sta_connected"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1af95b09e49e23ddaf698f4bd681a3ef30"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_connected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13sta_connectedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent9hostname_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent9hostname_E"></span><span id="esphomelib::WiFiComponent::hostname___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac7ab81d80abac2f110b58c62975f0340"></span>std::string esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">hostname_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent9hostname_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent7sta_on_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent7sta_on_E"></span><span id="esphomelib::WiFiComponent::sta_on___b"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a94b0e643de8207ce031e9908cf447bb7"></span>bool esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_on_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent7sta_on_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent9sta_ssid_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent9sta_ssid_E"></span><span id="esphomelib::WiFiComponent::sta_ssid___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a99977cfe732e9999b678f8fe0f78d5d9"></span>std::string esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_ssid_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent9sta_ssid_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent13sta_password_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent13sta_password_E"></span><span id="esphomelib::WiFiComponent::sta_password___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac6c0f9a638a63fc4023a2b4695c7dbe1"></span>std::string esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_password_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13sta_password_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent14sta_manual_ip_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent14sta_manual_ip_E"></span><span id="esphomelib::WiFiComponent::sta_manual_ip___Optional:ManualIP:"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a7e9f0f47e22eab1aa7bc609fe715bb51"></span><a class="reference internal" href="helpers.html#_CPPv3N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a>&gt; esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">sta_manual_ip_</code> = {}<a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent14sta_manual_ip_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent6ap_on_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent6ap_on_E"></span><span id="esphomelib::WiFiComponent::ap_on___b"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a83d5f0ed4bd451e2fb90050e8bc26fb1"></span>bool esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_on_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent6ap_on_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent8ap_ssid_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent8ap_ssid_E"></span><span id="esphomelib::WiFiComponent::ap_ssid___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a121adbc019937e8b5d8194ca77097836"></span>std::string esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_ssid_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent8ap_ssid_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent12ap_password_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent12ap_password_E"></span><span id="esphomelib::WiFiComponent::ap_password___ss"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a05aaf23d67020b59747e1a20be272bd7"></span>std::string esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_password_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent12ap_password_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent11ap_channel_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent11ap_channel_E"></span><span id="esphomelib::WiFiComponent::ap_channel___uint8_t"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1ac3cdb051e9c5f3bb01343811c75f3f5c"></span>uint8_t esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_channel_</code><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent11ap_channel_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib13WiFiComponent13ap_manual_ip_E">
+<span id="_CPPv2N10esphomelib13WiFiComponent13ap_manual_ip_E"></span><span id="esphomelib::WiFiComponent::ap_manual_ip___Optional:ManualIP:"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a864cb397f74256eb28654d67106ad286"></span><a class="reference internal" href="helpers.html#_CPPv3N10esphomelib8OptionalE" title="esphomelib::Optional">Optional</a>&lt;<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a>&gt; esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">ap_manual_ip_</code> = {}<a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13ap_manual_ip_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Static Functions</p>
+<dl class="function">
+<dt id="_CPPv3N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t">
+<span id="_CPPv2N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t"></span><span id="esphomelib::WiFiComponent::on_wifi_event__WiFiEvent_t"></span><span class="target" id="classesphomelib_1_1_wi_fi_component_1a1311f4495bc7b7f441255f8294a3103f"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib13WiFiComponentE" title="esphomelib::WiFiComponent">WiFiComponent</a><code class="descname">on_wifi_event</code><span class="sig-paren">(</span>WiFiEvent_t <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib13WiFiComponent13on_wifi_eventE11WiFiEvent_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Used for logging WiFi events. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv3N10esphomelib8ManualIPE">
+<span id="_CPPv2N10esphomelib8ManualIPE"></span><span id="esphomelib::ManualIP"></span><span class="target" id="structesphomelib_1_1_manual_i_p"></span><em class="property">struct </em>esphomelib<code class="descclassname">::</code><code class="descname">ManualIP</code><a class="headerlink" href="#_CPPv3N10esphomelib8ManualIPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Struct for setting static IPs in <a class="reference internal" href="#classesphomelib_1_1_wi_fi_component"><span class="std std-ref">WiFiComponent</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N10esphomelib8ManualIP9static_ipE">
+<span id="_CPPv2N10esphomelib8ManualIP9static_ipE"></span><span id="esphomelib::ManualIP::static_ip__IPAddress"></span><span class="target" id="structesphomelib_1_1_manual_i_p_1a2e0e831407b046b1ef23ee7e5aa51cdd"></span>IPAddress esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a><code class="descname">static_ip</code><a class="headerlink" href="#_CPPv3N10esphomelib8ManualIP9static_ipE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib8ManualIP7gatewayE">
+<span id="_CPPv2N10esphomelib8ManualIP7gatewayE"></span><span id="esphomelib::ManualIP::gateway__IPAddress"></span><span class="target" id="structesphomelib_1_1_manual_i_p_1aa08153c5882993d39a7f06b859f07489"></span>IPAddress esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a><code class="descname">gateway</code><a class="headerlink" href="#_CPPv3N10esphomelib8ManualIP7gatewayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib8ManualIP6subnetE">
+<span id="_CPPv2N10esphomelib8ManualIP6subnetE"></span><span id="esphomelib::ManualIP::subnet__IPAddress"></span><span class="target" id="structesphomelib_1_1_manual_i_p_1a32cd5863094e270e7e651f7ea61bb117"></span>IPAddress esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a><code class="descname">subnet</code><a class="headerlink" href="#_CPPv3N10esphomelib8ManualIP6subnetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib8ManualIP4dns1E">
+<span id="_CPPv2N10esphomelib8ManualIP4dns1E"></span><span id="esphomelib::ManualIP::dns1__IPAddress"></span><span class="target" id="structesphomelib_1_1_manual_i_p_1ae72e8c6cbaabf21155e1db8abc5d5339"></span>IPAddress esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a><code class="descname">dns1</code><a class="headerlink" href="#_CPPv3N10esphomelib8ManualIP4dns1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The first DNS server. 0.0.0.0 for default. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib8ManualIP4dns2E">
+<span id="_CPPv2N10esphomelib8ManualIP4dns2E"></span><span id="esphomelib::ManualIP::dns2__IPAddress"></span><span class="target" id="structesphomelib_1_1_manual_i_p_1a4d1546397bed1ede9a7689457118c130"></span>IPAddress esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib8ManualIPE" title="esphomelib::ManualIP">ManualIP</a><code class="descname">dns2</code><a class="headerlink" href="#_CPPv3N10esphomelib8ManualIP4dns2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The second DNS server. 0.0.0.0 for default. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">API Reference</a><ul>
+  <li><a href="index.html">Core</a><ul>
+      <li>Previous: <a href="component.html" title="previous chapter">Component</a></li>
+      <li>Next: <a href="mqtt.html" title="next chapter">MQTT Client</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/api/core/wifi.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-113203480-2']);
       _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_setAllowLinker', true]);
@@ -19,4 +334,9 @@
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();</script>
+      })();
+
+    </script>
+    
+  </body>
+</html>

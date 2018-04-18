@@ -1,4 +1,243 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="X-UA-Compatible"content="IE=Edge"><meta http-equiv="Content-Type"content="text/html; charset=utf-8"><title>Logging Engine &#8212; esphomelib 1.3.0 documentation</title><link rel="stylesheet"href="../../_static/alabaster.css"type="text/css"><link rel="stylesheet"href="../../_static/pygments.css"type="text/css"><script src="../../_static/documentation_options.js"></script><script src="../../_static/jquery.js"></script><script src="../../_static/underscore.js"></script><script src="../../_static/doctools.js"></script><link rel="index"title="Index"href="../../genindex.html"><link rel="search"title="Search"href="../../search.html"><link rel="next"title="Power Supply"href="power-supply.html"><link rel="prev"title="Helpers"href="helpers.html"><link rel="stylesheet"href="../../_static/custom.css"type="text/css"><meta name="viewport"content="width=device-width,initial-scale=0.9,maximum-scale=0.9"><div class="document"><div class="documentwrapper"><div class="bodywrapper"><div class="body"role="main"><div class="section"id="logging-engine"><h1>Logging Engine<a class="headerlink"href="#logging-engine"title="Permalink to this headline">¶</a></h1><p>esphomelib will by default log to both Serial (with baudrate 115200).<div class="section"id="api-reference"><h2>API Reference<a class="headerlink"href="#api-reference"title="Permalink to this headline">¶</a></h2><div class="section"id="log-h"><h3>log.h<a class="headerlink"href="#log-h"title="Permalink to this headline">¶</a></h3><dl class="type"><dt id="_CPPv311ESPLogLevel"><span id="_CPPv211ESPLogLevel"></span><span id="ESPLogLevel"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940"></span><em class="property">enum </em><code class="descname">ESPLogLevel</code><a class="headerlink"href="#_CPPv311ESPLogLevel"title="Permalink to this definition">¶</a><br><dd><p><em>Values:</em><dl class="enumerator"><dt id="_CPPv325ESPHOMELIB_LOG_LEVEL_NONE"><span id="_CPPv225ESPHOMELIB_LOG_LEVEL_NONE"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a481a6f05d6b1c994f807795e5858025c"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_NONE</code> = 0<a class="headerlink"href="#_CPPv325ESPHOMELIB_LOG_LEVEL_NONE"title="Permalink to this definition">¶</a><br><dd></dl><dl class="enumerator"><dt id="_CPPv326ESPHOMELIB_LOG_LEVEL_ERROR"><span id="_CPPv226ESPHOMELIB_LOG_LEVEL_ERROR"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940abeee558943b48b1342fd29d1f76ad6ee"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_ERROR</code> = 1<a class="headerlink"href="#_CPPv326ESPHOMELIB_LOG_LEVEL_ERROR"title="Permalink to this definition">¶</a><br><dd></dl><dl class="enumerator"><dt id="_CPPv325ESPHOMELIB_LOG_LEVEL_WARN"><span id="_CPPv225ESPHOMELIB_LOG_LEVEL_WARN"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a1e2fa3222a470504ae9c238b10cb530a"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_WARN</code> = 2<a class="headerlink"href="#_CPPv325ESPHOMELIB_LOG_LEVEL_WARN"title="Permalink to this definition">¶</a><br><dd></dl><dl class="enumerator"><dt id="_CPPv325ESPHOMELIB_LOG_LEVEL_INFO"><span id="_CPPv225ESPHOMELIB_LOG_LEVEL_INFO"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940ab65709705ce5ac808df05a4092cd1356"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_INFO</code> = 3<a class="headerlink"href="#_CPPv325ESPHOMELIB_LOG_LEVEL_INFO"title="Permalink to this definition">¶</a><br><dd></dl><dl class="enumerator"><dt id="_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG"><span id="_CPPv226ESPHOMELIB_LOG_LEVEL_DEBUG"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a0da406a72b62d44faa98e5c9d1380d8e"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_DEBUG</code> = 4<a class="headerlink"href="#_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG"title="Permalink to this definition">¶</a><br><dd></dl><dl class="enumerator"><dt id="_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE"><span id="_CPPv228ESPHOMELIB_LOG_LEVEL_VERBOSE"></span><span class="target"id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940afa92171a3cb2191f9fa2e72c39e5bbb4"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_VERBOSE</code> = 5<a class="headerlink"href="#_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE"title="Permalink to this definition">¶</a><br><dd></dl></dl></div><div class="section"id="logcomponent"><h3>LogComponent<a class="headerlink"href="#logcomponent"title="Permalink to this headline">¶</a></h3><dl class="class"><dt id="_CPPv3N10esphomelib12LogComponentE"><span id="_CPPv2N10esphomelib12LogComponentE"></span><span id="esphomelib::LogComponent"></span><span class="target"id="classesphomelib_1_1_log_component"></span><em class="property">class </em>esphomelib<code class="descclassname">::</code><code class="descname">LogComponent</code><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponentE"title="Permalink to this definition">¶</a><br><dd><p>A simple component that enables logging to Serial via the ESP_LOG* macros.<p>This component should optimally be setup very early because only after its setup log messages are actually sent. To do this, simply call <a class="reference internal"href="#classesphomelib_1_1_log_component_1a1b0153609061596b9230c97fd9b06343"><span class="std std-ref">pre_setup()</span></a> as early as possible.<p>Inherits from <a class="reference internal"href="controller.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a><div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Public Functions<dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent12LogComponentE8uint32_t6size_t"><span id="_CPPv2N10esphomelib12LogComponent12LogComponentE8uint32_t6size_t"></span><span id="esphomelib::LogComponent::LogComponent__uint32_t.s"></span><span class="target"id="classesphomelib_1_1_log_component_1aca14d5b5a02bd063ef2188b883fd991b"></span>esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">LogComponent</code><span class="sig-paren">(</span>uint32_t <em>baud_rate</em> = 11520, size_t <em>tx_buffer_size</em> = 512<span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent12LogComponentE8uint32_t6size_t"title="Permalink to this definition">¶</a><br><dd><p>Construct the <a class="reference internal"href="#classesphomelib_1_1_log_component"><span class="std std-ref">LogComponent</span></a>.<p><dl class="docutils"><dt><strong>Parameters</strong><dd><ul class="breatheparameterlist first last simple"><li><code class="docutils literal notranslate"><span class="pre">baud_rate</span></code>: The baud_rate for the serial interface. 0 to disable UART logging.<li><code class="docutils literal notranslate"><span class="pre">tx_buffer_size</span></code>: The buffer size (in bytes) used for constructing log messages.</ul></dl><p></dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent13set_baud_rateE8uint32_t"><span id="_CPPv2N10esphomelib12LogComponent13set_baud_rateE8uint32_t"></span><span id="esphomelib::LogComponent::set_baud_rate__uint32_t"></span><span class="target"id="classesphomelib_1_1_log_component_1ada5e0434eb54180939367d9a2cd4c563"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_baud_rate</code><span class="sig-paren">(</span>uint32_t <em>baud_rate</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent13set_baud_rateE8uint32_t"title="Permalink to this definition">¶</a><br><dd><p>Manually set the baud rate for serial, set to 0 to disable.</dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t"><span id="_CPPv2N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t"></span><span id="esphomelib::LogComponent::set_tx_buffer_size__s"></span><span class="target"id="classesphomelib_1_1_log_component_1abc856218ddc5fca5e432d531db5e668c"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_tx_buffer_size</code><span class="sig-paren">(</span>size_t <em>tx_buffer_size</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t"title="Permalink to this definition">¶</a><br><dd><p>Set the buffer size that’s used for constructing log messages. Log messages longer than this will be truncated.</dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent20set_global_log_levelE11ESPLogLevel"><span id="_CPPv2N10esphomelib12LogComponent20set_global_log_levelE11ESPLogLevel"></span><span id="esphomelib::LogComponent::set_global_log_level__ESPLogLevel"></span><span class="target"id="classesphomelib_1_1_log_component_1a6ec240ef4e8a10c663c53ecf4a28f173"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_global_log_level</code><span class="sig-paren">(</span><a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a> <em>log_level</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent20set_global_log_levelE11ESPLogLevel"title="Permalink to this definition">¶</a><br><dd><p>Set the global log level. Note: Use the ESPHOMELIB_LOG_LEVEL define to also remove the logs from the build.</dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent13set_log_levelERKNSt6stringE11ESPLogLevel"><span id="_CPPv2N10esphomelib12LogComponent13set_log_levelERKNSt6stringE11ESPLogLevel"></span><span id="esphomelib::LogComponent::set_log_level__ssCR.ESPLogLevel"></span><span class="target"id="classesphomelib_1_1_log_component_1ac50ed591cc94bdd6e70efc9dfea09674"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_log_level</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>tag</em>, <a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a> <em>log_level</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent13set_log_levelERKNSt6stringE11ESPLogLevel"title="Permalink to this definition">¶</a><br><dd><p>Set the log level of the specified tag.</dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent9pre_setupEv"><span id="_CPPv2N10esphomelib12LogComponent9pre_setupEv"></span><span id="esphomelib::LogComponent::pre_setup"></span><span class="target"id="classesphomelib_1_1_log_component_1a1b0153609061596b9230c97fd9b06343"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">pre_setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent9pre_setupEv"title="Permalink to this definition">¶</a><br><dd><p>Set up this component.</dl><dl class="function"><dt id="_CPPv3NK10esphomelib12LogComponent13get_baud_rateEv"><span id="_CPPv2NK10esphomelib12LogComponent13get_baud_rateEv"></span><span id="esphomelib::LogComponent::get_baud_rateC"></span><span class="target"id="classesphomelib_1_1_log_component_1ace7a290c3ca1d4ab54bd4f02fa99de0b"></span>uint32_t esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">get_baud_rate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink"href="#_CPPv3NK10esphomelib12LogComponent13get_baud_rateEv"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3NK10esphomelib12LogComponent18get_tx_buffer_sizeEv"><span id="_CPPv2NK10esphomelib12LogComponent18get_tx_buffer_sizeEv"></span><span id="esphomelib::LogComponent::get_tx_buffer_sizeC"></span><span class="target"id="classesphomelib_1_1_log_component_1ab15ce56e96e4627f19cad5bdd5440623"></span>size_t esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">get_tx_buffer_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink"href="#_CPPv3NK10esphomelib12LogComponent18get_tx_buffer_sizeEv"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelPKcPKc7va_list"><span id="_CPPv2N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelPKcPKc7va_list"></span><span id="esphomelib::LogComponent::log_vprintf___ESPLogLevel.cCP.cCP.va_list"></span><span class="target"id="classesphomelib_1_1_log_component_1a10828be8f800fd0bb33c10b4e4c59427"></span>int esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_vprintf_</code><span class="sig-paren">(</span><a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a> <em>level</em>, <em class="property">const</em> char *<em>tag</em>, <em class="property">const</em> char *<em>format</em>, va_list <em>args</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelPKcPKc7va_list"title="Permalink to this definition">¶</a><br><dd></dl><dl class="function"><dt id="_CPPv3N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelPKcEEE"><span id="_CPPv2N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelPKcEEE"></span><span class="target"id="classesphomelib_1_1_log_component_1a21456168cf00ee7a9c578a08451fb552"></span>void esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">add_on_log_callback</code><span class="sig-paren">(</span>std::function&lt;void<span class="sig-paren">(</span><a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a>, <em class="property">const</em> char *<span class="sig-paren">)</span>&gt; &amp;&amp;<em>callback</em><span class="sig-paren">)</span><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelPKcEEE"title="Permalink to this definition">¶</a><br><dd><p>Register a callback that will be called for every log message sent.</dl></div><div class="breathe-sectiondef docutils container"><p class="breathe-sectiondef-title rubric">Protected Attributes<dl class="member"><dt id="_CPPv3N10esphomelib12LogComponent10baud_rate_E"><span id="_CPPv2N10esphomelib12LogComponent10baud_rate_E"></span><span id="esphomelib::LogComponent::baud_rate___uint32_t"></span><span class="target"id="classesphomelib_1_1_log_component_1a7d9b91e63023345ed9f30b33f82bf88e"></span>uint32_t esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">baud_rate_</code><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent10baud_rate_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib12LogComponent10tx_buffer_E"><span id="_CPPv2N10esphomelib12LogComponent10tx_buffer_E"></span><span id="esphomelib::LogComponent::tx_buffer___std::vector:c:"></span><span class="target"id="classesphomelib_1_1_log_component_1adfaf04c4b7db0495282f53a065ecf2a4"></span>std::vector&lt;char&gt; esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">tx_buffer_</code><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent10tx_buffer_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib12LogComponent17global_log_level_E"><span id="_CPPv2N10esphomelib12LogComponent17global_log_level_E"></span><span id="esphomelib::LogComponent::global_log_level___ESPLogLevel"></span><span class="target"id="classesphomelib_1_1_log_component_1a316d815f5402ede199e8a9d7c662948c"></span><a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a> esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">global_log_level_</code> = {ESPHOMELIB_LOG_LEVEL}<a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent17global_log_level_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib12LogComponent11log_levels_E"><span id="_CPPv2N10esphomelib12LogComponent11log_levels_E"></span><span id="esphomelib::LogComponent::log_levels___std::unordered_map:ss.ESPLogLevel:"></span><span class="target"id="classesphomelib_1_1_log_component_1a4c8fc9405981ebef6a5e4fd0db2d8053"></span>std::unordered_map&lt;std::string, <a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a>&gt; esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_levels_</code><a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent11log_levels_E"title="Permalink to this definition">¶</a><br><dd></dl><dl class="member"><dt id="_CPPv3N10esphomelib12LogComponent13log_callback_E"><span id="_CPPv2N10esphomelib12LogComponent13log_callback_E"></span><span class="target"id="classesphomelib_1_1_log_component_1aa4079eee17ac93c9535ee7ce7cb35ad3"></span><a class="reference internal"href="helpers.html#_CPPv3N10esphomelib15CallbackManagerE"title="esphomelib::CallbackManager">CallbackManager</a>&lt;void<span class="sig-paren">(</span><a class="reference internal"href="#_CPPv311ESPLogLevel"title="ESPLogLevel">ESPLogLevel</a>, <em class="property">const</em> char *<span class="sig-paren">)</span>&gt; esphomelib::<a class="reference internal"href="#_CPPv3N10esphomelib12LogComponentE"title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_callback_</code> = {}<a class="headerlink"href="#_CPPv3N10esphomelib12LogComponent13log_callback_E"title="Permalink to this definition">¶</a><br><dd></dl></div></dl></div></div></div></div></div></div><div class="sphinxsidebar"role="navigation"aria-label="main navigation"><div class="sphinxsidebarwrapper"><div class="relations"><h3>Related Topics</h3><ul><li><a href="../../index.html">Documentation overview</a><ul><li><a href="../index.html">API Reference</a><ul><li><a href="index.html">Core</a><ul><li>Previous: <a href="helpers.html"title="previous chapter">Helpers</a><li>Next: <a href="power-supply.html"title="next chapter">Power Supply</a></ul></ul></ul></ul></div><div id="searchbox"style="display: none"role="search"><h3>Quick search</h3><div class="searchformwrapper"><form class="search"action="../../search.html"><input name="q"> <input type="submit"value="Go"> <input type="hidden"name="check_keywords"value="yes"> <input type="hidden"name="area"value="default"></form></div></div><script>$('#searchbox').show(0);</script></div></div><div class="clearer"></div></div><div class="footer">&copy;2018, Otto Winter. | Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a> &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a> | <a href="../../_sources/api/core/log.rst.txt"rel="nofollow">Page source</a></div><script>var _gaq = _gaq || [];
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Logging Engine &#8212; esphomelib 1.3.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Power Supply" href="power-supply.html" />
+    <link rel="prev" title="Helpers" href="helpers.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="logging-engine">
+<h1>Logging Engine<a class="headerlink" href="#logging-engine" title="Permalink to this headline">¶</a></h1>
+<p>esphomelib will by default log to both Serial (with baudrate 115200).</p>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="log-h">
+<h3>log.h<a class="headerlink" href="#log-h" title="Permalink to this headline">¶</a></h3>
+<dl class="type">
+<dt id="_CPPv311ESPLogLevel">
+<span id="_CPPv211ESPLogLevel"></span><span id="ESPLogLevel"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940"></span><em class="property">enum </em><code class="descname">ESPLogLevel</code><a class="headerlink" href="#_CPPv311ESPLogLevel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv325ESPHOMELIB_LOG_LEVEL_NONE">
+<span id="_CPPv225ESPHOMELIB_LOG_LEVEL_NONE"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a481a6f05d6b1c994f807795e5858025c"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_NONE</code> = 0<a class="headerlink" href="#_CPPv325ESPHOMELIB_LOG_LEVEL_NONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv326ESPHOMELIB_LOG_LEVEL_ERROR">
+<span id="_CPPv226ESPHOMELIB_LOG_LEVEL_ERROR"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940abeee558943b48b1342fd29d1f76ad6ee"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_ERROR</code> = 1<a class="headerlink" href="#_CPPv326ESPHOMELIB_LOG_LEVEL_ERROR" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv325ESPHOMELIB_LOG_LEVEL_WARN">
+<span id="_CPPv225ESPHOMELIB_LOG_LEVEL_WARN"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a1e2fa3222a470504ae9c238b10cb530a"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_WARN</code> = 2<a class="headerlink" href="#_CPPv325ESPHOMELIB_LOG_LEVEL_WARN" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv325ESPHOMELIB_LOG_LEVEL_INFO">
+<span id="_CPPv225ESPHOMELIB_LOG_LEVEL_INFO"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940ab65709705ce5ac808df05a4092cd1356"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_INFO</code> = 3<a class="headerlink" href="#_CPPv325ESPHOMELIB_LOG_LEVEL_INFO" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG">
+<span id="_CPPv226ESPHOMELIB_LOG_LEVEL_DEBUG"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940a0da406a72b62d44faa98e5c9d1380d8e"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_DEBUG</code> = 4<a class="headerlink" href="#_CPPv326ESPHOMELIB_LOG_LEVEL_DEBUG" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE">
+<span id="_CPPv228ESPHOMELIB_LOG_LEVEL_VERBOSE"></span><span class="target" id="log_8h_1ad1fabf2631096a3a2952dc9b8c05b940afa92171a3cb2191f9fa2e72c39e5bbb4"></span><code class="descname">ESPHOMELIB_LOG_LEVEL_VERBOSE</code> = 5<a class="headerlink" href="#_CPPv328ESPHOMELIB_LOG_LEVEL_VERBOSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="logcomponent">
+<h3>LogComponent<a class="headerlink" href="#logcomponent" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv3N10esphomelib12LogComponentE">
+<span id="_CPPv2N10esphomelib12LogComponentE"></span><span id="esphomelib::LogComponent"></span><span class="target" id="classesphomelib_1_1_log_component"></span><em class="property">class </em>esphomelib<code class="descclassname">::</code><code class="descname">LogComponent</code><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A simple component that enables logging to Serial via the ESP_LOG* macros. </p>
+<p>This component should optimally be setup very early because only after its setup log messages are actually sent. To do this, simply call <a class="reference internal" href="#classesphomelib_1_1_log_component_1a1b0153609061596b9230c97fd9b06343"><span class="std std-ref">pre_setup()</span></a> as early as possible. </p>
+<p>Inherits from <a class="reference internal" href="controller.html#classesphomelib_1_1_component"><span class="std std-ref">esphomelib::Component</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent12LogComponentE8uint32_t6size_t">
+<span id="_CPPv2N10esphomelib12LogComponent12LogComponentE8uint32_t6size_t"></span><span id="esphomelib::LogComponent::LogComponent__uint32_t.s"></span><span class="target" id="classesphomelib_1_1_log_component_1aca14d5b5a02bd063ef2188b883fd991b"></span>esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">LogComponent</code><span class="sig-paren">(</span>uint32_t <em>baud_rate</em> = 11520, size_t <em>tx_buffer_size</em> = 512<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent12LogComponentE8uint32_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct the <a class="reference internal" href="#classesphomelib_1_1_log_component"><span class="std std-ref">LogComponent</span></a>. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">baud_rate</span></code>: The baud_rate for the serial interface. 0 to disable UART logging. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tx_buffer_size</span></code>: The buffer size (in bytes) used for constructing log messages. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent13set_baud_rateE8uint32_t">
+<span id="_CPPv2N10esphomelib12LogComponent13set_baud_rateE8uint32_t"></span><span id="esphomelib::LogComponent::set_baud_rate__uint32_t"></span><span class="target" id="classesphomelib_1_1_log_component_1ada5e0434eb54180939367d9a2cd4c563"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_baud_rate</code><span class="sig-paren">(</span>uint32_t <em>baud_rate</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent13set_baud_rateE8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Manually set the baud rate for serial, set to 0 to disable. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t">
+<span id="_CPPv2N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t"></span><span id="esphomelib::LogComponent::set_tx_buffer_size__s"></span><span class="target" id="classesphomelib_1_1_log_component_1abc856218ddc5fca5e432d531db5e668c"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_tx_buffer_size</code><span class="sig-paren">(</span>size_t <em>tx_buffer_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent18set_tx_buffer_sizeE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the buffer size that’s used for constructing log messages. Log messages longer than this will be truncated. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent20set_global_log_levelE11ESPLogLevel">
+<span id="_CPPv2N10esphomelib12LogComponent20set_global_log_levelE11ESPLogLevel"></span><span id="esphomelib::LogComponent::set_global_log_level__ESPLogLevel"></span><span class="target" id="classesphomelib_1_1_log_component_1a6ec240ef4e8a10c663c53ecf4a28f173"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_global_log_level</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a> <em>log_level</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent20set_global_log_levelE11ESPLogLevel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the global log level. Note: Use the ESPHOMELIB_LOG_LEVEL define to also remove the logs from the build. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent13set_log_levelERKNSt6stringE11ESPLogLevel">
+<span id="_CPPv2N10esphomelib12LogComponent13set_log_levelERKNSt6stringE11ESPLogLevel"></span><span id="esphomelib::LogComponent::set_log_level__ssCR.ESPLogLevel"></span><span class="target" id="classesphomelib_1_1_log_component_1ac50ed591cc94bdd6e70efc9dfea09674"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">set_log_level</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>tag</em>, <a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a> <em>log_level</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent13set_log_levelERKNSt6stringE11ESPLogLevel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the log level of the specified tag. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent9pre_setupEv">
+<span id="_CPPv2N10esphomelib12LogComponent9pre_setupEv"></span><span id="esphomelib::LogComponent::pre_setup"></span><span class="target" id="classesphomelib_1_1_log_component_1a1b0153609061596b9230c97fd9b06343"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">pre_setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent9pre_setupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set up this component. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK10esphomelib12LogComponent13get_baud_rateEv">
+<span id="_CPPv2NK10esphomelib12LogComponent13get_baud_rateEv"></span><span id="esphomelib::LogComponent::get_baud_rateC"></span><span class="target" id="classesphomelib_1_1_log_component_1ace7a290c3ca1d4ab54bd4f02fa99de0b"></span>uint32_t esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">get_baud_rate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib12LogComponent13get_baud_rateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3NK10esphomelib12LogComponent18get_tx_buffer_sizeEv">
+<span id="_CPPv2NK10esphomelib12LogComponent18get_tx_buffer_sizeEv"></span><span id="esphomelib::LogComponent::get_tx_buffer_sizeC"></span><span class="target" id="classesphomelib_1_1_log_component_1ab15ce56e96e4627f19cad5bdd5440623"></span>size_t esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">get_tx_buffer_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv3NK10esphomelib12LogComponent18get_tx_buffer_sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelPKcPKc7va_list">
+<span id="_CPPv2N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelPKcPKc7va_list"></span><span id="esphomelib::LogComponent::log_vprintf___ESPLogLevel.cCP.cCP.va_list"></span><span class="target" id="classesphomelib_1_1_log_component_1a10828be8f800fd0bb33c10b4e4c59427"></span>int esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_vprintf_</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a> <em>level</em>, <em class="property">const</em> char *<em>tag</em>, <em class="property">const</em> char *<em>format</em>, va_list <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent12log_vprintf_E11ESPLogLevelPKcPKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv3N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelPKcEEE">
+<span id="_CPPv2N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelPKcEEE"></span><span class="target" id="classesphomelib_1_1_log_component_1a21456168cf00ee7a9c578a08451fb552"></span>void esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">add_on_log_callback</code><span class="sig-paren">(</span>std::function&lt;void<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a>, <em class="property">const</em> char *<span class="sig-paren">)</span>&gt; &amp;&amp;<em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent19add_on_log_callbackERRNSt8functionIFv11ESPLogLevelPKcEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a callback that will be called for every log message sent. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
+<dl class="member">
+<dt id="_CPPv3N10esphomelib12LogComponent10baud_rate_E">
+<span id="_CPPv2N10esphomelib12LogComponent10baud_rate_E"></span><span id="esphomelib::LogComponent::baud_rate___uint32_t"></span><span class="target" id="classesphomelib_1_1_log_component_1a7d9b91e63023345ed9f30b33f82bf88e"></span>uint32_t esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">baud_rate_</code><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent10baud_rate_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib12LogComponent10tx_buffer_E">
+<span id="_CPPv2N10esphomelib12LogComponent10tx_buffer_E"></span><span id="esphomelib::LogComponent::tx_buffer___std::vector:c:"></span><span class="target" id="classesphomelib_1_1_log_component_1adfaf04c4b7db0495282f53a065ecf2a4"></span>std::vector&lt;char&gt; esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">tx_buffer_</code><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent10tx_buffer_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib12LogComponent17global_log_level_E">
+<span id="_CPPv2N10esphomelib12LogComponent17global_log_level_E"></span><span id="esphomelib::LogComponent::global_log_level___ESPLogLevel"></span><span class="target" id="classesphomelib_1_1_log_component_1a316d815f5402ede199e8a9d7c662948c"></span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a> esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">global_log_level_</code> = {ESPHOMELIB_LOG_LEVEL}<a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent17global_log_level_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib12LogComponent11log_levels_E">
+<span id="_CPPv2N10esphomelib12LogComponent11log_levels_E"></span><span id="esphomelib::LogComponent::log_levels___std::unordered_map:ss.ESPLogLevel:"></span><span class="target" id="classesphomelib_1_1_log_component_1a4c8fc9405981ebef6a5e4fd0db2d8053"></span>std::unordered_map&lt;std::string, <a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a>&gt; esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_levels_</code><a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent11log_levels_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N10esphomelib12LogComponent13log_callback_E">
+<span id="_CPPv2N10esphomelib12LogComponent13log_callback_E"></span><span class="target" id="classesphomelib_1_1_log_component_1aa4079eee17ac93c9535ee7ce7cb35ad3"></span><a class="reference internal" href="helpers.html#_CPPv3N10esphomelib15CallbackManagerE" title="esphomelib::CallbackManager">CallbackManager</a>&lt;void<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv311ESPLogLevel" title="ESPLogLevel">ESPLogLevel</a>, <em class="property">const</em> char *<span class="sig-paren">)</span>&gt; esphomelib::<a class="reference internal" href="#_CPPv3N10esphomelib12LogComponentE" title="esphomelib::LogComponent">LogComponent</a><code class="descname">log_callback_</code> = {}<a class="headerlink" href="#_CPPv3N10esphomelib12LogComponent13log_callback_E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">API Reference</a><ul>
+  <li><a href="index.html">Core</a><ul>
+      <li>Previous: <a href="helpers.html" title="previous chapter">Helpers</a></li>
+      <li>Next: <a href="power-supply.html" title="next chapter">Power Supply</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Otto Winter.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../../_sources/api/core/log.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-113203480-2']);
       _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_setAllowLinker', true]);
@@ -8,4 +247,9 @@
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();</script>
+      })();
+
+    </script>
+    
+  </body>
+</html>
